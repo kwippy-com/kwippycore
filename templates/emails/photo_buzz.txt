@@ -1,0 +1,13 @@
+subject: #_2 has sent you a private message
+body_text:  hi #_1,\n\n #_2 wants to see your picture :P. #_2 has written this:\n\n   "#_3"  \n\n  p.s. you can you can reply privately on #_2's profile page - ssiittee/#_4.\n p.p.s if you'd rather not get these buzzes, you can change message settings here: ssiittee/dashboard/account  
+body_html:  hi #_1,<br /> <a href="ssiittee/#_4">#_2</a> wants to see your picture :P. <a href="ssiittee/#_4">#_2</a> has written this:  <br /><br />   "#_3"  <br /><br /> p.s. you can reply privately on <a href="ssiittee/#_4">#_2's</a> profile page - ssiittee/#_4.<br>p.p.s if you'd rather not get these buzzes, you can change message settings here: <a href="ssiittee/dashboard/account" alt="dashboard-account">dashboard>account</a>  
+
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('photo_buzz','#_2 has sent you a buzz',
+'Hi #_1,\n\n #_2 wants to see your profile picture :P, here\'s what #_2 has written:  \n\n   "#_3"  \n\n  p.s:  you can you can reply privately on #_2\'s kwips page - ssiittee/#_4. you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/',
+'Hi #_1,<br /> <a href="ssiittee/#_4">#_2</a> wants to see your profile picture :P, here\'s what <a href="ssiittee/#_4">#_2</a> has written: <br /><br />   "#_3"  <br /><br /> p.s.  you can reply privately on <a href="ssiittee/#_4">#_2\'s</a> kwips page.
+<br>p.p.s if you\'d rather not get these buzzes, you can change message settings here: <a href="ssiittee/dashboard/account/" alt="dashboard-account">dashboard>account</a>')
+
+insert into kwippy_im(type,body) values('photo_buzz','#_2 wants to see your profile picture, here is what #_2 has written:<br><br>"#_3"<br><br>p.s you can reply privately  here - http://kwippy.com/#_4');
+

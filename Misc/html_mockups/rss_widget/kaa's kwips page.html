@@ -1,0 +1,2189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+	
+	
+	
+	
+	  
+	
+        
+  
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="A microblogging and Instant Messenger status logger with a social network optimized for close friends">
+	<meta name="keywords" content="microblogging, microblog, nanoblogging, nanoblog, social network, Gtalk status, Yahoo messenger status, store status, archive status">
+        
+    	    <title>kaa's kwips page</title>
+        
+	<link rel="stylesheet" type="text/css" href="kaa%27s%20kwips%20page_files/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="kaa%27s%20kwips%20page_files/user_page.css">
+	<link rel="stylesheet" type="text/css" href="kaa%27s%20kwips%20page_files/custom_default.css">
+        <link rel="stylesheet" type="text/css" href="kaa%27s%20kwips%20page_files/global.css">
+	<style type="text/css"> .left_col a{color:#a7d4ff;}
+        .left_col a:hover{color:#a7d4ff;text-decoration:underline;}
+        .kwipsarea{color:#fff;background-color:#3f3f3f;}
+        a.selected:hover {color:#a7d4ff;}
+        a.selected,.link_prev, .link_next  {background-color:#3f3f3f;color:#a7d4ff;}
+        a.unselected:hover {background-color:#3f3f3f;color:#a7d4ff;} 
+        a.unselected {background-color:#a7d4ff;color:#3f3f3f;} 
+        .user_pic_16 {border:1px solid #a7d4ff;} 
+        </style>
+	<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon">
+    	<script type="text/javascript" src="kaa%27s%20kwips%20page_files/jquery-1.js"></script> 
+	<script type="text/javascript" src="kaa%27s%20kwips%20page_files/mypage.js"></script> 
+  </head><body>
+ 
+  <div style="background: transparent url(/images/top_bar.png) repeat-x scroll 0% 0%; width: 100%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; float: right; padding-right: 20px;">
+<div class="right_links">
+	
+		<span class="float_right">Hi, <a href="http://www.kwippy.com/kaa/">kaa</a> | <a href="http://www.kwippy.com/kaa/">home</a> | <a href="http://www.kwippy.com/kaa/dashboard/">dashboard</a> | <a href="http://www.kwippy.com/kaa/messages/inbox/">messages</a> | <a href="http://www.kwippy.com/logout/">logout</a> </span>
+	
+</div>
+</div> 
+	<div class="wrap"> 
+      
+	<a href="javascript:void(0);" style="color: black;" onclick="show_hide_fb_box();">
+		<span class="feedback_link">Feedback</span>
+	</a>
+	<form method="post" action="/feedback/add/" id="feedback_form"> 		
+		<div id="fback" style="display: none;">
+			<textarea id="feedback_box" class="textbox grey_text" onclick="if (this.value =='likes/dislikes ..bugs or suggestions if any, all are welcome :)') {this.value=''}" onblur="if (this.value==''){this.value='likes/dislikes ..bugs or suggestions if any, all are welcome :)'}" value="likes/dislikes ..bugs or suggestions if any, all are welcome :)" style="width: 500px; height: 50px;" name="feedback_box"></textarea>
+			<br>
+			<input id="submit_fb" class="button" value="submit" name="submit" type="submit">
+			<a href="javascript:void(0);" onclick="show_hide_fb_box();">or  close </a>
+		</div>
+	</form>
+
+      <div class="clear"></div>
+  	  <span id="flash_perm" style="display: block;" class="flash_message">
+	     
+	  </span>
+	  <span id="flash" style="display: none;" class="flash_message">
+	    already logged in as "kaa" , to login as someone else plz logout first.
+	  </span>
+
+     
+	 <div class="content">
+		<div class="left_col">
+			 
+ 
+			<div class="clear"></div>
+			
+	<span class="float_left" style="">
+		
+			
+				<a class="selected" href="http://www.kwippy.com/kaa/active/">your network</a>
+				<a class="unselected" href="http://www.kwippy.com/kaa/kwips/active/">your kwips</a>
+			
+		
+	</span>
+	<span class="float_right">
+		<a class="unselected" href="http://www.kwippy.com/everyone/active/">everyone's kwips</a>
+	</span>
+
+ 
+		<br class="clear">
+
+		
+		<div class="kwipsarea">
+	           
+                        
+
+                        
+
+
+                        <div class="clear"></div>
+                        
+                    
+	            
+  
+	
+   		
+	
+		<form method="post" action="/friendships/vincenthunt/" class="change_follow_setting" id="friendship_requests">friendship request from  <a target="_blank" style="color: rgb(0, 134, 255);" href="http://www.kwippy.com/vincenthunt/">vincenthunt</a>
+			<div class="float_right">
+				<input value="accept" class="button" name="accept" type="submit">or
+                                <input value="decline" class="button" name="decline" type="submit">
+                                <a href="javascript:void(0);" onclick="$('#friendship_requests')[0].style.display='none';" class="darkblue" style="color: rgb(0, 134, 255);"> hide </a>
+		        </div>	
+                <div class="clear"></div>
+		</form>
+                <br>
+	
+
+							
+		<form method="post" action="/kwip/add/" id="kwip_form" name="kwip_form" style="padding: 5px;"> 
+			<div id="kwip_area">
+				<textarea class="textarea" name="kwip_box" id="kwip_box" onclick="if (this.value =='Enter your current status here') {this.value=''}" onblur="if (this.value==''){this.value='Enter your current status here'}" value="Enter your current status here">Enter your current status here</textarea>
+					<div class="textarea_bolt">
+						<input class="button float_left" name="btnkwip" onclick="submit_form();" id="btnkwip" value="post»" type="button">
+					</div>
+			</div>		
+		  </form>
+	
+  
+
+
+		 <br>
+
+<div class="">
+
+                
+
+                
+                    <b>Recent kwips</b> |
+                
+                
+                    <b><a href="http://www.kwippy.com/kaa/active/">Recently active kwips<img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif"></a></b>
+                
+
+    
+        
+                
+                        
+                
+        
+    
+
+
+</div>
+
+<div class="clear"></div>
+		
+
+
+
+
+
+
+
+
+
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        is flying with burning wings
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298338">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298338)" href="javascript:void(0);" id="favorite_298338"><img id="fav_image_298338" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/rane/?src=kwipspage_uname">
+                              
+					rane 
+				</a>
+			    				 
+				from GTalk
+				(0 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/rane/kwips/2008/oct/08/062653/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/rane/kwips/2008/oct/08/062653/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/rane/kwips/2008/oct/08/062653/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/24.follower" alt="rane">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        Som Gruber skriver: "What is wrong with Microsoft? Who authorizes this crap?" <a target="_blank" href="http://ping.fm/EKfkP">http://ping.fm/EKfkP</a>
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298330">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298330)" href="javascript:void(0);" id="favorite_298330"><img id="fav_image_298330" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/claes/?src=kwipspage_uname">
+                              
+					claes 
+				</a>
+			    				 
+				from Ping.fm
+				(7 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/claes/kwips/2008/oct/08/062035/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/claes/kwips/2008/oct/08/062035/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/claes/kwips/2008/oct/08/062035/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/1242.follower" alt="claes">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        Hello Friends! Have a great day :)
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298327">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298327)" href="javascript:void(0);" id="favorite_298327"><img id="fav_image_298327" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/shreyam/?src=kwipspage_uname">
+                              
+					shreyam 
+				</a>
+			    				 
+				from Ping.fm
+				(8 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/shreyam/kwips/2008/oct/08/061910/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/shreyam/kwips/2008/oct/08/061910/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/shreyam/kwips/2008/oct/08/061910/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/2385.follower" alt="shreyam">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        cambia lo sfondo del desktop con <a target="_blank" href="http://ping.fm/RQyl0">http://ping.fm/RQyl0</a>
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298318">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298318)" href="javascript:void(0);" id="favorite_298318"><img id="fav_image_298318" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/mackley/?src=kwipspage_uname">
+                              
+					mackley 
+				</a>
+			    				 
+				from Ping.fm
+				(13 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/mackley/kwips/2008/oct/08/061352/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/mackley/kwips/2008/oct/08/061352/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/mackley/kwips/2008/oct/08/061352/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/1186.follower" alt="mackley">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        arrived at work. don't ask how... man, i'm soooo tired.... wtf is up with me?
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298311">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298311)" href="javascript:void(0);" id="favorite_298311"><img id="fav_image_298311" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/robin/?src=kwipspage_uname">
+                              
+					robin 
+				</a>
+			    				 
+				from Ping.fm
+				(17 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/robin/kwips/2008/oct/08/061039/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/robin/kwips/2008/oct/08/061039/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/robin/kwips/2008/oct/08/061039/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/596.follower" alt="robin">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        sleep.
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298303">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298303)" href="javascript:void(0);" id="favorite_298303"><img id="fav_image_298303" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/horsedreamer/?src=kwipspage_uname">
+                              
+					horsedreamer 
+				</a>
+			    				 
+				from Ping.fm
+				(19 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/horsedreamer/kwips/2008/oct/08/060810/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/horsedreamer/kwips/2008/oct/08/060810/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/horsedreamer/kwips/2008/oct/08/060810/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/1561.follower" alt="horsedreamer">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+Too tired to do a post-debate wrap-up tonight. Something about McCain
+always makes me so tired... good night! <div class="post_otherusers" id="298288">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298288)" href="javascript:void(0);" id="favorite_298288"><img id="fav_image_298288" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/thepete/?src=kwipspage_uname">
+                              
+					thepete 
+				</a>
+			    				 
+				from Ping.fm
+				(27 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/thepete/kwips/2008/oct/08/060045/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/thepete/kwips/2008/oct/08/060045/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/thepete/kwips/2008/oct/08/060045/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/2961.follower" alt="thepete">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        Still sleeps to dream
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298272">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298272)" href="javascript:void(0);" id="favorite_298272"><img id="fav_image_298272" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/sash/?src=kwipspage_uname">
+                              
+					sash 
+				</a>
+			    				 
+				from Ping.fm
+				(34 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/sash/kwips/2008/oct/08/055343/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/sash/kwips/2008/oct/08/055343/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/sash/kwips/2008/oct/08/055343/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/dude.jpeg" alt="sash">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        thinks tumblr SEO is dead set terrible, however it best suits my blogging traits
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298269">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298269)" href="javascript:void(0);" id="favorite_298269"><img id="fav_image_298269" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/armsultan/?src=kwipspage_uname">
+                              
+					armsultan 
+				</a>
+			    				 
+				from Ping.fm
+				(35 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/armsultan/kwips/2008/oct/08/055223/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/armsultan/kwips/2008/oct/08/055223/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/armsultan/kwips/2008/oct/08/055223/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/4236.follower" alt="armsultan">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        si sveglia e prepara la colazione, lasciando dormire il Ghiro Rosa
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298259">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298259)" href="javascript:void(0);" id="favorite_298259"><img id="fav_image_298259" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/mackley/?src=kwipspage_uname">
+                              
+					mackley 
+				</a>
+			    				 
+				from Ping.fm
+				(39 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/mackley/kwips/2008/oct/08/054823/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/mackley/kwips/2008/oct/08/054823/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/mackley/kwips/2008/oct/08/054823/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/1186.follower" alt="mackley">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        got that 'after gym' appeite, i could murk a steak or quad stack burger something...
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298257">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298257)" href="javascript:void(0);" id="favorite_298257"><img id="fav_image_298257" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/armsultan/?src=kwipspage_uname">
+                              
+					armsultan 
+				</a>
+			    				 
+				from Ping.fm
+				(40 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/armsultan/kwips/2008/oct/08/054726/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/armsultan/kwips/2008/oct/08/054726/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/armsultan/kwips/2008/oct/08/054726/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/4236.follower" alt="armsultan">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+Sometime tomorrow, I think I'm going to create a YouAre userbar
+generator. Just because YouAre is so cool and needs one. =] <div class="post_otherusers" id="298255">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298255)" href="javascript:void(0);" id="favorite_298255"><img id="fav_image_298255" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/MaxEvans/?src=kwipspage_uname">
+                              
+					MaxEvans 
+				</a>
+			    				 
+				from Ping.fm
+				(41 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/MaxEvans/kwips/2008/oct/08/054615/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/MaxEvans/kwips/2008/oct/08/054615/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/MaxEvans/kwips/2008/oct/08/054615/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/1338.follower" alt="MaxEvans">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        ..........virakti
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298246">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298246)" href="javascript:void(0);" id="favorite_298246"><img id="fav_image_298246" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/kaushalchandak/?src=kwipspage_uname">
+                              
+					kaushalchandak 
+				</a>
+			    				 
+				from GTalk
+				(46 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/kaushalchandak/kwips/2008/oct/08/054110/?src=kwipspage_clink">
+                                  
+				     
+				        
+					    6 Comments 
+					
+				    </a> 
+			        
+			    
+			    |<img class="link_icon" title="active in last 24 hours" src="kaa%27s%20kwips%20page_files/talking.gif">
+                                
+                                    |<a href="http://www.kwippy.com/kaushalchandak/kwips/2008/oct/08/054110/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/kaushalchandak/kwips/2008/oct/08/054110/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/111.follower" alt="kaushalchandak">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        Matt says dang-- where did the past six weeks go?
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298222">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298222)" href="javascript:void(0);" id="favorite_298222"><img id="fav_image_298222" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/mdodd/?src=kwipspage_uname">
+                              
+					mdodd 
+				</a>
+			    				 
+				from Ping.fm
+				(1 hr, 3 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/mdodd/kwips/2008/oct/08/052405/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/mdodd/kwips/2008/oct/08/052405/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/mdodd/kwips/2008/oct/08/052405/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/1234.follower" alt="mdodd">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        History of US Govt's bailouts: <a target="_blank" href="http://snipper.in/3p">http://snipper.in/3p</a>
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298206">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298206)" href="javascript:void(0);" id="favorite_298206"><img id="fav_image_298206" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/mayank/?src=kwipspage_uname">
+                              
+					mayank 
+				</a>
+			    				 
+				from Web
+				(1 hr, 11 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/mayank/kwips/2008/oct/08/051651/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/mayank/kwips/2008/oct/08/051651/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/mayank/kwips/2008/oct/08/051651/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/3.follower" alt="mayank">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        Tell me your dreams,
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298197">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298197)" href="javascript:void(0);" id="favorite_298197"><img id="fav_image_298197" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/sidsaxena/?src=kwipspage_uname">
+                              
+					sidsaxena 
+				</a>
+			    				 
+				from GTalk
+				(1 hr, 12 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/sidsaxena/kwips/2008/oct/08/051502/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/sidsaxena/kwips/2008/oct/08/051502/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/sidsaxena/kwips/2008/oct/08/051502/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/unisex.jpeg" alt="sidsaxena">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        Tell me your dreamsz...
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298196">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298196)" href="javascript:void(0);" id="favorite_298196"><img id="fav_image_298196" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/sidsaxena/?src=kwipspage_uname">
+                              
+					sidsaxena 
+				</a>
+			    				 
+				from GTalk
+				(1 hr, 12 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/sidsaxena/kwips/2008/oct/08/051453/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/sidsaxena/kwips/2008/oct/08/051453/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/sidsaxena/kwips/2008/oct/08/051453/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/unisex.jpeg" alt="sidsaxena">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        is idle~! aka done with all currently assigned tasks (for today? I hope not :P)
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298171">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298171)" href="javascript:void(0);" id="favorite_298171"><img id="fav_image_298171" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/goofydelinquent/?src=kwipspage_uname">
+                              
+					goofydelinquent 
+				</a>
+			    				 
+				from Ping.fm
+				(1 hr, 23 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/goofydelinquent/kwips/2008/oct/08/050414/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/goofydelinquent/kwips/2008/oct/08/050414/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/goofydelinquent/kwips/2008/oct/08/050414/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/1193.follower" alt="goofydelinquent">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+Senses Fail's new album is their best so far, and a combination of
+their emo/screamo roots and a STRONG Atreyu influence. <div class="post_otherusers" id="298167">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298167)" href="javascript:void(0);" id="favorite_298167"><img id="fav_image_298167" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/br_/?src=kwipspage_uname">
+                              
+					br_ 
+				</a>
+			    				 
+				from Ping.fm
+				(1 hr, 25 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/br_/kwips/2008/oct/08/050252/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/br_/kwips/2008/oct/08/050252/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/br_/kwips/2008/oct/08/050252/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/1372.follower" alt="br_">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	    
+	        <div class="kwip">
+                    
+            
+		        <div style="padding-left: 10px; float: left; width: 492px; padding-right: 8px;">
+			    
+				
+                                        
+                                        HeadAche...
+                                        
+				
+			    			
+		 
+		        
+			    <div class="post_otherusers" id="298166">
+		        
+		        					   
+			    <a align="left" onclick="favorite_unfavorite(298166)" href="javascript:void(0);" id="favorite_298166"><img id="fav_image_298166" class="go_icon" title="bookmark this kwip" src="kaa%27s%20kwips%20page_files/favorite.gif"></a> |							
+							 
+				by 
+			    
+                              
+                                <a href="http://www.kwippy.com/mayank/?src=kwipspage_uname">
+                              
+					mayank 
+				</a>
+			    				 
+				from GTalk
+				(1 hr, 25 mins ago)
+				
+			    
+				
+                                  
+                                    <a href="http://www.kwippy.com/mayank/kwips/2008/oct/08/050158/?src=kwipspage_clink">
+                                  
+				    go comment
+                                        <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif">
+                                    </a> 
+			        
+			    
+			    
+                                
+                                    |<a href="http://www.kwippy.com/mayank/kwips/2008/oct/08/050158/?src=kwipspage_plink">
+                                
+                                    <img class="link_icon" title="permalink" src="kaa%27s%20kwips%20page_files/icon_link.gif">
+                                </a> 
+				
+
+		            </div>
+		        </div>
+                        			
+  			    <div class="float_left" style="padding-top: 5px;">
+                                <a href="http://www.kwippy.com/mayank/kwips/2008/oct/08/050158/?src=kwipspage_img">
+                                    <img class="user_pic_16" src="kaa%27s%20kwips%20page_files/3.follower" alt="mayank">
+                                </a>
+                            </div>
+                        
+
+		</div>
+
+
+		<div class="clear border_top"></div>
+		
+
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+		<div class="clear"></div>
+	
+    
+	
+	
+		<div class="" align="center"><br>
+		
+	
+			Embed code* <input id="watch-url-field" class="email-video-url" type="text" readonly="" onmousedown="urchinTracker('/Events/VideoWatch/CopyPasteLinkFromMoreInfo');" onclick="javascript:document.urlForm.video_link.focus();document.urlForm.video_link.select();" value="http://in.youtube.com/watch?v=Z0ERgZ9dztk" name="video_link"/><br>
+			<div class="small_text">*html code for widget </div><div class="clear"></div>
+			<img src="kaa%27s%20kwips%20page_files/rss_icon.png" alt="feeds icon"><a href="http://www.kwippy.com/api/network/kaa.rss">RSS</a>|<a href="http://www.kwippy.com/api/network/kaa.atom">Atom</a>
+		
+			
+
+	
+		</div>
+
+			<br style="clear: both;">
+			<div> 
+	
+		<span class="float_left link_prev"> 
+			<a href="http://www.kwippy.com/kaa/?page=1&amp;count=20">←older</a>
+		</span>
+	
+	
+</div>
+	
+			
+		</div>
+		</div>
+		<div class="right_col">
+			<div class="logo_box" style="background-color: rgb(255, 255, 255);">
+				<a href="http://www.kwippy.com/" title="home"><img src="kaa%27s%20kwips%20page_files/logo.gif"></a>
+				<br>
+				
+					
+		<form method="get" action="/search/" id="search_form" name="search_form"> 
+			<div class="search_box">
+			    <input name="query" class="textbox grey_text" onclick="if (this.value =='people or kwips') {this.value=''}" onblur="if (this.value==''){this.value='people or kwips'}" value="people or kwips" id="query">
+				<input value="Search" class="button" type="submit">
+			</div>	
+	    </form>
+
+
+
+	<br>	
+			</div>
+			<div class="clear"></div>
+			<div class="networkarea">
+				<div>
+							
+                                            
+
+<div class="user_profile"> <!-- profile div-->
+	<img src="kaa%27s%20kwips%20page_files/4.main" alt="kaa">
+	
+		<div class="clear"></div>
+			<b><a href="http://www.kwippy.com/kaa/">kaa</a></b>
+			
+			  <br>  
+			  <div><b>
+				  
+					27 
+				  
+
+				  
+				   
+					|
+				   
+				   Male 
+				   
+				  
+				  
+    			   
+				     |
+				   
+				  delhi, India
+				   <!--need to add link for more -->
+				</b>  <br>
+     			  				  
+				   I am the design guy in kwippy. also handle some other odds and ends. <br>i write about design/usability here: <a target="_blank" href="http://kicksandkisses.com/" rel="nofollow">http://kicksandkisses.com</a> . <br>if you have any design feedback, or notice something clunky somewhere do mail me at <a target="_blank" href="mailto:kaa@kwippy.com">kaa@kwippy.com</a><br>
+				  
+                         
+			  <a href="http://www.kwippy.com/kaa/profile/"><b>View full profile</b></a><span class="new"><b><img src="kaa%27s%20kwips%20page_files/new.gif"></b></span><b></b><br>
+                         
+		  	  </div> 
+			  
+				<div><div style="float: left; width: 75px;"><img src="kaa%27s%20kwips%20page_files/kwip.gif"></div><div style="float: left;"><a href="http://www.kwippy.com/kaa/kwips/">406 kwips</a></div></div>
+				<div class="clear"></div>
+				<div><div style="float: left; width: 75px;"><img src="kaa%27s%20kwips%20page_files/talking.gif"></div><div style="float: left;"> <a href="http://www.kwippy.com/kaa/comments/">518 comments</a></div></div>
+				<div class="clear"></div>
+			  
+
+			
+</div>
+					
+				
+
+					    
+
+	<div class="clear"></div>
+	<div><div style="float: left; width: 75px;"><img src="kaa%27s%20kwips%20page_files/unfavorite.gif"> </div><div style="float: left;"><a href="http://www.kwippy.com/kaa/favoritekwips/" title="kaa's bookmarks">  28 bookmarks</a></div></div>
+	<div class="clear border_top"></div>
+    <br>
+
+
+
+
+                                            
+    
+    
+
+				
+                                              
+	
+			
+		
+	
+
+
+                                            
+	
+	    <br>
+		<form method="post" action="/invite_user/" id="user_invite_form" name="user_invite_form"> 
+			<div class="invite_box">
+				<h4><b>Invite friends</b> </h4>
+				<input name="e-mail" class="textbox grey_text" onclick="if (this.value =='enter an email id') {this.value=''}" onblur="if (this.value==''){this.value='enter an email id'}" value="enter an email id" id="e-mail">				<input value="invite" class="button" onclick="submit_invite_form();" type="button">		</div>	
+	    </form>
+		<a href="http://www.kwippy.com/kaa/dashboard/invite/"><b><img src="kaa%27s%20kwips%20page_files/invite.gif" class="link_icon">find &amp; invite twitter friends</b></a><br>
+	
+
+
+
+
+                                            <br>
+                                            
+
+	<div class="following_box">
+		<h4>
+			<a href="http://www.kwippy.com/kaa/friends/">friends(18):</a>
+		</h4>
+		
+		  
+			<div class="following_user">
+			  <a title="robin" href="http://www.kwippy.com/robin/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/596.following" alt="robin">
+			  </a>				
+			  <div class="following_name">
+				<a title="robin" href="http://www.kwippy.com/robin/"> robin </a>
+			  </div>
+			</div>
+		  
+			<div class="following_user">
+			  <a title="samrat1004" href="http://www.kwippy.com/samrat1004/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/221.following" alt="samrat1004">
+			  </a>				
+			  <div class="following_name">
+				<a title="samrat1004" href="http://www.kwippy.com/samrat1004/"> samrat1004 </a>
+			  </div>
+			</div>
+		  
+			<div class="following_user">
+			  <a title="Majento" href="http://www.kwippy.com/Majento/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/845.following" alt="Majento">
+			  </a>				
+			  <div class="following_name">
+				<a title="Majento" href="http://www.kwippy.com/Majento/"> Majento </a>
+			  </div>
+			</div>
+		  
+			<div class="following_user">
+			  <a title="mayank" href="http://www.kwippy.com/mayank/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/3.following" alt="mayank">
+			  </a>				
+			  <div class="following_name">
+				<a title="mayank" href="http://www.kwippy.com/mayank/"> mayank </a>
+			  </div>
+			</div>
+		  
+			<div class="following_user">
+			  <a title="xhan" href="http://www.kwippy.com/xhan/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/5141.following" alt="xhan">
+			  </a>				
+			  <div class="following_name">
+				<a title="xhan" href="http://www.kwippy.com/xhan/"> xhan </a>
+			  </div>
+			</div>
+		  
+			<div class="following_user">
+			  <a title="barcelonaphotoblog" href="http://www.kwippy.com/barcelonaphotoblog/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/5879.following" alt="barcelonaphotoblog">
+			  </a>				
+			  <div class="following_name">
+				<a title="barcelonaphotoblog" href="http://www.kwippy.com/barcelonaphotoblog/"> barcelonaphotoblog </a>
+			  </div>
+			</div>
+		  
+			<div class="following_user">
+			  <a title="chupchap" href="http://www.kwippy.com/chupchap/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/552.following" alt="chupchap">
+			  </a>				
+			  <div class="following_name">
+				<a title="chupchap" href="http://www.kwippy.com/chupchap/"> chupchap </a>
+			  </div>
+			</div>
+		  
+			<div class="following_user">
+			  <a title="seedoflife" href="http://www.kwippy.com/seedoflife/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1633.following" alt="seedoflife">
+			  </a>				
+			  <div class="following_name">
+				<a title="seedoflife" href="http://www.kwippy.com/seedoflife/"> seedoflife </a>
+			  </div>
+			</div>
+		  
+			<div class="following_user">
+			  <a title="Zrinka" href="http://www.kwippy.com/Zrinka/"> 
+					<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/4933.following" alt="Zrinka">
+			  </a>				
+			  <div class="following_name">
+				<a title="Zrinka" href="http://www.kwippy.com/Zrinka/"> Zrinka </a>
+			  </div>
+			</div>
+		  
+		
+		<div class="clear"></div>
+
+			<span class="float_right">
+			  <a href="http://www.kwippy.com/kaa/friends/">see all <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif"></a>
+			</span>
+	</div>
+
+                                            <div class="clear"></div>
+                                            
+
+<div class="following_box">
+	<h4>
+		<a href="http://www.kwippy.com/kaa/following/">following(332):</a>
+	</h4>
+	
+	  
+		<div class="following_user">
+		  <a title="thepete" href="http://www.kwippy.com/thepete/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/2961.following" alt="thepete">
+		  </a>				
+		  <div class="following_name">
+			<a title="thepete" href="http://www.kwippy.com/thepete/"> thepete </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="mdodd" href="http://www.kwippy.com/mdodd/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1234.following" alt="mdodd">
+		  </a>				
+		  <div class="following_name">
+			<a title="mdodd" href="http://www.kwippy.com/mdodd/"> mdodd </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="goofydelinquent" href="http://www.kwippy.com/goofydelinquent/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1193.following" alt="goofydelinquent">
+		  </a>				
+		  <div class="following_name">
+			<a title="goofydelinquent" href="http://www.kwippy.com/goofydelinquent/"> goofydelinquent </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="br_" href="http://www.kwippy.com/br_/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1372.following" alt="br_">
+		  </a>				
+		  <div class="following_name">
+			<a title="br_" href="http://www.kwippy.com/br_/"> br_ </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="shadowfoot" href="http://www.kwippy.com/shadowfoot/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1624.following" alt="shadowfoot">
+		  </a>				
+		  <div class="following_name">
+			<a title="shadowfoot" href="http://www.kwippy.com/shadowfoot/"> shadowfoot </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="marcfalk" href="http://www.kwippy.com/marcfalk/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1533.following" alt="marcfalk">
+		  </a>				
+		  <div class="following_name">
+			<a title="marcfalk" href="http://www.kwippy.com/marcfalk/"> marcfalk </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="MichelleMcCormack" href="http://www.kwippy.com/MichelleMcCormack/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1614.following" alt="MichelleMcCormack">
+		  </a>				
+		  <div class="following_name">
+			<a title="MichelleMcCormack" href="http://www.kwippy.com/MichelleMcCormack/"> MichelleMcCormack </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="cappella" href="http://www.kwippy.com/cappella/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1879.following" alt="cappella">
+		  </a>				
+		  <div class="following_name">
+			<a title="cappella" href="http://www.kwippy.com/cappella/"> cappella </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="justintevya" href="http://www.kwippy.com/justintevya/"> 
+				<img class="user_pic_following" src="kaa%27s%20kwips%20page_files/1673.following" alt="justintevya">
+		  </a>				
+		  <div class="following_name">
+			<a title="justintevya" href="http://www.kwippy.com/justintevya/"> justintevya </a>
+		  </div>
+		</div>
+	  
+	
+
+	<div class="clear"></div>
+
+		<span class="float_right">
+		  <a href="http://www.kwippy.com/kaa/following/">see all <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif"></a>
+		</span>
+</div>
+
+
+                                            <div class="clear"></div>
+                                            
+<div class="followers_box">
+	<h4>
+		<a href="http://www.kwippy.com/kaa/followers/">followers
+		
+			(582)
+			
+		:
+		</a>
+	</h4>
+	
+		
+			<div class="follower_user">
+				<a title="comotized" href="http://www.kwippy.com/comotized/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/5800.follower" alt="comotized">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="thepete" href="http://www.kwippy.com/thepete/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/2961.follower" alt="thepete">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="krishanu" href="http://www.kwippy.com/krishanu/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/223.follower" alt="krishanu">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="mdodd" href="http://www.kwippy.com/mdodd/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/1234.follower" alt="mdodd">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="3PAULX" href="http://www.kwippy.com/3PAULX/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/5850.follower" alt="3PAULX">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="goofydelinquent" href="http://www.kwippy.com/goofydelinquent/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/1193.follower" alt="goofydelinquent">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="yesbwana" href="http://www.kwippy.com/yesbwana/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/dude.jpeg" alt="yesbwana">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="br_" href="http://www.kwippy.com/br_/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/1372.follower" alt="br_">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="AainaA" href="http://www.kwippy.com/AainaA/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/5210.follower" alt="AainaA">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="shadowfoot" href="http://www.kwippy.com/shadowfoot/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/1624.follower" alt="shadowfoot">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="qiuhailong" href="http://www.kwippy.com/qiuhailong/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/dude.jpeg" alt="qiuhailong">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="tjclark" href="http://www.kwippy.com/tjclark/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/6346.follower" alt="tjclark">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="marcfalk" href="http://www.kwippy.com/marcfalk/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/1533.follower" alt="marcfalk">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="MichelleMcCormack" href="http://www.kwippy.com/MichelleMcCormack/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/1614.follower" alt="MichelleMcCormack">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="cassidydr" href="http://www.kwippy.com/cassidydr/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/6031.follower" alt="cassidydr">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="angelashupe" href="http://www.kwippy.com/angelashupe/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/5732.follower" alt="angelashupe">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="justintevya" href="http://www.kwippy.com/justintevya/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/1673.follower" alt="justintevya">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="OctaneZ" href="http://www.kwippy.com/OctaneZ/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/unisex.jpeg" alt="OctaneZ">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="rafaelmontano" href="http://www.kwippy.com/rafaelmontano/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/unisex.jpeg" alt="rafaelmontano">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="arieshu" href="http://www.kwippy.com/arieshu/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/5648.follower" alt="arieshu">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="danlang" href="http://www.kwippy.com/danlang/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/unisex.jpeg" alt="danlang">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="boxman" href="http://www.kwippy.com/boxman/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/6201.follower" alt="boxman">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="tutivillus" href="http://www.kwippy.com/tutivillus/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/1686.follower" alt="tutivillus">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="taylormarek" href="http://www.kwippy.com/taylormarek/"> 
+					<img class="user_pic_follower" src="kaa%27s%20kwips%20page_files/6126.follower" alt="taylormarek">
+				</a>
+			</div>
+		
+	
+	<div class="clear"></div>
+	
+	<span class="float_right">
+		<a href="http://www.kwippy.com/kaa/followers/">see all <img class="go_icon" src="kaa%27s%20kwips%20page_files/arrow_right.gif"></a>
+	</span>
+	
+</div>	
+
+
+                                        
+				</div>
+			</div>
+		</div>
+	 </div>
+	 
+	 <br class="clear">
+	  <br>
+	<div class="footer">
+	<ul>
+                <li><a href="http://www.kwippy.com/home/about/" class="onwhite">about</a></li>
+		<li><a href="http://blog.kwippy.com/" class="onwhite">blog</a></li>
+		<li><a href="http://www.kwippy.com/help/" class="onwhite">help</a></li>
+		 <li><a href="http://www.kwippy.com/home/extras" class="onwhite">extras</a></li>
+		<li><a href="http://www.kwippy.com/home/contactus/" class="onwhite">contact us</a></li>
+		<li><a href="http://www.kwippy.com/home/tos/" class="onwhite">TOS</a></li>
+	</ul>
+	<div>©2008 kwippy</div>
+</div>  
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="kaa%27s%20kwips%20page_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3116342-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+    </div>
+</body></html>

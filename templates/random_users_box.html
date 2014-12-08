@@ -1,0 +1,21 @@
+<br>
+{% load show_followee_pic %}
+<div class="following_box">
+	{% if random_users %}
+    	 <h4>
+		Random Beautiful Users:
+ 	</h4>
+	  {%for user in random_users %}
+		<div class="following_user">
+		  <a title="{{ user.username }}" href="/{{ user.username }}/profile/?src=everyone_bful"> 
+				<img class="user_pic_following" src="{% show_followee_pic user.id %}" alt="{{user.username}}" />
+		  </a>				
+		  <div class="following_name">
+			<a title="{{ user.username }}" href="/{{ user.username }}//profile/?src=everyone_bful"> {{user.username }} </a>
+		  </div>
+		</div>
+	  {% endfor %}
+	{% endif %}
+
+	<div class="clear"></div>		
+</div>

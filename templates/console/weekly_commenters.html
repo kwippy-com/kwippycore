@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				Metrics to track kwippy's weekly unique commenters.<br/><br/>	
+				No of unique users who commented in the past 1 week = {{last_week_commenters}}<br>
+                                No of unique users who commented in the past 2nd week = {{last_2week_commenters}}<br>
+                                No of unique users who commented in the past 3rd week = {{last_3week_commenters}}<br>
+                                No of unique users who commented in the past 4th week = {{last_4week_commenters}}<br>
+                                No of unique users who commented in the past 5th week = {{last_5week_commenters}}<br>
+                                No of unique users who commented in the past 6th week = {{last_6week_commenters}}<br>
+
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

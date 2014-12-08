@@ -1,0 +1,97 @@
+<html>
+  <head>
+  <style>
+  
+  </style>
+    <title>
+
+	</title>		 
+	<link rel="stylesheet" type="text/css"    href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+
+		
+		
+		 <div class="content"><!--this has all the content-->
+			<h1> Admin page</h1>
+			
+			<div class="left_col">
+				<a href="">generate invite</a><br/>
+				<a href="">link2</a>
+			</div>
+
+			<div class="right_col">
+			<h2><b> user status </b></h2>
+			<table border="1">
+				<tbody>
+					<tr>
+						<td align="center"> inviter </td> 
+						<td align="center">email</td>
+						<td align="center">signup</td>
+						<td align="center">username</td>
+						<td align="center">activated</td>
+						<td align="center">IM buddy added</td>
+						<td align="center">integrated</td>
+					</tr>
+					<tr>
+						<td align="center">kaa </td> 
+						<td align="center">prashant@yahoo.com</td>
+						<td align="center">yes</td>
+						<td align="center">prash_cool</td>
+						<td align="center">yes</td>
+						<td align="center">yes</td>
+						<td align="center">no</td>   <!-- if the code has not been sent-->
+						<!--if a column is irrelevant - just leave it blank. yes for success and no for not success -->
+					</tr>
+				</tbody>
+
+			</table>
+
+			</div>
+
+
+			
+
+		 </div><!-- content ends-->
+		 
+		 
+
+		 
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+
+		 </div><!--footer ends-->
+
+</div>	 <!--wrap ends-->
+
+
+
+
+
+
+
+
+
+
+</body>
+ <script language="javascript">
+			intval=window.setInterval("hide_flash()",1000)
+			 function hide_flash(){
+				document.getElementById('flash').style.display="none"
+				window.clearInterval(intval)
+			 }
+			 
+			 function show_hide_reply(qp_id){	 	
+				reply_id = 'reply_' + qp_id
+				if (document.getElementById(reply_id).style.display=="none"){
+					document.getElementById(reply_id).style.display="block";
+				}
+				else{
+					document.getElementById(reply_id).style.display="none";
+				}
+			 }
+</script>
+</html>

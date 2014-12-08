@@ -1,0 +1,11 @@
+subject: #_2 has invited their friends into your conversation
+body_text:  hi #_1,\n\n #_2 so likes your kwip, "#_3" that they have invited their friends into the conversation.  \n\n you can also invite your friends into the conversation.
+body_html:  hi #_1,<br /> <a href="ssiittee/#_4">#_2</a> so likes your kwip, "#_3" that they have invited their friends into the conversation  <br /><br /> you can also invite your friends into the conversation.
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('notify_invite_to_talk','#_2 has invited their friends into your conversation',
+'hi #_1,\n\n #_2 so likes your kwip, ssiittee/#_3 , that they have invited their friends into the conversation. you can also invite your friends into the conversation.\n\n you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/',
+'hi #_1,<br /> <a href="ssiittee/#_2">#_2</a> so likes your kwip, ssiittee/#_3 , that they have invited their friends into the conversation. you can also invite your friends into the conversation.<br/> <br/>you can choose not to get these messages by changing the options here - <a href="ssiittee/dashboard/account/">here</a>')
+
+insert into kwippy_im(type,body) values('notify_invite_to_talk','#_2 has invited their friends into your conversation  ssiittee/#_3 .you can also invite your friends into the conversation.');
+

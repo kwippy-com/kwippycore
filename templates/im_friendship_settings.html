@@ -1,0 +1,21 @@
+<form method="post" action="/im_notification/{{login}}/	">				    
+	IM notifications 
+	{% if dict.is_following_on_im %}
+		<input id="" type="radio" checked="" value="1" name="im_notifications"/>
+		<label for="">on</label>
+		<input id="" type="radio" value="0" name="im_notifications"/>
+		<label for="">off</label> <br />
+	{%else%}
+		<input id="" type="radio"  value="1" name="im_notifications"/>
+		<label for="">on</label>
+		<input id="" type="radio" checked="" value="0" name="im_notifications"/>
+		<label for="">off</label> <br />
+	{%endif%}			
+	{% include "friend_settings.html" %}
+	<span class="float_right">
+		<a href="javascript:void(0);" onClick="show_hide_followsettings_box('hide');" class="darkblue" style="color:#0086FF;"/> or cancel </a>
+	</span>
+	<input type="submit" value="save" class="button float_right" />
+	<div class="clear" ></div>
+</form>
+	

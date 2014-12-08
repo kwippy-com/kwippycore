@@ -1,0 +1,22 @@
+<ul class="nav">
+{% block nav_import %}
+	<li >
+		<a id="li_import"  href="javascript:void(0);"> Import</a>
+		<span id="import" style="display:none">Import</span>
+	</li>
+{%endblock%}
+	<li>
+	  <a id="li_profile" href="/{{user}}/dashboard/profile" >Profile</a>
+	  <span id="profile" style="display:none">Profile</span>
+	</li>
+	<li>
+		<a id="li_accounts" href="javascript:void(0);" >Account settings </a>
+		<span id="accounts" style="display:none">Account Settings</span>
+	</li>
+<!--		
+	<li>
+		<a  id="li_kwips_page" href="javascript:void(0);" onClick="show_fieldset('kwips_page','accounts,profile,import');" >Kwips Page</a>
+		<span id="kwips_page" style="display:none">Kwips Page</span>
+	</li>
+-->
+</ul>

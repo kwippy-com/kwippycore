@@ -1,0 +1,386 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
+	
+		<title>kaa's dashboard</title>
+		<link rel="stylesheet" type="text/css" href="kaa%27s%20dashboard_files/dashboard.css">
+		<link rel="stylesheet" type="text/css" href="kaa%27s%20dashboard_files/global.css">
+		<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon">		
+               <script type="text/javascript" src="kaa%27s%20dashboard_files/dashboard.js"></script>  
+		<script type="text/javascript" src="kaa%27s%20dashboard_files/jquery-1.js"></script> 
+	<title>kaa's dashboard</title></head><body><body"> 
+		<div class="wrap">
+			<div class="clear"></div>
+			
+			
+			<span id="flash" style="display: block;" class="flash_message wrap">   
+				
+			</span>
+			<div class="content">
+				<div class="header">
+					<div class="header_logo">
+						<a href="http://www.kwippy.com/" title="home"><img src="kaa%27s%20dashboard_files/logo.gif"></a><br>
+						<a href="http://www.kwippy.com/logout">Logout</a>
+					</div>
+					<h1>Hi  <a href="http://www.kwippy.com/kaa/">kaa</a> | dashboard</h1>
+					<ul class="nav">
+						
+							<li>
+								<a id="li_import" href="http://www.kwippy.com/kaa/dashboard/import/"> Import</a>
+								<span id="import" style="display: none;">Import</span>
+							</li>	
+						
+						
+							<li>
+								  <a id="li_profile" href="http://www.kwippy.com/kaa/dashboard/profile/">Profile</a>
+								  <span id="profile" style="display: none;">Profile</span>
+							</li>
+						
+						
+	<li>
+		<span id="accounts" style="display: block;">Account</span>
+	</li>
+
+						
+							<li>
+								<a id="li_kwips_page" href="http://www.kwippy.com/kaa/dashboard/kwips_page/">Kwips Page </a>
+								<span id="kwips_page" style="display: none;">Kwips Page </span>
+							</li>
+							
+						
+						
+							<li>
+								<a id="li_invite" href="http://www.kwippy.com/kaa/dashboard/invite/">Find &amp; Invite Friends <span class="new"><img src="kaa%27s%20dashboard_files/new.gif"></span></a>
+								<span id="invite" style="display: none;">Find &amp; Invite Friends <span class="new"><img src="kaa%27s%20dashboard_files/new.gif"></span>
+							</span></li>
+							<li>
+							</li>
+						
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<!-- Content -->
+				<div id="content">			
+					
+	<br>
+	<fieldset id="field_accounts" class="dashboard_fieldset" style="display: block;">
+			<legend>Account</legend>
+				
+						<ul>
+				<li class="im_names" style="display: block;">
+				 <span id="GTalk_text" style="display: block;">Settings</span>
+				</li> 
+				<li class="im_names" style="display: block;">
+				  <a href="http://www.kwippy.com/kaa/dashboard/account/stats" id="Stats">Stats</a>
+				</li>
+			</ul>
+			<div class="clear"></div>
+
+			<div id="account_settings" style="display: block;">
+				<form action="" method="post" id="accounts">
+					<p>
+	<b>message settings</b>
+</p>
+	<table>
+		<tbody><tr>
+			<td></td>
+			<td>email</td>
+			<td>&nbsp;&nbsp;instant messenger</td>
+		</tr>
+		<tr>
+			<td>new comment</td>
+			<td align="center">
+			   
+					<input id="comment_mail" name="comment_mail" type="checkbox">
+				
+			</td>
+			<td align="center">
+			   
+					<input checked="checked" name="comment_im" id="comment_im" type="checkbox"> 
+				
+			</td>
+		</tr>
+		<tr>
+			<td>new follower</td>
+			<td align="center">
+				 
+					<input name="follower_mail" id="follower_mail" type="checkbox">
+				
+			</td>
+			<td align="center">
+			   
+					<input checked="checked" name="follower_im" id="follower_im" type="checkbox"> 
+				
+			</td>
+		</tr>
+		<tr>
+			<td>private message</td>
+			<td align="center">
+				
+					<input name="pm_mail" id="pm_mail" type="checkbox">
+				
+
+
+			</td>
+			<td align="center">
+				
+					<input checked="checked" name="pm_im" id="pm_im" type="checkbox">
+				
+
+			</td>
+		</tr>		
+		<tr>
+			<td>buzz</td>
+			<td align="center">
+				
+					<input name="buzz_mail" id="buzz_mail" type="checkbox">
+				
+			</td>
+			<td align="center">
+				
+					<input checked="checked" name="buzz_im" type="checkbox">
+				
+			</td>
+		</tr>
+                <tr>
+                        <td>favorite notification</td>
+                        <td align="center">
+                                
+                                        <input name="fav_mail" id="fav_mail" type="checkbox">
+                                
+                        </td>
+                        <td align="center">
+                                
+                                        <input checked="checked" name="fav_im" type="checkbox">
+                                
+                        </td>
+                </tr>
+                <tr>
+                        <td>friend request</td>
+                        <td align="center">
+                                
+                                        <input name="fr_req_mail" id="fr_req_mail" type="checkbox">
+                                
+                        </td>
+                        <td align="center">
+                                
+                                        <input checked="checked" name="fr_req_im" type="checkbox">
+                                
+                        </td>
+                </tr>
+                <tr>
+                        <td>conversation invite</td>
+                        <td align="center">
+                                
+                                        <input name="conv_inv_mail" id="conv_inv_mail" type="checkbox">
+                                
+                        </td>
+                        <td align="center">
+                                
+                                        <input checked="checked" name="conv_inv_im" type="checkbox">
+                                
+                        </td>
+                </tr>
+		<tr>
+			<td>kwips</td>
+			<td align="center">
+			</td>
+			<td align="center">
+				
+					<input checked="checked" name="kwips_im" type="checkbox">
+				
+			</td>
+		</tr>
+
+	</tbody></table>
+					<hr>
+					<p><b>Secondary Email ID</b></p>
+					<input type="textbox"> <input type="button" value="add">
+
+									
+					<hr>
+					<p><b>Default behavior</b></p>
+									
+										<input id="notification_on" value="1" checked="checked" name="def_im_notification" type="radio">
+										<label for="notification_on">On</label>
+										<input id="notification_off" value="0" name="def_im_notification" type="radio">
+										<label for="notification_off">Off</label> | IM notification for kwips on following a user 
+									
+					<hr>
+					<p><b>to change your password</b></p>
+					
+					<p class="aligned wide">
+						<label for="id_old_password">Old password:</label><input id="id_old_password" class="vPasswordField required" name="old_password" size="30" value="" maxlength="30" type="password">
+					</p>
+					
+					<p class="aligned wide">
+						<label for="id_new_password1">New password:</label><input id="id_new_password1" class="vPasswordField required" name="new_password1" size="30" value="" maxlength="30" type="password">
+					</p>
+					
+					<p class="aligned wide">
+						<label for="id_new_password2">Confirm password:</label><input id="id_new_password2" class="vPasswordField required" name="new_password2" size="30" value="" maxlength="30" type="password">
+					</p>
+					<hr>
+					<p><input class="button" value="Save all changes" type="submit"></p>
+				</form>
+				<hr>
+				<div><br><br><a onclick="return confirm('do you really want to delete your account? this is non reversible');" href="http://www.kwippy.com/kaa/dashboard/acc_delete" style="color: rgb(255, 182, 143);">delete kwippy account (kaa)</a>
+			</div>
+			<div id="user_stats" style="display: none;">
+				
+        
+	
+		
+		<link rel="stylesheet" type="text/css" href="kaa%27s%20dashboard_files/dashboard.css">
+		<link rel="stylesheet" type="text/css" href="kaa%27s%20dashboard_files/global.css">
+		<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon">		
+               <script type="text/javascript" src="kaa%27s%20dashboard_files/dashboard.js"></script>  
+		<script type="text/javascript" src="kaa%27s%20dashboard_files/jquery-1.js"></script> 
+	<body"> 
+		<div class="wrap">
+			<div class="clear"></div>
+			
+			
+			<span id="flash" style="display: block;" class="flash_message wrap">   
+				
+			</span>
+			<div class="content">
+				<div class="header">
+					<div class="header_logo">
+						<a href="http://www.kwippy.com/" title="home"><img src="kaa%27s%20dashboard_files/logo.gif"></a><br>
+						<a href="http://www.kwippy.com/logout">Logout</a>
+					</div>
+					<h1>Hi  <a href="http://www.kwippy.com/kaa/">kaa</a> | dashboard</h1>
+					<ul class="nav">
+						
+							<li>
+								<a id="li_import" href="http://www.kwippy.com/kaa/dashboard/import/"> Import</a>
+								<span id="import" style="display: none;">Import</span>
+							</li>	
+						
+						
+							<li>
+								  <a id="li_profile" href="http://www.kwippy.com/kaa/dashboard/profile/">Profile</a>
+								  <span id="profile" style="display: none;">Profile</span>
+							</li>
+						
+						
+	<li>
+		<span id="account" style="display: block;">Account</span>
+	</li>	
+
+						
+							<li>
+								<a id="li_kwips_page" href="http://www.kwippy.com/kaa/dashboard/kwips_page/">Kwips Page </a>
+								<span id="kwips_page" style="display: none;">Kwips Page </span>
+							</li>
+							
+						
+						
+							<li>
+								<a id="li_invite" href="http://www.kwippy.com/kaa/dashboard/invite/">Find &amp; Invite Friends <span class="new"><img src="kaa%27s%20dashboard_files/new.gif"></span></a>
+								<span id="invite" style="display: none;">Find &amp; Invite Friends <span class="new"><img src="kaa%27s%20dashboard_files/new.gif"></span>
+							</span></li>
+							<li>
+							</li>
+						
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<!-- Content -->
+				<div id="content">			
+					
+	<br>
+	<fieldset id="field_accounts" class="dashboard_fieldset" style="display: block;">
+			<legend>Account</legend>
+			<ul>
+				<li class="im_names" style="display: block;">
+				 <a href="http://www.kwippy.com/kaa/dashboard/account/" id="Settings" style="display: block;">Settings</a>
+				</li> 
+				<li class="im_names" style="display: block;">
+				  <span id="Stats_text" style="display: block;">Stats</span>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			
+	<br>Total Comments: , Total Kwips: , Total Bookmarks: <br><br>
+	Kwips/day: ,Comments/day: <br><br>
+        Comments on your kwips: , Bookmarks on your kwips: 
+	  <br> <br>Percentage of kwips from various sources<br>
+	  <img src="kaa%27s%20dashboard_files/chart.png" alt="Various sources">
+          <br>How often do you quip (last 30 days)<br>
+          <img src="kaa%27s%20dashboard_files/chart_002.png" alt="Last 30 days">
+          
+	
+	</fieldset>
+
+					<br class="clear">
+				</div>
+				<!-- END Content -->
+
+				<!--footer begins--> 	
+				<div class="footer">
+	<ul>
+                <li><a href="http://www.kwippy.com/home/about/" class="onwhite">about</a></li>
+		<li><a href="http://blog.kwippy.com/" class="onwhite">blog</a></li>
+		<li><a href="http://www.kwippy.com/help/" class="onwhite">help</a></li>
+		 <li><a href="http://www.kwippy.com/home/extras" class="onwhite">extras</a></li>
+		<li><a href="http://www.kwippy.com/home/contactus/" class="onwhite">contact us</a></li>
+		<li><a href="http://www.kwippy.com/home/tos/" class="onwhite">TOS</a></li>
+	</ul>
+	<div>©2008 kwippy</div>
+</div>  
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="kaa%27s%20dashboard_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3116342-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+				<!--footer begins--> 	
+	   
+		   </div>
+		</div>
+	</body"></div>
+	</div></fieldset>
+
+					<br class="clear">
+				</div>
+				<!-- END Content -->
+
+				<!--footer begins--> 	
+				<div class="footer">
+	<ul>
+                <li><a href="http://www.kwippy.com/home/about/" class="onwhite">about</a></li>
+		<li><a href="http://blog.kwippy.com/" class="onwhite">blog</a></li>
+		<li><a href="http://www.kwippy.com/help/" class="onwhite">help</a></li>
+		 <li><a href="http://www.kwippy.com/home/extras" class="onwhite">extras</a></li>
+		<li><a href="http://www.kwippy.com/home/contactus/" class="onwhite">contact us</a></li>
+		<li><a href="http://www.kwippy.com/home/tos/" class="onwhite">TOS</a></li>
+	</ul>
+	<div>©2008 kwippy</div>
+</div>  
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="kaa%27s%20dashboard_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3116342-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+				<!--footer begins--> 	
+	   
+		   </div>
+		</div>
+	</body"></body></html>

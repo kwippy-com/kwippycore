@@ -1,0 +1,14 @@
+subject: #_2 has accepted your friend request :)
+body_text:  hi #_1,\n\n go hangout :D - #_2 has accepted your friend request. \n\n you can choose not to get these messages. you can change the options here - #_10
+body_html:  hi #_1,<br /> go hangout :D - <a href="ssiittee/#_2">#_2</a> has accepted your friend request.  <br><br> you can choose not to get these messages. you can change the options <a href="#_10">here</a>
+
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('friend_request_accepted','#_2 has accepted your friend request :)',
+'hi #_1,\n\n #_2 has accepted your friend request. \n\n go hangout :D .\n\n you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/',
+'hi #_1,<br /> <a href="ssiittee/#_2">#_2</a>  has accepted your friend request.<br> go hangout :D .<br> you can choose not to get these messages by changing the options here - <a href="ssiittee/dashboard/account/">here</a>')
+
+insert into kwippy_im(type,body) values('friend_request_accepted','<a href="ssiittee/#_2">#_2</a> has accepted your friend request .go hangout :D');
+
+
+

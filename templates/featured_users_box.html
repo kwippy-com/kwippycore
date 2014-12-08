@@ -1,0 +1,21 @@
+{% if featured_users %}
+<br>
+{% load show_followee_pic %}
+<div class="following_box">
+	<h4>
+		Featured Users:
+	</h4>
+	
+	  {%for feat_user in featured_users %}
+		<div class="following_user">
+		  <a title="{{ feat_user.user.username }}" href="/{{ feat_user.user.username }}/profile/?src=everyone_feat"> 
+				<img class="user_pic_following" src="{% show_followee_pic feat_user.user.id %}" alt="{{feat_user.user.username}}" />
+		  </a>				
+		  <div class="following_name">
+			<a title="{{ feat_user.user.username }}" href="/{{ feat_user.user.username }}//profile/?src=everyone_feat"> {{feat_user.user.username }} </a>
+		  </div>
+		</div>
+	  {% endfor %}
+	<div class="clear"></div>		
+</div>
+{% endif %}

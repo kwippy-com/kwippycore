@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<form id="roll_pendinginvites" name="roll_pendinginvites" action="/console/roll_pendinginvites/" method="post">
+				<input class="button" id="send_betainvites" type="submit" value="roll out pending invites"><br><br>
+			</form>
+			<div class="right_col">
+				Id, email,submited_at, email_sent
+				{% for bemail in emails %}
+					<p>{{bemail.id}}) {{bemail.email}}  ({{bemail.created_at|timesince}} ago) {{bemail.sent_email_status}}</p>
+				{% endfor %}
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

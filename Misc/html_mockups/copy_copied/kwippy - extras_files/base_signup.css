@@ -1,0 +1,158 @@
+/*
+Copyright (c) 2007, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.4.1
+*/
+html{color:#000;background:f9f9f9;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}legend{color:#000;}
+		
+		
+		body {
+		text-align:center;
+		margin:0 auto;
+		padding-top:30px;
+		font-family:lucida sans, verdana,sans-serif;
+		}
+
+		.wrap {
+		text-align:center;
+		margin:0 auto;
+		width:800px;
+		min-height:400px;
+		font-size:110%;
+		min-height:500px;
+		}
+				
+		.header{
+		padding-bottom:35px;
+		}
+
+		.content{font-size:90%;text-align:left;}
+
+		.textbox{
+		border-top:1px solid grey;
+		border-left:1px solid grey;
+		height:25px;
+		width:400px;
+		font-family:lucida sans, verdana;
+		font-size:15px;
+		}
+
+		.textarea{
+		width:100%;
+		border-top:1px solid grey;
+		border-left:1px solid grey;
+		height:150px;
+		font-family:lucida sans, verdana;
+		font-size:15px;
+		}
+		.button {
+		background-color:#bbd26c;
+		border:1px solid grey;
+		text-align:center;
+		height:25px;
+		}
+		.text_left {
+		text-align:left;
+		}
+
+		.text_center{
+		text-align:center;
+		}
+		
+		.text_12 {
+		font-size:12px;
+		}
+		a.onwhite {
+		color:#0086FF;
+		text-decoration:none;
+		}
+		a.onwhite:hover {
+		text-decoration:underline;
+		}
+
+		a.link_normal {border:1px solid #a7d4ff;text-decoration:none;color:black;}
+		a.link_normal:hover{background-color:#a7d4ff;}
+
+
+		.menu {padding-top:15px;}
+				/*
+		.menu ul{margin:0;padding:0;width:auto;height:auto; }
+		
+		.menu li{list-style:none;
+				 border:1px solid #a7d4ff;
+				 display:inline;
+				 padding:3px 7px 3px 7px;
+				 text-align:center;
+				 margin:auto 2px;	}
+		.menu li a{text-decoration:none;color:black;}
+
+		.menu span.selected{background-color:#a7d4ff;}
+		.menu span:hover{background-color:#a7d4ff;}
+		*/
+		.menu li{list-style:none;
+				 display:inline;
+				 text-align:center;
+				}
+		.link a{ border:1px solid #a7d4ff;
+				 padding:3px 7px 3px 7px;
+				 text-align:center;
+				color:black;
+				text-decoration:none;
+				margin:0 4px;
+				}
+		.link a:hover{
+		background-color:#a7d4ff;
+		padding:3px 7px 3px 7px;
+		text-align:center;
+		}
+
+		li.selected {background-color:#a7d4ff;
+		padding:4px 7px 4px 7px;
+		text-align:center;
+		}
+		
+		.footer{
+		font-size:12px;
+		}
+		.footer ul {
+		height:auto;
+		margin:0pt;
+		padding:0pt;
+		width:auto;
+		}
+		.footer li{
+		display:inline;
+		list-style-image:none;
+		list-style-position:outside;
+		list-style-type:none;
+		padding:3px 7px;
+		text-align:center;
+		}
+        
+		h1 {font-size:24px;}
+
+		h2 {font-size:18px;margin-bottom:20px;*margin-bottom:10px; border-bottom:1px solid grey;}
+
+		.form {
+		margin:0 auto;
+		}
+
+		.flash_message{
+		background-color:#FFF4BF;
+		}
+		.float_left{
+		float:left;
+		}
+		.float_right{
+		float:right;
+		}
+
+		.clear{
+		clear:both;
+		height:1px;
+		overflow:hidden;
+		}	
+		.feedback{text-align:left;float:left;padding-left:16px;font-size:13px;height:16px;width:370px;}		
+		.positive_feedback{float:left;width:400px;background:transparent url(../images/icons/accept.gif) no-repeat scroll right;}	
+		.negative_feedback{float:left;width:400px;background:transparent url(../images/icons/cancel.gif) no-repeat scroll right;}

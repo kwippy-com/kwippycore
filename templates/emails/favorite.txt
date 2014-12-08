@@ -1,0 +1,6 @@
+insert into kwippy_email(type,subject,body_text,body_html)
+values('favorite_kwip','#_2 has favorited your kwip',
+'hi #_1, \n\n #_2 has bookmarked your kwip ssiittee/#_3 \n\n you can go view #_2\'s profile here: ssiittee/#_2  :). \n\n keep rocking, \n\n kwippy team.\n\n you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/',
+'hi #_1, <br /><br /> #_2 has bookmarked your <a href="ssiittee/#_3" alt="your kwip url">kwip</a>. you can go view #_2\'s profile <a href="ssiittee/#_2" alt="#_2\'s profile page">here</a>.<br> keep rocking, <br> kwippy team. <br><br> you can choose not to get these messages by changing the options here - <a href="ssiittee/dashboard/account/">here</a>')
+
+insert into kwippy_im(type,body) values('favorite',' #_2 has bookmarked your kwip:<br>"ssiittee/#_3"<br><br>you can go view #_2\'s profile here:<br> ssiittee/#_2');

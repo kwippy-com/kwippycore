@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+ 	{%load format_username%}
+        {% load format_date_time %}
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+				{% include "console/admin_menu.html" %}
+				<div>
+				        Topper Kwips.<br/><br/>
+					1) Comments<br>
+					 &nbsp text  &nbsp;&nbsp;&nbsp;&nbsp; comment_count &nbsp;&nbsp;&nbsp;&nbsp; kwip <br/><br/>
+									{%for quip in most_commented_quips%}
+		`                              {{ quip.formated}} &nbsp;&nbsp;&nbsp;&nbsp;  
+                                               {{quip.comment_count}}<a href="/{% formattime quip.id%}/"> {% formattime quip.id%} </a> <br/><br/>
+									{%endfor%}			
+			2) Favorites<br>
+					 &nbsp user  &nbsp;&nbsp;&nbsp;&nbsp; favorite_count &nbsp;&nbsp;&nbsp;&nbsp; kwip <br/><br/>
+									{%for item,key in most_favorited_quips%}   
+                                                                               {{item}}, <a href="/{% formattime key%}/"> {% formattime key%} </a> <br/><br/>
+									{%endfor%}
+            			
+				</div>
+
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

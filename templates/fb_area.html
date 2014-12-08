@@ -1,0 +1,29 @@
+{% load comments %}
+{% load format_url %}
+{% load format_date_time %}
+{% load show_quip_provider %}
+{% load format_quipper_displayname%}
+
+{% if quips %}
+	{% for quip in quips %}
+	     <div class="kwip">				   
+			{{quip.text}}
+		</div>
+    	 {% ifequal quip.user request.user %}
+			  <div class="post_byuser">
+		 {% else%}
+			  <div class="post_otherusers">
+		 {%endifequal%}
+				 by 
+				 {%if quip.user %}
+					<a href="/{{quip.user.username}}/"> {% formatdisplayname quip.user.id %} </a>
+				 {%else%}
+					anonymous....
+				 {%endif%}
+		      </div>
+
+
+	{% endfor %}
+{% else %}
+	<p>No quips are available.</p>
+{% endif %}	

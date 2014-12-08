@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>Tracking Age Distribution<br><br>
+                        <b>Total People who've filled YOB :{{total}}</b><br>
+	                Users Aged < 13              : {{born_after_95}}<br>
+                        Users Age bw 13 and 23       : {{born_between_85_95}}<br>
+                        Users Age bw 23 and 33       : {{born_between_75_85}}<br>
+                        Users Age bw 33 and 43       : {{born_between_65_75}}<br>
+                        Users Age bw 43 and 53       : {{born_between_55_65}}<br>
+                        Users Age bw 53 and 63       : {{born_between_45_55}}<br>
+                        Users Aged btw 63 above 73   : {{born_between_35_45}}<br>
+                        Users Aged btw 73 above 83   : {{born_between_25_35}}<br>
+			</div><br><br>
+                        <div>                           
+                            &nbsp; YOB &nbsp;&nbsp;&nbsp;&nbsp; no of users<br/><br/> 
+                            {%for item,key in age_dist%}
+    `                              {{key}} &nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+                            {%endfor%}
+                        </div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

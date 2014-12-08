@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div class="right_col">
+				<h1>cache status</h1>
+                                <ul>
+                                <li>memory usage:
+                                    {{ stats.bytes|filesizeformat }}
+                                <li>keys in cache:
+                                    {{ stats.curr_items }} of {{ stats.total_items }}
+                                <li>cache hits:
+                                    {{ stats.get_hits }} of {{ stats.cmd_get }}:
+                                    <b>{{ hit_rate }}%</b>
+                                <li>cache traffic:
+                                    {{ stats.bytes_read|filesizeformat }} in,
+                                    {{ stats.bytes_written|filesizeformat }} out
+                                <li>uptime: {{ stats.uptime }}
+                                </ul>
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

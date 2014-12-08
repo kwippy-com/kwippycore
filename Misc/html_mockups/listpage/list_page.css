@@ -1,0 +1,98 @@
+html{background-color:#dddddd;}
+
+body {
+font: 83% lucida sans, verdana, sans-serif;
+line-height: 1.4;
+color:#333;
+background-repeat:repeat-x ;
+text-align:center;
+}
+
+.float_right{
+float:right;
+}
+
+.float_left{
+float:left;
+}
+
+.grey_text{
+color:grey;
+}
+
+.wrap{
+display:block;
+}
+
+a {
+color:#a7d4ff;
+text-decoration:none;
+}
+a:hover {
+text-decoration:underline;
+}
+
+.col2 a {
+color:#0086FF;
+text-decoration:none;
+}
+
+.col2 a:hover{
+text-decoration:underline;
+}
+
+.right_links{
+color:#333;
+font-size:12px;}
+
+
+
+.content {
+margin:0pt auto;
+padding-top:2em;
+text-align:left;
+width:860px;
+background-color:white;
+display:block;
+
+}
+
+.col2 {
+float:right;
+padding:10px auto 2em 0pt;
+width:270px;
+text-align:center;
+background-color:#fff;
+
+}
+
+h1 {
+font-size:20px;
+padding-bottom:30px 
+padding-left:7px;
+}
+
+.h2 {
+color:#fff;
+font-size:20px;
+padding-bottom:10px;
+}
+
+
+
+
+.prev_link, .next_link{
+background-color:black;
+padding-right:5px;
+padding-left:5px;
+
+}
+
+
+.user_pic_following {
+border:1px solid #0086FF;
+}
+
+.user_pic_follower {
+border:1px solid #0086FF;
+}

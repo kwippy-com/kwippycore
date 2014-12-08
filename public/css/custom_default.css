@@ -1,0 +1,113 @@
+
+.kwip {
+font-size:13px;	
+padding: 10px;
+margin:5px auto 0 ;
+overflow:hidden;
+width:97%px;
+text-align:justify;
+}
+.kwip a{
+color:#0086FF;
+text-decoration:none;
+}
+.kwip a:hover,.change_follow_setting a:hover,a:hover.darkblue {
+text-decoration:underline;
+}
+.kwipsarea {
+padding:20px 5px 0 5px ;
+background-color:#fff;
+text-align:left;
+}
+.post_byuser{
+font-size:11px;
+line-height:1.6;
+padding-left:0px;
+padding-bottom:13px;
+text-align:left;
+/*background-image:url(/images/bubble_0.gif);*/
+background-repeat:no-repeat;
+color:#9f9f9f;
+}
+
+.textarea_bolt{
+padding-right:35px;
+text-align:right;
+/*background-image:url(/images/bubble_1.gif);*/
+background-repeat:no-repeat;
+background-position:top right;
+padding-bottom:16px;
+color:#9F9F9F;
+}
+
+.post_otherusers{
+padding-right:10px;
+padding-bottom:13px;
+text-align:right;
+/*background-image:url(/images/bubble_1.gif);*/
+background-repeat:no-repeat;
+background-position:top right;
+color:#9f9f9f;
+font-size:11px;
+line-height:1.6;
+}
+.post_byuser a,.post_otherusers a, .follow_userlink a,.prev_link a, .next_link a,.textarea_bolt a,.manage a, .buzz_kwips a{
+color:#0086FF;
+}
+.post_byuser a:hover,.post_otherusers a:hover, .follow_userlink a:hover,.prev_link a:hover, .next_link a:hover,.textarea_bolt a:hover,.manage a:hover, .buzz_kwips a:hover{
+color:#0086FF;
+text-decoration:underline;
+}
+
+a.unselected{
+padding:3px 4px 1px 4px;
+color:black;
+background-color:#a7d4ff;
+text-decoration:none;
+
+}
+a.unselected:hover{
+padding:3px 4px 1px 4px;
+color:#0086FF;
+background-color:#fff;
+/*border:1px solid #a7d4ff;*/
+text-decoration:none;
+}
+
+a.selected{
+background-color:#fff;
+padding:3px 4px 2px 4px;
+color:#0086FF;
+}	
+a.selected:hover{
+color:#0086FF;
+text-decoration:underline;
+padding:3px 4px 2px 4px;
+}
+
+/*for kwips buzz*/
+.buzz_kwips {
+padding-top:8px;
+}
+
+.comment_area h3{
+font-weight:bold;
+font-size:14px;
+}
+
+.user_pic_16{
+vertical-align:middle;
+border:1px solid #A7D4FF;
+}
+.link_prev, .link_next{
+padding-right:5px;
+padding-left:5px;
+font-weight:bold;
+background-color:#fff;
+}
+.border_top{
+border-top:1px dotted #9f9f9f;
+height:1px;}
+.highlight{
+background-color:#FF8A00;
+}

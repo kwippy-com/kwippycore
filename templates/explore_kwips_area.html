@@ -1,0 +1,65 @@
+{% load comments %}
+{% load format_url %}
+{% load show_follower_pic %}
+{% load format_date_time %}
+{% load show_quip_provider %}
+{% load format_quipper_displayname%}
+
+{% if quips %}
+	{% for quip in quips %}
+	   {% get_comment_count for kwippy.quip quip.id as comment_count %}
+	     <div class="kwip">				   
+			   {% formaturl quip.id %}  						
+		 </div>
+		 {% ifequal quip.account.user.username login %}
+			  <div class="post_byuser">
+		 {% else%}
+			  <div class="post_otherusers">
+		 {%endifequal%}
+				 {% if user.is_authenticated %}
+					   {% if user.is_superuser %}
+							<a href="/kwip/favourite/{{quip.id}}" align="left">fav it!!</a> |
+							<a href="/kwip/unfavourite/{{quip.id}}" align="left">unfav it!!</a> |
+					   {%endif%}
+				 {% endif %}	
+				 
+				 by 
+				 {%if quip.account.user %}
+					<a title="/{{quip.account.user.username}}/" href="/{{quip.account.user.username}}/"> <img class="user_pic_follower" src="{% show_follower_pic quip.account.user.id %}" /> </a>
+				 {%else%}
+					anonymous....
+				 {%endif%}
+
+				 
+				 from {% displayprovider quip.id %}
+				
+				({{quip.created_at|timesince}} ago)
+				
+				{%if quip.account.user and quip.account.user.username %}
+					{% if not is_single %}
+					<a href="/{% formattime quip.id%}/">
+						 {% ifequal comment_count 0 %}go reply<img class="go_icon" src="/images/icons/arrow_right.gif" />{%else%} 
+						   {% ifequal comment_count 1 %}
+								 1 Reply
+							{% else %}
+								 {{ comment_count }} Replies
+							{% endifequal %}
+						 {% endifequal%}</a> 
+					{% endif %}
+				{% endif %}
+								
+				| <a href="/{% formattime quip.id%}/"> <img class="link_icon" title="permalink" src="/images/icons/icon_link.gif" /></a> 
+
+					{% ifequal login quip.account.user.username %}
+						  {% ifequal user.username login %}
+							 | <a href="/kwip/delete/{{quip.id}}" onClick="return confirm('Are you sure you wanna send this kwip to gallows? Mind you there are no rebirths here :>');">
+									 delete
+								</a> 
+						  {%endifequal%}
+					{%endifequal%}
+		      </div>
+				{% include "comment_area.html" %}
+	{% endfor %}
+{% else %}
+	<p>No quips are available.</p>
+{% endif %}	

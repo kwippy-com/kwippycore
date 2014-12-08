@@ -1,0 +1,24 @@
+{% extends "signup/base_unloggeduser.html" %}
+
+{% block title %}
+    kwippy - signup 
+{% endblock %}
+
+ {% block header_signup %}
+	 <li class="selected"><a href="/signup/">Signup</a></li>
+ {% endblock %}
+
+{% block content %}
+<br>
+<br>
+	<div class="content text_center" >
+		<form method="post" action=".">
+			<table class="form">
+				{{ form }}
+			</table>
+			<br>
+			<br>
+        <input type="submit" value="Submit" class="button" />
+			</form>
+	</div>
+{% endblock %}

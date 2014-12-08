@@ -1,0 +1,46 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block nav_page_settings %}
+	<li>
+		  <a id="li_profile" style="display:none" href="/{{user}}/dashboard/kwips_page" >Kwips Page</a>
+		  <span id="profile" style="display:block">Kwips Page</span>
+	</li>
+{%endblock%}
+
+{% block content %}	
+	<br>	
+	<fieldset id="field_profile" class="dashboard_fieldset" style="display:block">
+		<legend>Manage kwips</legend>
+		  <form action="." method="post">
+				<h4>theme</h4>
+                                <input type="radio"  name="theme_type" 
+                                        {%ifequal selected_theme 0%}
+                                            checked="checked" 
+                                        {%endifequal%}
+                                        value="0">Default</label> <img style="padding-left:5px;padding-top:3px;border:1px solid black;" src="/themes/0.png" width="100" height="20"><br>
+				{%for t in theme_list%}
+                                        <label><input type="radio"  name="theme_type" 
+                                        {%ifequal t.id selected_theme%}
+                                            checked="checked" 
+                                        {%endifequal%}
+                                        value="{{t.id}}">{{t.name}}</label> <img style="padding-left:5px;padding-top:3px;border:1px solid black;" src="/themes/{{t.id}}.png" width="100" height="20"><br>
+                                        
+				{%endfor%}
+				<hr>
+
+			<br />
+			<br />			
+			<div class="float_right" ><input type="submit" class="button" value="save"> </div>
+			<div class="clear"></div>
+		  </form>
+	</fieldset>
+
+{% endblock %}
+
+
+
+
+
+
+
+

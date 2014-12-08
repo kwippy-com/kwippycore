@@ -1,0 +1,44 @@
+{% extends "signup/base_unloggeduser.html" %}
+
+{% block title %}
+    kwippy - login
+{% endblock %}
+
+{% block header_login %}
+	<li class="selected">Login</li>
+{% endblock%}
+
+{% block content %}
+   <span id="flash" style="display:block;" class="flash_message">
+	{{flash}}
+   </span>
+
+	<br/>
+	<div class="content text_center" >
+			<form method="post" action=".">
+			<label for="id_username">e-mail/username<br>
+			<!--<input id="user_title" class="textbox" type="text" />-->
+			{{ form.email }}
+			</label>
+			<br>
+			<label for="id_password">password
+			<br>
+			{{ form.password }}
+			</label>
+                        <br><br>
+                        <label for="id_Remember">
+                        {{ form.Remember }}
+                       remember me </label>
+                        <br><br>
+			{% if form.errors %}
+<p class="flash_message"> <img src="/images/icons/cancel.gif" /> Your email/username and password didn't match. Please try again.</p>
+{% endif %}
+			<br><br>
+			<input type="submit" value="enter &raquo;" class="button" / /><br>
+			<input type="hidden" name="next" value="{{ next }}" />
+<!--			<input type="hidden" name="referer" value="{{ referer }}" />-->
+<br>
+			<a href="/home/forgotpassword" class="onwhite text_12">Forgot Password?</a>
+			</form>
+		</div>
+{% endblock %}

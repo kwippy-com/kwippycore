@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+ 	{%load format_username%}
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				Metrics to track kwippy's twitter virality.<br/><br/>	
+                                Daywise usage of feature: <br/><br/>
+                                    &nbsp count &nbsp;&nbsp;&nbsp;&nbsp; Date<br/><br/>
+                                {%for item,key in invite_sent%}
+    `                              {{item}} &nbsp;&nbsp;&nbsp;&nbsp; <b>{{key}}</b>  <br/><br/>
+                                {%endfor%}
+
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

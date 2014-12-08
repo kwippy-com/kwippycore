@@ -1,0 +1,68 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block nav_invite %}
+	<li>
+		<a id="li_invite" href="/{{user}}/dashboard/invite/" style="display:none" >Find & Invite Friends </a>
+		<span id="invite" style="display:block">Find & Invite Friends <span class="new"><img src="/images/icons/new.gif"></span>
+	</li>
+{%endblock%}
+
+{% block content %}
+	<br>
+
+<fieldset class="dashboard_fieldset" id="field_invite" style="display: block;">
+	<legend>find & invite followers</legend>
+	<form action="/{{login}}/dashboard/send_invites/" method="post" id="twiter_invites" name="twiter_invites">
+		<div align="center" style="height:300px;overflow:auto;float:left;background-color:#EFFBFF;">			
+			<table id="invite_details" width="100%" name="invite_details">
+			<style>
+				th{
+					background-color:#B9C9FE;
+					
+					}
+			</style>
+			<thead style="border-bottom:1px solid #000;background-color:white;">
+				 <tr name="everyone">
+                                        <th align="right" width="50">
+                                                <input type="checkbox" checked="true" id="check_everyone" name="check_everyone" onClick="toggle_all();" href="javascript();">
+                                        </th>
+                                        <!-- <th align="center" width="160"><b>user pic</b></th> -->
+                                        <th width="150" class=""><b>username</b></th>
+                                </tr>
+
+			</thead> 
+			<tbody>
+				
+				{%for i in data %}
+					<tr id="user_{{i.email}}" name="list">
+						<td class="medium_text" align="right" >
+					        <input type="checkbox" checked="true" id="invite_{{i.email}}" name="invite_{{i.email}}" onClick="uncheck_everyone();" href="javascript();">
+						</td>
+						<!-- <td align="center" >
+							<img width="32"  height="32" src=""></td> -->
+						<td class="medium_text">{{i.name}}</td>
+					</tr>
+				{%endfor%}
+			  </tbody>
+			</table>
+		    
+                </div>
+		<div style="overflow:auto;width:330px;float:left;padding-left:40px;">
+			Personalize your invite:
+			<textarea name="invitation_msg" id="invitation_msg" cols="30" rows="4" href="javascript();" value="Hey, checkout kwippy, its fun." onkeyup="message_check({{characters_allowed}});">Hey, checkout kwippy, its fun.</textarea>
+			<input type="submit" id="invite_btn" class="button" value="invite selected"/><span  id="chars_left">
+				<strong id="chars" style="color: rgb(204, 204, 204);">{{characters_left}}</strong>
+			</span><br><br>
+			<span class="small_font">
+                        <a id="follow_link" href="#" onclick="follow_tweeps('{{user.username}}','{{registered_list}}');return false;">
+                        <img src="/images/icons/plus.gif" alt="follow" title="follow"><span id="follow_tweeps"> follow signed up followers</span></a><br><br>
+			<div class="small_font">p.s. the invites will be sent as Emails or messages within your chosen social network.<br><br>
+			<i>invited</i> means the user has already been invited once. And we don't want to spam the user with more invites.</div>
+			</span>
+		</div>
+        <input type="hidden" value={{sessionid}} id="sessionid" name="sessionid"> 
+        <input type="hidden" value={{service}} id="service" name="service">
+	</form>
+
+</fieldset>
+<br>
+{% endblock %}

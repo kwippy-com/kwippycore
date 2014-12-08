@@ -1,0 +1,10 @@
+subject: #_1 is a follower
+body_text:  hi #_1,\n you have got a fan following :-). \n #_2 so likes what you kwip that #_2's started following your kwips. \n\n hop onto #_2's page(ssiittee/#_2), you may want to follow, #_2.\n\n ciao,\n kwippy \n\n you can choose not to get these messages. you can change the options here - #_10
+body_html:  hi #_1,<br />you have got a fan following :-). <br /> <a href="ssiittee/#_3">#_2</a> so likes what you kwip that  <a href="ssiittee/#_3">#_2</a>'s  started following your kwips. <br /><br /> hop onto  <a href="ssiittee/#_3">#_2</a>'s page, you may want to follow,  <a href="ssiittee/#_3">#_2</a>.<br /><br /> ciao,<br /> kwippy  <br><br> you can choose not to get these messages. you can change the options <a href="#_10">here</a>
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('follower','#_1 is a follower',
+'hi #_2,\\n you have got a fan following :-). \\n #_1 so likes what you kwip that #_1\'s started following your kwips. \\n\\n hop onto #_1\'s page(ssiittee/#_3), you may want to follow, #_1.\\n\\n ciao,\n kwippy \\n\\n you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/ ',
+'hi #_2,<br />you have got a fan following :-). <br /> <a href="ssiittee/#_3">#_1</a> so likes what you kwip that  <a href="ssiittee/#_3">#_1</a>\'s  started following your kwips. <br /><br /> hop onto  <a href="ssiittee/#_3">#_1</a>\'s page, you may want to follow,  <a href="ssiittee/#_3">#_1</a>.<br /><br /> ciao,<br /> kwippy  <br><br> you can choose not to get these messages by changing the options here - <a href="ssiittee/dashboard/account/">here</a>')
+
+insert into kwippy_im(type,body) values('follower','you have got a new follower :)<br>#_1 so likes what you kwip that #_1\'s started following your kwips.<br><br>you could checkout #_1\'s page too:<br>http://kwippy.com/#_3');

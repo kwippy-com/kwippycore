@@ -1,0 +1,13 @@
+{% if friendship_requests %}
+	{%for request in friendship_requests %}
+		<form method="post" action="/friendships/{{request.sender.username}}/" class="change_follow_setting" id="friendship_requests">friendship request from  <a target="_blank" style="color:#0086FF;" href="/{{request.sender.username}}/">{{request.sender.username}}</a>
+			<div class="float_right">
+				<input value="accept" class="button " type="submit" name="accept">or
+                                <input value="decline" class="button " type="submit" name="decline">
+                                <a href="javascript:void(0);" onclick="$('#friendship_requests')[0].style.display='none';" class="darkblue" style="color: rgb(0, 134, 255);"> hide </a>
+		        </div>	
+                <div class="clear"></div>
+		</form>
+                <br>
+	{%endfor%}
+{% endif %}

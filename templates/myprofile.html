@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>	
+    {% load append_revision_number %}
+    {% load show_big_pic %}
+    {% load format_date_time %}
+    {% load snip_to_more %}
+    {% load show_quip_provider %}
+    {% load comment_active%}
+  	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="description" content="{{ dict.user.username}}, {{ dict.user_profile.about_me|truncatewords:20}}" />
+		<meta name="keywords" content="microblogging, microblog, nanoblogging, nanoblog, social network, Gtalk status, Yahoo messenger status, store status, archive status" />
+		<title>{{ login }}'s profile - {{dict.user_profile.about_me|truncatewords:20  }} </title>
+		<link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/reset-fonts-grids.css' %}"> 
+		<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% append_revision_number '/css/user_page.css' %}{% endblock %}" >
+		 <link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/global.css' %}" >
+
+		<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon"/>
+		<script type="text/javascript" src="/js/jquery-1.2.2.js"></script>
+  	</head>
+	<body>
+	{% include "top_bar_login.html" %} 
+		<div class="wrap"> 
+			{% include "feedback_link.html" %}
+			<div class="clear"></div>
+			{% if login %}
+				<div class="content">
+					<div class="left_col">
+						<div class="profile_area">
+							<h2>Personal info</h2>
+							<div class="float_left" style="width:300px;display:block;height:auto;margin:0 auto;background-color:#EFF7FF;text-align:center;padding-top:20px;padding-bottom:20px;"><img src="{%show_big_pic dict.user.id%}">
+
+							</div>
+							<div class="personal_info float_left" style="width:263px;padding:7px;background:white;margin-left:8px;">
+								name -<b> {{dict.user.username}}</b><br>
+								{%if dict.user_profile.age %}age - <b> {{dict.user_profile.age}} </b><br>{%endif%}
+								{%if dict.user_profile.birth_day and dict.user_profile.birth_month%}birth date - <b> {{dict.user_profile.birth_day}} {{dict.profile_for_display.birth_month}}</b><br>{%endif%}
+								gender -<b> {%if dict.user_profile.gender %}{{dict.profile_for_display.gender}}{%endif%}</b><br>
+								{%if dict.user_profile.location_city or dict.user_profile.country%}location - {%if dict.user_profile.location_city %}<b> {{dict.user_profile.location_city}}                                                                            {% if dict.user_profile.country %}
+                                                                                , {{dict.user_profile.country}}
+                                                                            {%endif%}</b>
+											{%else%}
+												<b>{{dict.user_profile.country}}
+											{%endif%}
+                                                                            </b>
+																			<br>{%endif%}
+								date joined - {{dict.user.date_joined|date}}<br>
+                                                          	{%if user.is_superuser %}
+                                                                last login - {{dict.user.last_login|date}}<br>		{%endif%}				
+								<a href="/{{login}}/kwips/"> {{kwip_count}} kwips</a>,
+                                                                <a href="/{{login}}/comments/">{{comment_count}} comments</a>,<br>
+                                                                <a href="/{{login}}/favoritekwips/">{{favorite_count}} bookmarks</a>
+							</div>
+							<div class="clear"></div>
+							<div class="profile_box">
+								<h4>description</h4>{{dict.user_profile.about_me|urlize|linebreaksbr}}
+							</div>
+							<h2>{{login}}'s recent activity</h2>
+							<div class="profile_box">
+								 <h4>Recent kwips</h4>
+								 {% for kwip in recent_activity.kwips %}
+									{% sniptomore kwip.id %} <br>
+                                                                       <span class="grey_text small_text"> from {% displayprovider kwip.id %}
+		                                              		({{kwip.created_at|timesince}} ago)</span> 
+			                                            {%if kwip.account.user and kwip.account.user.username %}
+				                                    {% if not is_single %}
+                                                                    <a href="/{% formattime kwip.id%}/?src=profile">
+                                                                        {% ifequal kwip.comment_count 0 %}comment
+                                                                            <img class="go_icon" src="/images/icons/arrow_right.gif" />
+                                                                        {%else%} 
+                                                                            {% ifequal kwip.comment_count 1 %}
+                                                                                1 Comment
+                                                                            {% else %}
+                                                                                {% ifequal kwip.comment_count -1 %}
+                                                                                    comment
+                                                                                {% else %}
+                                                                                    {{ kwip.comment_count }} comments
+                                                                                {% endifequal %} 
+                                                                            {% endifequal %}
+                                                                        {% endifequal%}</a> 
+			                                                {% endif %}
+			                                            {% endif %}
+			                                            {% comment_active kwip.id %}
+                                                                        <a href="/{% formattime kwip.id%}/"> <img class="link_icon" title="permalink" src="/images/icons/icon_link.gif" /></a> <br/><br/>
+								 {% endfor %}
+							</div>
+							<div class="clear"></div>
+							<div class="profile_box">
+								 <h4 >Recent comments</h4>
+								 {% for comment in recent_activity.comments %}
+									{{comment.comment|linebreaksbr|escape|urlize}}<br>
+									<span class="grey_text small_text">({{comment.submit_date|timesince}} ago)</span>
+									<a href="/{% formattime comment.object_pk%}/">	here
+										<img class="go_icon" src="/images/icons/arrow_right.gif" />
+									</a>
+                                                                <a href="/{% formattime comment.object_pk%}/#{{comment.id}}"> <img class="link_icon" title="permalink" src="/images/icons/icon_link.gif" /></a><br/><br/>
+								 {% endfor %}
+							</div>
+														<div class="clear"></div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="right_col">
+						<div class="logo_box" style="background-color:#fff;">
+							<a href="/" title="home"><img src="/images/logo.gif"/></a>
+							<br />
+							
+							{% include "search_box.html" %}	<br />	
+						</div>
+						<div class="clear"></div>
+						<div class="networkarea">
+							<div>
+								{% include "direct_message_box.html" %}
+					                        <br/>
+					                        {% include "following_box.html" %}
+					                        <div class="clear"></div>
+					                        {% include "follower_box.html" %}
+							</div>
+						</div>
+					</div>
+				</div>
+			{% else%}
+				User doesn't exist...
+			{%endif%}
+			<br class="clear" />	
+			<br/>
+			{% include "footer.html" %}
+		</div>
+	</body>
+</html>

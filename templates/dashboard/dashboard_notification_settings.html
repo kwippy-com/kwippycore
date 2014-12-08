@@ -1,0 +1,145 @@
+<p>
+	<b>message settings</b>
+</p>
+	<table>
+		<tr>
+			<td></td>
+			<td>email</td>
+			<td>&nbsp;&nbsp;instant messenger</td>
+		</tr>
+		<tr>
+			<td>new comment</td>
+			<td  align="center">
+			   {%if comment_mail %}
+					<input type="checkbox" checked="" id="comment_mail" name="comment_mail"/>
+				{%else%}
+					<input type="checkbox" id="comment_mail" name="comment_mail"/>
+				{%endif%}
+			</td>
+			<td  align="center">
+			   {%if comment_im %}
+					<input type="checkbox" checked="" name="comment_im" id="comment_im"/> 
+				{%else%}
+					<input type="checkbox" name="comment_im" id="comment_im"/> 
+				{%endif%}
+			</td>
+		</tr>
+		<tr>
+			<td>new follower</td>
+			<td align="center" >
+				 {%if follower_mail %}
+					<input type="checkbox" checked="" name="follower_mail" id="follower_mail"/>
+				{%else%}
+					<input type="checkbox"	name="follower_mail" id="follower_mail"/>
+				{%endif%}
+			</td>
+			<td  align="center">
+			   {%if follower_im %}
+					<input type="checkbox" checked="" name="follower_im" id="follower_im"/> 
+				{%else%}
+					<input type="checkbox" name="follower_im" id="follower_im"/> 
+				{%endif%}
+			</td>
+		</tr>
+		<tr>
+			<td>private message</td>
+			<td  align="center">
+				{%if pm_mail %}
+					<input type="checkbox" checked="" name="pm_mail" id="pm_mail"/>
+				{%else%}
+					<input type="checkbox" name="pm_mail" id="pm_mail"/>
+				{%endif%}
+
+
+			</td>
+			<td  align="center">
+				{%if pm_im %}
+					<input type="checkbox" checked="" name="pm_im" id="pm_im"/>
+				{%else%}
+					<input type="checkbox" name="pm_im" id="pm_im"/>
+				{%endif%}
+
+			</td>
+		</tr>		
+		<tr>
+			<td>buzz</td>
+			<td  align="center">
+				{%if buzz_mail %}
+					<input type="checkbox" checked="" name="buzz_mail" name="buzz_mail"/>
+				{%else%}
+					<input type="checkbox"  name="buzz_mail" id="buzz_mail"/>
+				{%endif%}
+			</td>
+			<td  align="center">
+				{%if buzz_im %}
+					<input type="checkbox" checked="" name="buzz_im" name="buzz_im"/>
+				{%else%}
+					<input type="checkbox"  name="buzz_im" id="buzz_im"/>
+				{%endif%}
+			</td>
+		</tr>
+                <tr>
+                        <td>favorite notification</td>
+                        <td  align="center">
+                                {%if fav_mail %}
+                                        <input type="checkbox" checked="" name="fav_mail" name="fav_mail"/>
+                                {%else%}
+                                        <input type="checkbox"  name="fav_mail" id="fav_mail"/>
+                                {%endif%}
+                        </td>
+                        <td  align="center">
+                                {%if fav_im %}
+                                        <input type="checkbox" checked="" name="fav_im" name="fav_im"/>
+                                {%else%}
+                                        <input type="checkbox"  name="fav_im" id="fav_im"/>
+                                {%endif%}
+                        </td>
+                </tr>
+                <tr>
+                        <td>friend request</td>
+                        <td  align="center">
+                                {%if fr_req_mail %}
+                                        <input type="checkbox" checked="" name="fr_req_mail" name="fr_req_mail"/>
+                                {%else%}
+                                        <input type="checkbox"  name="fr_req_mail" id="fr_req_mail"/>
+                                {%endif%}
+                        </td>
+                        <td  align="center">
+                                {%if fr_req_im %}
+                                        <input type="checkbox" checked="" name="fr_req_im" name="fr_req_im"/>
+                                {%else%}
+                                        <input type="checkbox"  name="fr_req_im" id="fr_req_im"/>
+                                {%endif%}
+                        </td>
+                </tr>
+                <tr>
+                        <td>conversation invite</td>
+                        <td  align="center">
+                                {%if conv_inv_mail %}
+                                        <input type="checkbox" checked="" name="conv_inv_mail" name="conv_inv_mail"/>
+                                {%else%}
+                                        <input type="checkbox"  name="conv_inv_mail" id="conv_inv_mail"/>
+                                {%endif%}
+                        </td>
+                        <td  align="center">
+                                {%if conv_inv_im %}
+                                        <input type="checkbox" checked="" name="conv_inv_im" name="conv_inv_im"/>
+                                {%else%}
+                                        <input type="checkbox"  name="conv_inv_im" id="conv_inv_im"/>
+                                {%endif%}
+                        </td>
+                </tr>
+		<tr>
+			<td>kwips</td>
+			<td  align="center">
+			</td>
+			<td  align="center">
+				{%if kwips_im %}
+					<input type="checkbox" checked="" name="kwips_im" name="kwips_im"/>
+				{%else%}
+					<input type="checkbox"  name="kwips_im" id="kwips_im"//>
+				{%endif%}
+			</td>
+		</tr>
+
+	</table>

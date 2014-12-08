@@ -1,0 +1,15 @@
+<HTML>
+<head>
+	<TITLE>Registration Form</TITLE>
+</head>
+<BODY>
+	  {% block content %}
+      <form action="." method="post">
+        <table class="form">
+          {{ form }}
+        </table>
+        <input type="submit" value="Submit" />
+      </form>
+      {% endblock %}
+</BODY>
+</HTML>

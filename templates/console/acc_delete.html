@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	{%load format_username%}
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->		 
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<form id="mailer" action="/console/acc_delete/" name="mailer" method="post">
+				<div>
+                                        <input id="username" name="username"></input>
+					<input type="submit" value="delete"></input>
+				</div>
+				</form>
+</div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

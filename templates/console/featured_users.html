@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>
+	Console
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		{% load format_date_time %}
+		 <div class="content"><!--this has all the content-->
+			<h1>Featured Users</h1>
+			{% include "console/admin_menu.html" %}
+			<div class="right_col"><br/><br/>
+			<form id="roll_bdaymails" name="roll_bdaymails" action="/console/feature_new_users/" method="post">
+				<input class="button" id="feature_users" type="submit" value="Feature users"><br><br>
+			</form>
+			<b>showing Featured users</b> <br/><br/>
+			<b>	name(signed_up, last_login)<br/></b>
+				{% for feat_user in featured_users%}
+					<a href="/{{feat_user.user.username}}/">{{feat_user.user.username}}</a>  ({{feat_user.created_at|timesince}} ago) 
+					<br> 
+				{%endfor%}
+			<br/><br/>
+
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

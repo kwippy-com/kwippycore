@@ -1,0 +1,18 @@
+	{% ifequal dict.are_friends  1%}
+		also a friend ?
+		<input id="" type="radio" checked="" value="1" name="are_friends"/>
+		<label for="">on</label>
+		<input id="" type="radio" value="0" name="are_friends"/>
+		<label for="">off</label> <br />
+	{%else%}
+		 {% ifequal dict.are_friends  -1 %}
+			 also a friend ?
+			<input id="" type="radio"  value="1" name="are_friends"/>
+			<label for="">on</label>
+			<input id="" type="radio" checked="" value="0" name="are_friends"/>
+			<label for="">off</label> <br />
+		  {%else%}
+			friend request pending <br />
+			<input type="hidden" name="are_friends" value="2">
+		  {%endifequal%}
+	{%endifequal%}			

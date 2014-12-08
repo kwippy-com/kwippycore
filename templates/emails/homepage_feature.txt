@@ -1,0 +1,4 @@
+insert into kwippy_email(type,subject,body_text,body_html)
+values('homepage_feature','congrats your kwip is on kwippy homepage',
+'hi #_1,\n\n we found your kwip  "ssiittee/#_2" so awesome that we featured it on our homepage. \n\n  you can view it here site (while logged out) \n\n .ciao \n\n kwippy team',
+'hi #_1,<br /> we found your <a href="ssiittee/#_2" alt="kwip page">kwip</a> so awesome that we featured it on our <a href="ssiittee" alt="homepage while logged out">homepage</a> (while logged out). <br /><br />  ciao<br> kwippy team') 

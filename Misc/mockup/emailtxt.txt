@@ -1,0 +1,153 @@
+this has the subject the, text mail and the html. plz look for any typo. the difference between the html and text is <br /> replaced with \n
+the format mayank had given me had # for username. but in some mails there are two usernames. also if it is possible then if the user has entered gender use "his" "her" ..i have put such cases inside the < >
+
+
+
+
+New Comment notification
+**************************
+subject:new comment from <username> (kwippy)
+text - 
+
+hi <username>,\n
+<a>displayname/ifnot_then_username</a> has left a comment on your kwip, "the first 20 charaters ...".\n\n
+
+"the full commment"
+\n\n
+go <a>reply</a>!\n\n
+<font color="gray"> <a>displayname/ifnot_then_username</a> posted the comment at December 4, 2007 1:18 PM\n\n
+
+#-- the unsubscribe text should come only after that thing is coded--- #to unsubscribe from comment notification mails <a>dashboard/#accountsettings</a>
+
+
+******************html
+
+
+hi <username>,<br />
+<a>displayname/ifnot_then_username</a> has left a comment on your kwip, "the first 20 charaters ...".<br /><br />
+
+"the full commment"
+<br /><br />
+go <b><a>reply</a></b>!<br /><br />
+<font color="gray"> <a>displayname/ifnot_then_username</a> posted the comment at December 4, 2007 1:18 PM<br /><br />
+
+#-- the unsubscribe text should come only after that thing is coded--- #to unsubscribe from comment notification mails <a>dashboard/#accountsettings</a>
+
+
+**************************
+beta mail invite
+**************************
+subject: invite for Kwippy (beta)
+
+hey!!\n
+you are one of the chosen few. \n
+:) no kidding, <a>kwippy</a> is in private beta. \n
+what it does:\n\n
+
+	*stores status messages from 7 different Instant Messengers. (Gtalk, AIM, put the list )\n
+	*post from the web browser\n
+	*and use your kwips to a social network so that you can meet friends of your friends.\n
+
+\n
+click <a href="http://staging.kwippy.com/signup/#@$@#$@#">here</a> to signup.\n\n
+
+please help us in testing it out. mail us, chat with us, tell us what you don't like. in fact kick our asses.\n\n
+
+see you there!\n
+kwippy team
+
+
+*****************************html
+
+
+hey!!<br />
+you are one of the chosen few. <br />
+:) no kidding, <a>kwippy</a> is in private beta. <br />
+what it does:<br />
+<ul>
+<li>	stores status messages from 7 different Instant Messengers. (Gtalk, AIM, put the list )</li>
+<li>	post from the web browser</li>
+<li>	and use your kwips to a social network so that you can meet friends of your friends.</li>
+</ul>
+<br />
+click <a href="http://staging.kwippy.com/signup/#@$@#$@#">here</a> to signup.<br /><br />
+
+please help us in testing it out. mail us, chat with us, tell us what you don't like. in fact kick our asses.<br /><br />
+
+See you there!<br />
+kwippy team
+
+
+**************************
+signup activation mail
+**************************
+subjet:kwippy activation
+
+hi <username>, \n
+you are almost there :)\n
+just click this <a>link</a> and start using <a>kwippy</a>.\n\n
+
+see you there!\n
+kwippy team.
+
+******************************html
+
+
+hi <username>, <br />
+you are almost there :)<br />
+just click this <a>link</a> and start using <a>kwippy</a>.<br />
+
+see you there!
+kwippy team.
+
+
+***************************
+follower
+***************************
+subject:<username> is a follower
+hi </username>(display name, if it is not there than url, do this everywhere),\n
+you have got a fan following :-). \n
+<username> so likes what you kwip <if gender than "he has" or "she has" if not then <username>'s > started following your kwips. \n\n
+
+
+hop onto <his her or username>'s page, you may want to follow, <his her or username>.\n\n
+
+ciao,\n
+kwippy 
+
+***************************html
+
+hi </username>(display name, if it is not there than url, do this everywhere),<br />
+
+you have got a fan following :-). <br />
+
+<username> so likes what you kwip <if gender than "he has" or "she has" if not then <username>'s > started following your kwips. <br /><br />
+
+
+hop onto <his her or username>'s page, you may want to follow, <his her or username>.<br /><br />
+
+ciao,<br />
+kwippy 
+
+***************************
+forgot passwd
+***************************
+subject:reset your kwippy password
+
+hi </username>,\n
+
+its ok, everybody forgets passwords :o).\n\n
+
+click <here> and you can reset your password. \n\n
+at  your service,\n
+kwippy 
+
+***************************html
+
+hi </username>,<br />
+
+its ok, everybody forgets passwords :o).<br /><br />
+
+click <here> and you can reset your password. <br />
+at  your service,<br />
+kwippy 

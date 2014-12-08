@@ -1,0 +1,11 @@
+{% load login_logout %}
+<div class="right_links">
+	{% if user.is_authenticated %}
+		{% show_login_logout user.id%}
+	{%else%}
+		<span class="float_right">
+			<a href="/login/">login</a> |
+			<a href="/home/">request an invite</a>
+		</span>
+	{% endif %}
+</div>

@@ -1,0 +1,78 @@
+<html>
+        {% load append_revision_number %}
+	<head>
+		<title>{{ displayname }}'s dashboard</title>
+		<link rel="stylesheet" type="text/css" href="{% block stylesheet %}/css/dashboard.css{% endblock %}" >
+		<link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/global.css' %}" >
+		<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon"/>		
+               <script type="text/javascript" src="{% append_revision_number '/js/dashboard.js' %}"></script>  
+		<script type="text/javascript" src="/js/jquery-1.2.2.js"></script> 
+	</head>
+    <body"> 
+		<div class="wrap">
+			<div class="clear"></div>
+			{%block perm_flash%}
+			{%endblock%}
+			<span id="flash" style="display:block;" class="flash_message wrap">   
+				{{flash}}
+			</span>
+			<div class="content">
+				<div class="header">
+					<div class="header_logo">
+						<a href="/" title="home"><img src="/images/logo.gif" /></a><br />
+						<a href="/logout">Logout</a>
+					</div>
+					<h1>Hi  <a href="/{{user}}/">{{ displayname }}</a> | dashboard</h1>
+					<ul class="nav">
+						{% block nav_import %}
+							<li >
+								<a id="li_import"  href="/{{user}}/dashboard/import/"> Import</a>
+								<span id="import" style="display:none">Import</span>
+							</li>	
+						{%endblock%}
+						{% block nav_profile %}
+							<li>
+								  <a id="li_profile" href="/{{user}}/dashboard/profile/" >Profile</a>
+								  <span id="profile" style="display:none">Profile</span>
+							</li>
+						{%endblock%}
+						{% block nav_account %}
+							<li>
+								<a id="li_accounts" href="/{{user}}/dashboard/account/" >Account</a>
+							</li>
+						{%endblock%}
+						{% block nav_page_settings %}
+							<li>
+								<a id="li_kwips_page" href="/{{user}}/dashboard/kwips_page/" >Kwips Page </a>
+								<span id="kwips_page" style="display:none">Kwips Page </span>
+							</li>
+							
+						{%endblock%}
+						{% block nav_invite %}
+							<li>
+								<a id="li_invite" href="/{{user}}/dashboard/invite/" >Find & Invite Friends <span class="new"><img src="/images/icons/new.gif"></a>
+								<span id="invite" style="display:none">Find & Invite Friends <span class="new"><img src="/images/icons/new.gif"></span>
+							</li>
+							<li></span>
+							</li>
+						{%endblock%}
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<!-- Content -->
+				<div id="content">			
+					{% block content %}
+						{{ content }}
+					{% endblock %}
+					<br class="clear" />
+				</div>
+				<!-- END Content -->
+
+				<!--footer begins--> 	
+				{% include "footer.html" %}
+				<!--footer begins--> 	
+	   
+		   </div>
+		</div>
+	</body>
+</html>

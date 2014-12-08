@@ -1,0 +1,396 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0026)http://www.kwippy.com/kaa/ -->
+<HTML><HEAD><TITLE>kaa's kwips page</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><!--loading all the templatetags needed --><LINK 
+href="golak's kwips page_files/reset-fonts-grids.css.css" type=text/css 
+rel=stylesheet><LINK href="golak's kwips page_files/user_page.css.css" 
+type=text/css rel=stylesheet><LINK href="http://staging.kwippy.com/favicon.ico" 
+rel="shortcut icon">
+<SCRIPT src="golak's kwips page_files/jquery-1.2.2.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="golak's kwips page_files/mypage.js" type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY onload=flashy();>
+<DIV class=wrap><A style="COLOR: black" onclick=show_hide_fb_box(); 
+href="javascript:void(0);"><SPAN class=feedback_link>Feedback</SPAN> </A>
+
+<FORM id=feedback_form action=/feedback/add/ method=post>
+<DIV id=fback style="DISPLAY: none"><TEXTAREA class="textbox grey_text" id=feedback_box onblur="if (this.value==''){this.value='likes/dislikes ..bugs or suggestions if any, all are welcome :)'}" style="WIDTH: 500px; HEIGHT: 50px" onclick="if (this.value =='likes/dislikes ..bugs or suggestions if any, all are welcome :)') {this.value=''}" name=feedback_box value="likes/dislikes ..bugs or suggestions if any, all are welcome :)"></TEXTAREA> 
+
+<BR><INPUT class=button id=submit_fb type=submit value=submit name=submit> <A 
+onclick=show_hide_fb_box(); href="javascript:void(0);">or close 
+</A></DIV></FORM>
+
+
+
+
+<DIV class=clear></DIV><SPAN class=flash_message id=flash_update 
+style="DISPLAY: none"></SPAN><SPAN class=flash_message id=flash_perm 
+style="DISPLAY: block"></SPAN><SPAN class=flash_message id=flash 
+style="DISPLAY: block"></SPAN><!--important maintain indentation-->
+<DIV class=content><!--this has all the content-->
+<DIV class=left_col>
+<DIV class=float_left><SPAN class=float_left><A class=selected 
+href="http://www.kwippy.com/kaa">network kwips</A> <A class=unselected 
+href="http://www.kwippy.com/kaa/kwips">kaa's kwips</A> </SPAN><SPAN 
+class=float_right><A class=unselected 
+href="http://www.kwippy.com/everyone/">everyone's kwips</A> </SPAN></DIV><BR 
+class=clear>
+<DIV class=kwipsarea><!--left col begins-->
+
+<DIV class="follow_userlink"  style="text-align:right;">
+			<a id="unfollow" href="/follow/kalooram?to_do=unfollow">
+				<span class="follow_icon"><img src="/images/icons/minus.gif"/></span><b> unfollow kalooram</b>
+			</a><br />
+			<a href="" />change settings</a>
+</DIV><BR><BR><!--buzz_kwips code -->None <!-- buzz kwips code ends here-->
+
+<DIV class=kwip>Twitterman - <A 
+href="http://money.cnn.com/video/#/video/news/2008/06/10/news.twitterman.06092008.cnnmoney" 
+target=_blank 
+rel=nofollow>http://money.cnn.com/video/#/video/news/2008/06/10/news.twitterman.06092008.cnnmoney</A> 
+</DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13872" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(12 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/141807/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/141807/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>flock is cool... </DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13867" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/mayank/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/3.3.follower" width=16> Mayank Dhingra </A>from 
+Web (20 minutes ago) <A 
+href="http://www.kwippy.com/mayank/kwips/2008/jun/11/140940/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/mayank/kwips/2008/jun/11/140940/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>Twitter Survives Apple Conference | WebProNews - <A 
+href="http://www.webpronews.com/topnews/2008/06/10/twitter-survives-apple-conference" 
+target=_blank 
+rel=nofollow>http://www.webpronews.com/topnews/2008/06/10/twitter-survives-apple-conference</A> 
+</DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13866" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(20 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/140937/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/140937/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>The evolution of the mind - <A 
+href="http://scienceblogs.com/neurophilosophy/2008/06/evolving_the_mind.php" 
+target=_blank 
+rel=nofollow>http://scienceblogs.com/neurophilosophy/2008/06/evolving_the_mind.php</A> 
+</DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13860" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(33 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/135640/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/135640/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>The Blimps are coming - <A 
+href="http://blog.wired.com/cars/2008/06/its-not-going-t.html" target=_blank 
+rel=nofollow>http://blog.wired.com/cars/2008/06/its-not-going-t.html</A> </DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13854" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(52 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/133735/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/133735/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>The brain: 6 iconoclastic discoveries - <A 
+href="http://scienceblogs.com/neurophilosophy/2008/06/6_iconoclastic_discoveries_about_the_brain.php" 
+target=_blank 
+rel=nofollow>http://scienceblogs.com/neurophilosophy/2008/06/6_iconoclastic_discoveries_about_the_brain.php</A> 
+</DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13851" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(1 hour, 2 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/132758/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/132758/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>Cloaking Device Concept Moves Beyond Theory - <A 
+href="http://www.livescience.com/technology/080606-bts-milton-superlens.html" 
+target=_blank 
+rel=nofollow>http://www.livescience.com/technology/080606-bts-milton-superlens.html</A> 
+</DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13847" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(1 hour, 10 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/131945/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/131945/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>Natural lab shows sea's acid path - <A 
+href="http://news.bbc.co.uk/2/hi/science/nature/7437862.stm" target=_blank 
+rel=nofollow>http://news.bbc.co.uk/2/hi/science/nature/7437862.stm</A> </DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13844" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(1 hour, 18 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/131224/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/131224/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>It's official: Caribbean monk seal is extinct - <A 
+href="http://www.msnbc.msn.com/id/25007277/" target=_blank 
+rel=nofollow>http://www.msnbc.msn.com/id/25007277/</A> </DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13842" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(1 hour, 23 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/130654/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/130654/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV>
+<DIV class=kwip>Chinese wholesale inflation accelerates in May - <A 
+href="http://www.china.org.cn/business/news/2008-06/11/content_15742685.htm" 
+target=_blank 
+rel=nofollow>http://www.china.org.cn/business/news/2008-06/11/content_15742685.htm</A> 
+</DIV>
+<DIV class=post_otherusers><A href="http://www.kwippy.com/kwip/favourite/13837" 
+align="left"><IMG class=go_icon title="favorite this kwip" 
+src="golak's kwips page_files/favorite.gif"></A> | by <A 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_16 height=16 
+src="golak's kwips page_files/154.1.follower" width=16> jansegers </A>from Web 
+(1 hour, 33 minutes ago) <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/125700/">go reply<IMG 
+class=go_icon src="golak's kwips page_files/arrow_right.gif"></A> | <A 
+href="http://www.kwippy.com/jansegers/kwips/2008/jun/11/125700/"><IMG 
+class=link_icon title=permalink 
+src="golak's kwips page_files/icon_link.gif"></A> </DIV>
+<DIV class=comment_area></DIV><BR style="CLEAR: both">
+<DIV><SPAN class="float_left prev_link"><A 
+href="http://www.kwippy.com/kaa/?page=1">?older</A> </SPAN></DIV></DIV></DIV><!--left col ends -->
+<DIV class=right_col><!--right col begins-->
+<DIV class=logo_box style="BACKGROUND-COLOR: #fff"><A title=home 
+href="http://www.kwippy.com/"><IMG src="golak's kwips page_files/logo.gif"></A> 
+<BR>
+<DIV class=right_links>Hi, <A href="http://www.kwippy.com/kaa/">kaa</A> | <A 
+href="http://www.kwippy.com/kaa/dashboard">dashboard</A> | <A 
+href="http://www.kwippy.com/logout">logout</A> </DIV>
+<FORM id=search_form name=search_form action=/search/ method=get>
+<DIV class=search_box><INPUT class="textbox grey_text" id=query 
+onblur="if (this.value==''){this.value='people or kwips'}" 
+onclick="if (this.value =='people or kwips') {this.value=''}" 
+value="people or kwips" name=query> <INPUT class=button type=submit value=Search> </DIV></FORM><BR></DIV>
+<DIV class=clear></DIV>
+<DIV class=networkarea>
+<DIV>
+<DIV class=user_profile><!-- profile div--><IMG 
+src="golak's kwips page_files/4.0.jpg"> <!--<div class="buzz_imageupload"><a href="" >buzz!</a></div>--><!-- link for buzz image upload- verfiy if the image is the default or the  user uploaded and than show the link-->
+<DIV class=clear></DIV><B><A href="http://www.kwippy.com/kaa/">kaa</A></B> <BR>
+<DIV><B>26 | Male | delhi <!--need to add link for more --></B><BR>
+<P>I am the thought behind kwippy.<BR>also i write about design/usability here: 
+<A href="http://kicksandkisses.com/" target=_blank 
+rel=nofollow>http://kicksandkisses.com/</A></P></DIV>
+<DIV class=grey_text><B><A href="http://www.kwippy.com/kaa/kwips">269 kwips</A>, 
+194 comments </B></DIV></DIV><!--<br />
+<div class="">
+<a href="/username/favorites" title="username's favorite kwips"> <img src="/images/icons/unfavorite.gif" /> 5 favorites</a>
+<br />--><BR>
+<FORM id=user_invite_form name=user_invite_form action=/invite_user/ 
+method=post>
+<DIV class=invite_box>
+<H4><B>Invite friends</B> (100 left)</H4><IMG class=new 
+src="golak's kwips page_files/new.gif"> <INPUT class="textbox grey_text" 
+id=e-mail onblur="if (this.value==''){this.value='enter an email id'}" 
+onclick="if (this.value =='enter an email id') {this.value=''}" 
+value="enter an email id" name=e-mail> <INPUT class=button onclick=submit_invite_form(); type=button value=invite> 
+</DIV></FORM><BR>
+<DIV class=following_box>
+<H4><A href="http://www.kwippy.com/kaa/following/">following(82):</A> </H4>
+<DIV class=following_user><A title="Mayank Dhingra" 
+href="http://www.kwippy.com/mayank/"><IMG class=user_pic_following 
+src="golak's kwips page_files/3.3.following"> </A>
+<DIV class=following_name><A title="Mayank Dhingra" 
+href="http://www.kwippy.com/mayank/">Mayank Dhingra </A></DIV></DIV>
+<DIV class=following_user><A title=golak 
+href="http://www.kwippy.com/golak/"><IMG class=user_pic_following 
+src="golak's kwips page_files/35.1.following"> </A>
+<DIV class=following_name><A title=golak 
+href="http://www.kwippy.com/golak/">golak </A></DIV></DIV>
+<DIV class=following_user><A title=jansegers 
+href="http://www.kwippy.com/jansegers/"><IMG class=user_pic_following 
+src="golak's kwips page_files/154.1.following"> </A>
+<DIV class=following_name><A title=jansegers 
+href="http://www.kwippy.com/jansegers/">jansegers </A></DIV></DIV>
+<DIV class=following_user><A title=dipankar 
+href="http://www.kwippy.com/dipankar/"><IMG class=user_pic_following 
+src="golak's kwips page_files/6.7.following"> </A>
+<DIV class=following_name><A title=dipankar 
+href="http://www.kwippy.com/dipankar/">dipankar </A></DIV></DIV>
+<DIV class=following_user><A title=hieronymus 
+href="http://www.kwippy.com/hieronymus/"><IMG class=user_pic_following 
+src="golak's kwips page_files/241.1.following"> </A>
+<DIV class=following_name><A title=hieronymus 
+href="http://www.kwippy.com/hieronymus/">hieronymus </A></DIV></DIV>
+<DIV class=following_user><A title=kwippy 
+href="http://www.kwippy.com/kwippy/"><IMG class=user_pic_following 
+src="golak's kwips page_files/53.5.following"> </A>
+<DIV class=following_name><A title=kwippy 
+href="http://www.kwippy.com/kwippy/">kwippy </A></DIV></DIV>
+<DIV class=following_user><A title=mohit 
+href="http://www.kwippy.com/mohit/"><IMG class=user_pic_following 
+src="golak's kwips page_files/dude.0.gif"> </A>
+<DIV class=following_name><A title=mohit 
+href="http://www.kwippy.com/mohit/">mohit </A></DIV></DIV>
+<DIV class=following_user><A title="Gaurav Gupta" 
+href="http://www.kwippy.com/gauravgupta/"><IMG class=user_pic_following 
+src="golak's kwips page_files/44.1.following"> </A>
+<DIV class=following_name><A title="Gaurav Gupta" 
+href="http://www.kwippy.com/gauravgupta/">Gaurav Gupta </A></DIV></DIV>
+<DIV class=following_user><A title=22 href="http://www.kwippy.com/saurabh/"><IMG 
+class=user_pic_following src="golak's kwips page_files/17.2.following"> </A>
+<DIV class=following_name><A title=22 href="http://www.kwippy.com/saurabh/">22 
+</A></DIV></DIV>
+<DIV class=clear></DIV><SPAN class=float_right><A 
+href="http://www.kwippy.com/kaa/following/">see all <IMG class=go_icon 
+src="golak's kwips page_files/arrow_right.gif"></A> </SPAN></DIV>
+<DIV class=clear></DIV>
+<DIV class=followers_box>
+<H4><A href="http://www.kwippy.com/kaa/followers/">followers(30):</A></H4>
+<DIV class=follower_user><A title="Mayank Dhingra" 
+href="http://www.kwippy.com/mayank/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/3.3.follower"> </A></DIV>
+<DIV class=follower_user><A title=dipankar 
+href="http://www.kwippy.com/dipankar/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/6.7.follower"> </A></DIV>
+<DIV class=follower_user><A title=AK href="http://www.kwippy.com/akz/"><IMG 
+class=user_pic_follower src="golak's kwips page_files/251.2.follower"> 
+</A></DIV>
+<DIV class=follower_user><A title=brianritchie 
+href="http://www.kwippy.com/brianritchie/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/212.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=mohit href="http://www.kwippy.com/mohit/"><IMG 
+class=user_pic_follower 
+src="D:\kwippy\django\kwippyproject\Misc\html_mockups\follow_im_notify\golak's kwips page_files\dude.0(1).gif"> 
+</A></DIV>
+<DIV class=follower_user><A title="Gaurav Gupta" 
+href="http://www.kwippy.com/gauravgupta/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/44.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=22 href="http://www.kwippy.com/saurabh/"><IMG 
+class=user_pic_follower src="golak's kwips page_files/17.2.follower"> </A></DIV>
+<DIV class=follower_user><A title=kaushalchandak 
+href="http://www.kwippy.com/kaushalchandak/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/111.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=Smaran 
+href="http://www.kwippy.com/smaran/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/96.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=capobecchino 
+href="http://www.kwippy.com/capobecchino/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/246.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=prashant 
+href="http://www.kwippy.com/prashant/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/249.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=Smrity 
+href="http://www.kwippy.com/smriti/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/11.3.follower"> </A></DIV>
+<DIV class=follower_user><A title=lalit href="http://www.kwippy.com/lalit/"><IMG 
+class=user_pic_follower src="golak's kwips page_files/48.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=zk href="http://www.kwippy.com/zoe/"><IMG 
+class=user_pic_follower src="golak's kwips page_files/207.1.follower"> 
+</A></DIV>
+<DIV class=follower_user><A title=Adheeth 
+href="http://www.kwippy.com/adheeth/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/116.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=BlackTieMedia 
+href="http://www.kwippy.com/BlackTieMedia/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/205.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=yatender 
+href="http://www.kwippy.com/yatender/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/43.2.follower"> </A></DIV>
+<DIV class=follower_user><A title=maitrayee 
+href="http://www.kwippy.com/maitrayee/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/52.2.follower"> </A></DIV>
+<DIV class=follower_user><A title=brijesh 
+href="http://www.kwippy.com/brijesh/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/85.5.follower"> </A></DIV>
+<DIV class=follower_user><A title=chat2me 
+href="http://www.kwippy.com/chat2me/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/155.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=agajendra 
+href="http://www.kwippy.com/agajendra/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/45.1.follower"> </A></DIV>
+<DIV class=follower_user><A title=Jerry href="http://www.kwippy.com/jerry/"><IMG 
+class=user_pic_follower src="golak's kwips page_files/158.1.follower"> 
+</A></DIV>
+<DIV class=follower_user><A title=SimplyArun 
+href="http://www.kwippy.com/simplyarun/"><IMG class=user_pic_follower 
+src="D:\kwippy\django\kwippyproject\Misc\html_mockups\follow_im_notify\golak's kwips page_files\dude.0(1).gif"> 
+</A></DIV>
+<DIV class=follower_user><A title=misspsycool 
+href="http://www.kwippy.com/misspsycool/"><IMG class=user_pic_follower 
+src="golak's kwips page_files/71.2.follower"> </A></DIV>
+<DIV class=clear></DIV><SPAN class=float_right><A 
+href="http://www.kwippy.com/kaa/followers/">see all <IMG class=go_icon 
+src="golak's kwips page_files/arrow_right.gif"></A> 
+</SPAN></DIV></DIV></DIV></DIV><!--right col ends --></DIV><!-- content ends--><BR 
+class=clear><BR><!--footer begins-->
+<DIV class=footer>
+<UL>
+  <LI><A class=onwhite href="http://blog.kwippy.com/">blog</A> 
+  <LI><A class=onwhite href="http://www.kwippy.com/home/team/">team</A> 
+  <LI><A class=onwhite href="http://www.kwippy.com/help/">help</A> 
+  <LI><A class=onwhite href="http://www.kwippy.com/home/contactus/">contact 
+  us</A> 
+  <LI><A class=onwhite href="http://www.kwippy.com/home/tos/">TOS</A> </LI></UL>
+<DIV>©2008 kwippy</DIV></DIV>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-3116342-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+<!--footer ends--></DIV><!--wrap ends--></BODY></HTML>

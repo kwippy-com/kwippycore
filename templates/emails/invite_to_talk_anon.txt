@@ -1,0 +1,11 @@
+subject: #_2 has invited you to join a conversation at kwippy
+body_text:  hi,\n\n #_2 invited you join a conversation at kwippy.  \n\n come join > "#_1". \n\n
+body_html:  hi,<br /> <a href="ssiitte/#_4">#_2</a> invited you to join a conversation on kwippy.  <br /><br />  come join > "#_1"<br><br>.
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('invite_to_talk_anon','#_2 has invited you to join a conversation at kwippy',
+'hi,\n\n #_2 has invited you to join a conversation at kwippy. \n\n come join > ssiittee/#_1.',
+'hi,<br /> <a href="ssiittee/#_2">#_2</a>  has invited you to join a conversation at kwippy.  <br /><br />  come join <a href="ssiittee/#_1">ssiittee/#_1</a>')
+
+insert into kwippy_im(type,body) values('invite_to_talk','#_2 has invited you to join a conversation. <br><br> come join ssiittee/#_3 . ');
+

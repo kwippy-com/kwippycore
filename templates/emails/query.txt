@@ -1,0 +1,18 @@
+insert into kwippy_email(type,subject,body_text,body_html)
+values('friend_invite','kwippy(beta) invite from #_2 ',
+'hey!!\\n\\n http://staging.kwippy.com/#_2 has invited you to check out http://kwippy.com.  \\n what it does:\\n\\n *stores status messages from different Instant Messengers.\\n *post from the web browser\\n *and use your kwips to a social network so that you can meet friends of your friends.\\n \\n click http://staging.kwippy.com/signup/#_1 to signup.\\n\\n please help us in testing it out. mail us, chat with us, tell us what you don\'t like. in fact kick our asses.\\n\\n*beta testing - means just add "staging" before kwippy. so kwippy becomes staging.kwippy.com. and your data is safe :), even if this is "testing".\\n\\n see you there!\\n kwippy team'
+,'hey!!<br /><br /> <a href="http://staging.kwippy.com/#_2">#_2</a> has invited you to check out <a href="http://kwippy.com">kwippy</a>. <br /><br /> what it does:<br /> <ul> <li>	stores status messages from different Instant Messengers.</li><li> post from the web browser</li><li>	and use your kwips to a social network so that you can meet friends of your friends.</li></ul><br /><br />click <a href="http://staging.kwippy.com/signup/#_1">here</a> to signup.<br /><br />please help us in testing it out. mail us, chat with us, tell us what you don\'t like. in fact kick our asses.<br /><br />*beta testing - means just add "staging" before kwippy. so kwippy becomes staging.kwippy.com . and your data is safe :), even if this is "testing". <br /><br />see you there!<br />kwippy team')
+
+
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('beta_invite','invite for Kwippy (beta)',
+'hey!!\\n  \\n you are invited to check out http://www.kwippy.com. \\n what it does:\\n\\n *stores status messages from different Instant Messengers.\\n *post from the web browser\\n *and use your kwips to a social network so that you can meet friends of your friends.\\n \\n click http://staging.kwippy.com/signup/#_1 to signup.\\n\\n please help us in testing it out. mail us, chat with us, tell us what you don\'t like. in fact kick our asses.\\n\\n*beta testing - means just add "staging" before kwippy. so kwippy becomes staging.kwippy.com . and your data is safe :), even if this is "testing".\\n\\n see you there!\\n kwippy team'
+,'hey!!<br /> <br />you are invited to check out <a href="http://kwippy.com/">kwippy</a>. <br /><br /> what it does:<br /> <ul> <li>stores status messages from different Instant Messengers.</li><li> post from the web browser </li><li>	and use your kwips to a social network so that you can meet friends of your friends.</li></ul><br /><br />click <a href="http://staging.kwippy.com/signup/#_1">here</a> to signup.<br /><br />please help us in testing it out. mail us, chat with us, tell us what you don\'t like. in fact kick our asses.<br /><br />*beta testing - means just add "staging" before kwippy. so kwippy becomes staging.kwippy.com . and your data is safe :), even if this is "testing". <br /><br />see you there!<br />kwippy team')
+
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('private_message','#_2 has sent you a private message',
+'hi #_1,\n\n #_2 has sent you a private message.  \n\n   "#_3"  \n\n  p.s. this is a private message, you can reply privately on #_2\'s profile page - site/#_4 .',
+'hi #_1,<br /> <a href="site/#_4">#_2</a> has sent you a private message.  <br /><br />   "#_3"  <br /><br /> p.s. this is a private message, you can reply privately on <a href="site/#_4">#_2</a>\'s profile page - site/#_4.'
+

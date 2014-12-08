@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>	
+	{% load show_flash_message%}
+	{% load append_revision_number %}
+	{% load show_news%}
+	{% load ifusergroup%}  
+	{% load show_buzz %}
+	{% load theme %}
+  <head>
+	 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="A microblogging and Instant Messenger status logger with a social network optimized for close friends" />
+	<meta name="keywords" content="microblogging, microblog, nanoblogging, nanoblog, social network, Gtalk status, Yahoo messenger status, store status, archive status" />
+    	<title>{{ login }}'s bookmarks page</title>
+	<link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/reset-fonts-grids.css' %}"> 
+	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% append_revision_number '/css/user_page.css' %}{% endblock %}" >
+	<link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/custom_default.css' %}" >
+        <link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/global.css' %}" >
+	{% theme login %}
+	<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon"/>
+    	<script type="text/javascript" src="/js/jquery-1.2.2.js"></script> 
+	<script type="text/javascript" src="{% append_revision_number '/js/mypage.js' %}"></script> 
+
+  </head>
+  <body>
+    {% include "top_bar_login.html" %} 
+	<div class="wrap"> 
+      {% include "feedback_link.html" %}
+      <div class="clear"></div>
+	  <span id="flash" style="display:block;" class="flash_message">
+	    {{ flash }}
+	  </span>
+
+     {% if login %}
+	 <div class="content">
+		<div class="left_col">
+                    {% include "unlogged_mypage.html" %} 
+			<div class="clear" ></div>
+    			<span class="float_left">
+	             	    <a class="unselected" href="/{{login}}/">{{ login }}'s network</a>
+			    <a  class="unselected"  href="/{{ login }}/kwips/">{{ login }}'s kwips</a>
+			</span>
+			<span class="float_right">
+			    <a class="unselected" href="/everyone/">everyone's kwips</a>
+			</span>
+	           	<br class="clear" />		
+		        <div class="kwipsarea">
+                           {%ifnotequal page_type 'everyone'%}
+                                {% include "follow_unfollow.html" %}
+                                {% include "favourites.html" %}
+                                <div class="clear"></div>
+                                    {% displaybuzz login 'quip' %}
+							{%else%}
+					<div>	<h1>everyone's bookmarks</h1>
+	<div class="clear" ></div>
+</div>
+                            {%endifnotequal%}
+		            <br>
+                            <div class="clear"></div>
+					{%ifnotequal page_type 'everyone'%}
+			            {% include "kwips_area_new.html" %}	
+					{%else%}
+						{% include "favorites_list.html" %}
+					{%endifnotequal%}
+		            <div align ="center" class="on_black"><br>
+        		      <img src="/images/icons/rss_icon.png" alt="feeds icon">
+                                <a href="/api/favorites/{{login}}.rss">RSS</a>|
+                                <a href="/api/favorites/{{login}}.atom">Atom</a>
+            		    </div>
+			    <br style="clear:both;" />
+				{% include "pagination_links.html" %}	
+</div>
+		</div>
+		<div class="right_col">
+			<div class="logo_box" style="background-color:#fff;">
+				<a href="/" title="home"><img src="/images/logo.gif"/></a>
+				<br />
+				
+					{% include "search_box.html" %}	<br />	
+			</div>
+			<div class="clear"></div>
+			<div class="networkarea">
+				<div>
+                                    {%ifnotequal page_type 'everyone'%}
+					{% include "user_profile_box.html" %}
+                                        {% include "profile_links.html" %}
+					{% include "add_as_friend_box.html" %}				
+					{% include "direct_message_box.html" %}
+					{% include "invite_friends_box.html" %}
+					<br/>
+					{% include "friends_box.html" %}
+					<div class="clear"></div>
+					{% include "following_box.html" %}
+					<div class="clear"></div>
+					{% include "follower_box.html" %}
+                                    {%else%}
+                                        {% include "everyone_profile_links.html" %}
+                                        {% include "active_users_box.html" %}
+										{% include "featured_users_box.html" %}
+                                        {% include "random_users_box.html" %}
+                                    {%endifnotequal%}
+				</div>
+			</div>
+		</div>
+	 </div>
+	 {% else%}
+		User doesn't exist
+	 {%endif%}
+	 <br class="clear" />
+	  <br/>
+	{% include "footer.html" %}
+    </div>
+</body>
+
+</html>

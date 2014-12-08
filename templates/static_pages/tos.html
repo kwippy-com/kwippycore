@@ -1,0 +1,276 @@
+{% extends "static_pages/base_static.html" %}
+
+{% load format_quipper_displayname%}
+
+
+
+{% block title %}
+
+    kwippy - tos 
+
+{% endblock %}
+
+
+
+{%if user.is_authenticated%}
+
+	{%block menu%}	
+
+	{%endblock%}
+
+{%endif%}
+
+
+
+{% block content %}
+
+	<div class="content" style="font-size:12px;">
+
+		    {%if user.is_authenticated%}
+
+			<h1 style="float:left;"><a href="/" class="onwhite"> Home</a> &raquo;<b> TOS</b></h1>
+
+			<div style="float:right;">Hi, 
+
+				<a class="onwhite" href="/{{user}}/">{% formatdisplayname user.id %}</a> |
+
+				<a class="onwhite"  href="/{{user}}/dashboard">dashboard</a> |
+
+  			    <a class="onwhite"  href="/logout"> logout</a>
+
+			</div>
+
+			<br class="clear"/>
+
+		<hr/>
+
+		{%endif%}
+
+
+
+	<h3>kwippy.com - Terms Of Service</h3>
+
+<br>
+Welcome to the world of micro-blogging with kwippy!
+<br>
+You are required to read and agree to the following before you start using the services provided by kwippy.
+<br><br>
+
+1.<b>Agreement:</b>
+<br>
+This constitutes an agreement between you [referred to as 'you' or 'your' or yourself', hereinafter] and kwippy, a registered partnership firm [referred to as 'kwippy' or 'we' or 'us' hereinafter] governing your use of the services provided by kwippy.
+<br>
+This agreement governs your use of the kwippy application, including your participation on the website www.kwippy.com, owned and operated by kwippy, and the downloading and use of any proprietary software required for the use of the website and the kwippy services [collectively referred to as 'kwippy Services']. 
+<br>
+This agreement is governed by the applicable Indian laws and you hereby agree to abide by the same. If you do not agree/comply with the terms and conditions setforth in this agreement, then you shall not have the right to use/access 'kwippy Services' and we shall not be responsible for the consequences arising out of any such unauthorized use by you.
+<br>
+This agreement shall have a retrospective effect with respect to the existing users of 'kwippy Services' and shall be deemed to have come into force from the day you started using our services. And your continued use of 'kwippy Services' here after shall imply your agreement to abide by this agreement and the terms and conditions herein.
+<br>
+kwippy may, in its sole discretion, modify or revise these terms and conditions with/without express notification to you and you agree to be bound by such revised/modified terms and conditions. You are expected to check and review this page from time to time for any such modifications.
+<br><br>
+2. <b>Access:</b> 
+<br>
+'kwippy Services' are provided to you on a temporary basis and kwippy reserves the right to discontinue/suspend/amend the 'kwippy Services' without notice to you. We will not be responsible if the website or 'kwippy Services' are not available for any reason, for any period of time. We may restrict access to whole or part of kwippy website/services from time to time.
+<br>
+You shall make your own arrangements necessary for accessing 'kwippy Services' and you shall be responsible for ensuring compliance with the terms and conditions herein, by all persons accessing 'kwippy Services' from your internet connection.
+<br>
+If your access to 'kwippy Services' is disabled by us for any reason, you shall not be able to access your account or any of the information contained therein. 
+<br>
+<br>
+3. <b>Description Of Services: </b>
+<br>
+kwippy is a service for close friends who interact over small posts - one liners. It even autoblogs; stores your Gtalk and Yahoo messenger status messages if you want. kwippy extends your social network, by opening doors of friends of your friends.
+<br>
+kwippy is evolving and innovating on a continuous basis so as to provide you with the best, upto date and novel services. You agree that due to this constant evolution process the form and features of the 'kwippy Services' may change from time to time without any prior notice to you. Also, you agree that certain features/services may be discontinued temporarily or permanently at our discretion without any notification. 
+<br>
+As of today, 'kwippy Services' are provided free of any charge to you. We are not liable to you for any amounts charged by your service provider or wireless carrier or any other charges whatsoever,
+with respect of your access and use of 'kwippy Services'.
+<br>
+<br>
+
+4.<b>Membership And Registration:</b>
+<br>
+You are required to register as a member with us by providing some basic identification information about yourself so as to be able to use the 'kwippy Services'. As on this date membership to 'kwippy Services' is strictly on an invite base. You shall use 'kwippy Services' only if you have registered with us as a member corresponding to an authentic invite from us. You need to be a member in order to post any content on the kwippy website. However you can access/read the kwippy pages for information even without signing up with us as a member. 
+<br>
+You agree that the information that you provide during the registration process shall be true, 
+accurate and up to date. Each registration is for one individual alone unless specified otherwise on the registration page.
+<br>
+If you choose or are provided with a user identification/name, password or any such information as part of our security procedures, you agree to treat such information as confidential. You agree that you shall be responsible for the security of your user name and password. 
+<br>
+You agree that you shall be responsible for all the activities taking place under your user name or registered account, whether or not authorized by you. You agree to inform us immediately of any unauthorized use of your password, if any.   
+<br>
+We shall have the right to disable your user name/identification code, at any time, if in our opinion you have violated or failed to comply with any of the terms herein. 
+<br><br>
+5. <b>Use And User Conduct:</b>
+<br>
+You agree that you shall be solely responsible for your conduct and any data, text, information, screen names, graphics, photos, profiles, audio and video clips, links (collectively referred to as Content hereinafter) that you submit, post, and display on the 'kwippy Services' and for any consequences arising thereof. However, you agree and acknowledge that the content uploaded/posted by you shall be in conformity with the content standards setforth in this agreement.
+<br>
+You agree to use the 'kwippy Service' in a lawful manner in compliance with any local, state, national or international laws applicable. Violation of any of the terms of this agreement including content standards will result into termination of this agreement and also may be an offence under any state or national law.
+<br>
+You agree to use 'kwippy Services' in such a way, that your use does not interfere with any third party rights. Your use of 'kwippy Services' must not interrupt, abuse, harass, threaten, impersonate or intimidate other kwippy members/users. You must not create or submit unwanted email to any kwippy members ("Spam").
+<br>
+You agree not to use the Site or post or modify any Content to defame, abuse, solicit, harass, stalk, threaten or otherwise violate the legal rights of any person. You shall not use the Site or post or modify any content to distribute any information that promotes or contains bigotry, racism, hatred, profanity or obscenity or promotes physical harm.
+<br>
+Engage in any fraudulent, abusive or illegal activity, including but not limited to any communication or solicitation designed or intended to fraudulently obtain the password or any private information of any other person.
+<br>
+Post any content that you believe to be false or misleading.
+<br>
+Use the 'kwippy Services' or post any content to violate the security of any computer network, crack passwords or security encryption codes, transfer or store illegal material.
+<br>
+Reverse engineer, decompile, disassemble, copy, reproduce, distribute, modify, transmit, perform, reproduce, publish or create derivative works from or in any way exploit any of the content in violation of the terms and conditions herein or the laws of any country.
+<br>
+Run any form of auto responder, mail list or spam on the 'kwippy Services' or any processes that are run or are activated while you are not logged on.
+<br>
+Distribute any downloaded file that you know, or reasonably should know, cannot be legally distributed.
+<br>
+Reproduce, duplicate, copy, sell, resell or exploit for any commercial purpose, or redistribute or publish the information and content provided by us or obtained from us without obtaining our prior express written consent. This restriction includes any attempt to incorporate any information provided by us into any other directory, product, or service.
+<br>
+Post, distribute or reproduce in any way any copyrighted material, trademarks, or other proprietary information without obtaining the prior written consent of the owner of such proprietary rights. You may not submit any content or material that infringes, misappropriates or violates the intellectual property, publicity, privacy or other rights of any party.
+<br>
+Cache or permit caching by any person.
+<br>
+Do any act, including without limiting, running internet relay chats or IRC bots, or any other acts that may cause the overload of the servers or which will adversely affect the 'kwippy Services' as provided, unless there is an explicit written permission from us to do so.
+<br>
+Use the 'kwippy Services' or post any content to store and/or display and/or publish any adult content, which without limitation includes all pornography, erotic images and messages, or otherwise lewd or obscene content. The designation of "adult content" is left entirely to our discretion.
+<br>
+The content posted is posted by individuals on kwippy.com, hence the responsibility for such content is with the person or people who have posted the content. We are not responsible in any way for any of the postings on the website. We do not provide you the content, but just access to content through our services. 
+<br>
+Because of the nature of the kwippy services, kwippy.com may contain inaccurate, offensive, harmful, deceptive or otherwise inappropriate material. You are expected to use caution and common sense and reasonable judgement before placing reliance on any of the material posted on the website.
+<br><br>
+6. <b>Content Standards:</b>
+<br>
+kwippy is a free service, provided to facilitate communication, free expression and exchange of information. But in order to avoid abuse we need to have certain limits on the content that can be posted on our website. You agree to comply with the content standards set out below whenever you post/upload any content on the kwippy website. You warrant that any contribution made by you to the website shall be in compliance with these standards. You agree to indemnify us in case of a breach of this warranty. Content standards are applicable to each of the contribution as a whole as well as in part.
+<br>
+While you retain all ownership, copyright and any other rights you have in information, text, graphics, or other materials you publish on kwippy.com, you hereby grant us a perpetual, irrevocable, world-wide, royalty free and non-exclusive license to reproduce, modify, translate, publish and publicly distribute all or part of your content online and offline and permit others to do the same. However, you must not use any part of any material on our website for commercial purposes without obtaining a license to do so from us.
+<br>
+Content Standards:<br>
+You shall not post/upload/publish the following:<br>
+Images or videos promoting pornography and/or obscenity
+<br>
+Written, images, graphics or videos promoting bestiality, pedophilia, child pornography or incest
+<br>
+Material that promotes hatred against people based on gender, race or ethnicity, nationality, sex, region, caste, creed, colour, religion, age or sexual activity.
+<br>
+Material that promotes or directs violence against any particular person or group of persons
+<br>
+Personal and private information of any other individual
+<br>
+Information likely to harass, upset, embarrass, alarm or annoy any other person
+<br>
+Anything which infringes the IP Rights including copyrights or ownership or any other rights belonging to the third party
+<br>
+Anything that contains viruses, worms or other damaging computer files/programs 
+<br>
+Anything in violation of Indian Penal Code-1861, Information technology Act - 2000 and/or any other applicable laws  
+<br>
+Breach of any of the content standards shall result in temporary/permanent suspension of your account. Moreover, we shall have the right to pursue legal remedies/appropriate statutory proceedings against you in addition to action for recovery of any costs or damages. This right is not exclusive to any other right available under law.
+<br>
+7.<b> Privacy:</b>
+You agree that kwippy shall disclose your personal information, including your correspondence in case of any valid legal or statutory proceedings.
+<br>
+We reserve the right to show you advertisements/promotions, to remove any content posted by you, and to investigate for ensuring compliance with the terms of this agreement. We also reserve the right to restrict the number of communications/emails to be sent/received by a user in a day.
+<br>
+You agree that kwippy shall not be responsible for deletion of or failure to store or transmit any information via its service. We reserve the right to put restrictions on storage ad transmission any time at our discretion.
+<br><br>
+8. <b>Content On kwippy:</b>
+<br>
+The content available on 'kwippy Services' is posted by people over whom we do not have control. kwippy is not responsible for any such content and it shall be the sole responsibility of the person who has posted any such content.
+<br>
+We do not investigate, represent or endorse the accuracy, legality, legitimacy, operability, availability, validity or reliability of any content including any advertisements, advice, comments, ratings, listings and recommendations contained on, distributed through or linked, downloaded or accessed from the 'kwippy Services'. You shall rely on the information at your own risk and we shall have no responsibility.  
+<br>
+Any references made by the 'kwippy Services' to any names, marks, products or services of third parties or hypertext links to any third party site or information do not constitute or imply our endorsement, sponsorship or recommendation of the third party, of the quality of any product, service, advice, information or other materials displayed, or obtained by you as a result of an advertisement or any other information or offer in or in connection with the 'kwippy Services'.
+<br><br>
+9. <b>Warranty Exclusions:</b>
+<br>
+'kwippy Services' are provided to you on 'as is as available' basis and we hereby deny any warranty or guarantee [express or implied] or responsibility as to its fitness, suitability to a particular cause.
+<br>
+Your use of 'kwippy Services' is at your own risk.
+<br>
+We do not guarantee the accuracy or correctness of any content on our website. You alone shall be responsible for use/download of any content and any consequences thereof.
+<br>
+We are not responsible for any error, omission, deletion, defect, delay/failure of transmission, alteration of user communication or unauthorized access.
+<br>
+We disclaim our liability for any technical malfunction or failure, traffic congestion or ay harm to your system or to any person due to use or download using 'kwippy Services'.
+<br>
+We do not represent or warrant to you expressly or impliedly that your use of the 'kwippy Services' will meet your needs and requirements, that access to the 'kwippy Services' shall be uninterrupted, error free or secure, that the material you download from our website shall be accurate and reliable and that any defects or malfunctionality in the 'kwippy Services' shall be corrected.
+<br>
+To the extent permitted by law, we, other members of our group of companies and third parties connected to us hereby expressly exclude all conditions, warranties and other terms which might otherwise be implied by statute, common law or the law of equity.
+<br><br>
+10. <b>Limitation Of Liability:</b>
+<br>
+Our liability to you in any scenario shall not exceed an amount of Rs.100/- (One Hundred Rupees Only).
+<br>
+Any liability for any direct, indirect or consequential loss or damage incurred by any user in connection with the use, inability to use, or results of the use of the 'kwippy services', any websites linked to it and any materials posted on it, including, without limitation any liability for loss of income or revenue, loss of business, loss of profits or contracts, loss of anticipated savings, loss of data, loss of goodwill, wasted management or office time, and for any other loss or damage of any kind, however arising and whether caused by tort (including negligence), breach of contract or otherwise, even if foreseeable, is expressly excluded.
+<br><br>
+11. <b>Time Limit For Claims:</b>
+<br>
+We may store/archive certain content at our discretion, based on number of views or other criteria, and make them available to members for a certain period of time, we are under no obligation to do so. To the extent that we cease to archive, store or otherwise make available certain content, we may be unable to action claims in relation to such content and therefore require that all claims in relation to the content available on the 'kwippy Services' be made by members within a period of [1] month of the relevant content being posted.
+<br><br>
+12. <b>Safety And Security:</b>
+<br>
+You agree not to compromise the safety/security of the 'kwippy Services' and to use the same with reasonable care and caution. 
+<br>
+You must not misuse our site by knowingly introducing viruses, trojans, worms, logic bombs or other material, which is malicious or technologically harmful. You must not attempt to gain unauthorised access to our site, the server on which our site is stored or any server, computer or database connected to our site. You must not attack our site via a denial-of-service attack or a distributed denial-of service attack. You must not use any automated tool (e.g., robots, spiders), including IRC Bots, EXEs, CGI to use the 'kwippy Services' or to store, copy, modify, distribute, or resell any of its content. You must not circumvent or disable any digital rights management, usage rules, or other security features of the 'kwippy Services'.
+<br>
+Violation of any of the provisions of this section, will result into a criminal offence under the Information Technology Act, 2000. We shall take appropriate measures to report such activities to the appropriate authorities. Also, we shall aid and assist in the investigations further.
+<br>
+We will not be liable for any loss or damage caused by any viruses or denial-of-service attack or any other technologically harmful/destructive material to your computer equipment, programs, files or other proprietary instrument as a result of your use of kwippy or you downloading any content from kwippy.
+<br><br>
+13. <b>Linking To kwippy Website:</b>
+<br>
+You may link to our home page, so long as such linking is done in a legal manner. However, you  must not link to our website in such a way, which is damaging or harmful to our reputation. You must not try to establish any association with us by linking to our website, when there exists no such relationship. 
+<br>
+Our website must not be framed on any other site which does not comply with the content standards set out herein. You must not link our website to any other site so as to falsely imply any connection with our website. You may do the linking only to our home page and to no other part. We reserve the right to withdraw the permission to link to our website any time at our discretion.
+<br><br>
+14. <b>IP Rights And Other Proprietary Rights:</b>
+<br>
+You acknowledge and agree that the ownership of all the legal rights, interests and title including all the Intellectual Property rights (whether registered or not) subsisting in kwippy are owned by us. All the work and content of kwippy is protected by the Intellectual Property laws including copyrights laws and treaties around the world.
+<br>
+You shall not make use of kwippy trademark, trade name, logo, domain names, service marks, brand names or any such distinctive feature associated with kwippy, unless permitted by kwippy. You agree not to remove any proprietary rights notices of kwippy affixed to or on the 'kwippy Services'.
+<br>
+By very nature of our services, people post/publish content on our website freely. However, our content standards require that the material posted/published by our users shall not infringe the IP rights and/or other legal rights of any other person. If we find out or receive a formal complaint about any content infringing IP rights or any other legal rights, we shall remove such content or take appropriate action, as necessary.
+<br><br>
+15. <b>Indemnification:</b>
+<br>
+You warrant to us that the content or information that you upload or submit on kwippy shall be accurate and correct. You agree to indemnify and hold us harmless from and against any loss, damages or claims and costs or expenses thereto (including, but not limited to, reasonable attorney's fees), arising as a result of breach of this warranty or your use of the 'kwippy Services'
+<br>
+You agree to protect and hold us harmless against any IP infringement claims by third parties with respect to the content submitted or uploaded by you on the 'kwippy Services' You shall indemnify us for any loss, damages or claims and costs or expenses thereto (including, but not limited to, reasonable attorney's fees), caused by such infringement of third party IP Rights.
+<br><br>
+16. <b>Assignment:</b>
+<br>
+You agree not assign or sub-license this agreement and rights and obligations  hereunder to any other person without obtaining our prior consent.
+<br><br>
+17. <b>Termination:</b>
+<br>
+We reserve the right to terminate your membership temporarily/permanently at our discretion with/without reason without giving prior notice to you. 
+<br>
+You agree that your account may be terminated for a temporary/permanent period of time if we believe or you have failed to comply with any of the terms and conditions of this agreement without any prior notice to you.
+<br>
+
+You agree that you account will be terminated if you fail to comply with the content standards stout in this agreement. Such termination may for a limited period or in perpetuity. No notice shall be required to be given to you of such termination.
+<br>
+If you wish to terminate your account with us, you need not inform or notify us about it. You have to just discontinue using/accessing our services.
+<br>
+In case of termination, we may discontinue displaying some of or all of the content posted by you on our website. You shall not be able to access any information contained in your account after termination.
+<br><br>
+18. <b>Entire Agreement & Severability:</b>
+<br>
+You hereby agree that this agreement constitutes the entire agreement between you and us. And any previous agreements shall be void and ineffective.
+<br>
+You agree that, if any of the provisions of this agreement are found be unenforceable by any court of law having competent jurisdiction in India, then only that part of the agreement shall stand suspended, and the remaining agreement shall very much be in full force.
+<br><br>
+19. <b>Governing Law:</b>
+<br>
+You agree that the agreement and the relationship between you and us shall be governed by the applicable Indian laws. 
+<br><br>
+20. <b>Jurisdiction:</b>
+<br>
+The high court of Delhi, India shall have sole jurisdiction over any claim arising from, or related to, a visit to/use of the 'kwippy Services', although we retain the right to bring proceedings against you for breach of any of these terms and conditions in your country of residence, country of use or other relevant country. 
+<br>
+
+
+
+
+	</div>
+
+{% endblock %}

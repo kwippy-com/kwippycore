@@ -1,0 +1,64 @@
+{% load comments %}
+{% load format_url %}
+{% load is_favourited%}
+{% load format_date_time %}
+{% load show_quip_provider %}
+{% load show_follower_pic %}
+{% load show_quipper_pic %}
+{% load show_quip_text %}
+
+{% if comments %}
+  {% for comment in comments %}
+	 {%if comment.user %}
+	     <div class="kwip">
+                {% ifequal login comment.user.username%}
+                <div class="float_left" style="padding-top: 5px; padding-left: 10px;">
+                    <a href="/{% formattime comment.object_pk%}/#{{comment.id}}">
+                            <img class="user_pic_following" width="25" height="25" 
+                        src="{% show_follower_pic comment.user.id %}" style="height:auto;" 
+                        alt="{% show_quip_text comment.object_pk %}" title="{{comment.user.username}} commented on {% show_quip_text comment.object_pk %}">
+                        <img class="user_pic_following" width="16" height="16" 
+                        src="{% show_quipper_pic comment.object_pk %}"  alt="{% show_quip_text comment.object_pk %}" style="margin-top:-20px;height:auto;margin-left:-20px;" title=" {{comment.user.username}} commented on {% show_quip_text comment.object_pk %}">
+                    </a>
+                </div>
+                {%endifequal%}
+                <div style="padding-left:10px;float:left;width:492px;padding-right:8px;">
+		    {{ comment.comment|escape|urlizetrunc:40 }}				
+    	    	    <div class="post_byuser" id="{{comment.id}}">
+			commented by 
+			{%if comment.user %}
+			<a href="/{{comment.user.username}}/">
+			    {{comment.user.username}} 
+			</a>
+			{%endif%}
+			({{comment.submit_date|timesince}} ago)
+                        <a href="/{% formattime comment.object_pk%}/">	here
+                            <img class="go_icon" src="/images/icons/arrow_right.gif" />
+                        </a>
+			| <a  href="/{% formattime comment.object_pk%}/#{{comment.id}}"> 
+                            <img class="link_icon" title="permalink" src="/images/icons/icon_link.gif" />
+                        </a> 
+	        {% ifequal login comment.user.username %}
+		    {% ifequal user.username login %}
+			| <a href="/comments/delete/{{comment.id}}" onClick="return confirm('Are you sure you want to delete? you won\'t be able to bring it back');">
+			    delete
+			</a> 
+		    {%endifequal%}
+		{%endifequal%}
+		    </div>
+                </div>
+                {% ifnotequal login comment.user.username%}
+                             <div class="float_left" style="padding-top: 5px; padding-left: 10px;">
+                                <a href="/{% formattime comment.object_pk%}/#{{comment.id}}">
+                                 <img class="user_pic_following" width="25" height="25" src="{% show_follower_pic comment.user.id %}" style="height:auto;" alt="{{comment.user.username}}" title=" {{comment.user.username}} commented on {% show_quip_text comment.object_pk %}">
+                                <img class="user_pic_following" width="16" height="16" src="{% show_quipper_pic comment.object_pk %}" alt="{{comment.user.username}}" title=" {{comment.user.username}} commented on {% show_quip_text comment.object_pk %}" style="margin-top:-20px;height:auto;margin-left:-20px;">
+
+                                </a>
+                            </div>
+                {%endifnotequal%}
+            </div><div class="clear border_top"></div>
+	 {% endif %}
+  {% endfor %}
+{% else %}
+          <p class="white"> {{login}} has no comments yet </p>
+{% endif %}	

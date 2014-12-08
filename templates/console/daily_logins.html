@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				Metrics to track kwippy's re-logins.<br/><br/>	                            								
+								No of people who haven't logged in the past 3 months = {{inactive_users_12week}}<br>
+   							    No of people who haven't logged in the past 2 months = {{inactive_users_8week}}<br>
+								No of people who haven't logged in the past 1 month = {{inactive_users_4week}}<br>
+								No of people who haven't logged in the past 3 weeks = {{inactive_users_3week}}<br>
+								No of people who haven't logged in the past 2 weeks = {{inactive_users_2week}}<br>
+								No of people who haven't logged in the past 1 week	= {{inactive_users_week}}<br>
+                                <br><br><b>No of people who haven't logged again</b> = {{one_time_loggers}}
+                                <br><br><b>No of people who haven't logged 2nd day</b> = {{one_day_loggers}}
+
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

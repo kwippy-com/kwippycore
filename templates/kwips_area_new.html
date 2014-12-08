@@ -1,0 +1,147 @@
+{% load comments %}
+{% load is_favourited%}
+{% load format_date_time %}
+{% load show_quip_provider %}
+{% load show_follower_pic %}
+{% load generate_invite %}
+{% load comment_active%}
+{% load snip_to_more%}
+{% load show_quip_simple%}
+{% load snip_to_more1%}
+{% if quips %}
+    {% for quip in quips %}
+	{%if quip.account.user %}
+	        <div class="kwip">
+                    {% ifequal quip.account.user.username login %}			
+			<div class="float_left" style="padding-top:5px;padding-left:10px;">
+                            {%ifequal quips_for 'everyone'%}
+                                <a href="/{{ quip.user.username }}/kwip/{{ quip.id }}/?src=everyone_uimg">
+                            {%else%}
+                                <a href="/{{ quip.user.username }}/kwip/{{ quip.id }}/?src=kwipspage_uimg">
+                            {%endifequal%}
+                                    <img class="user_pic_16" src="{% show_follower_pic quip.account.user.id %}" alt="{{quip.account.user.username}}" >
+                                </a>
+                        </div>
+                    {%endifequal%}
+            
+		        <div style="padding-left:10px;float:left;width:492px;overflow:hidden;padding-right:8px;">
+			    {%ifequal quip.type 1%}
+                                {% ifequal quip.account.user.username login %}
+                                    {{ quip.formated|safe|linebreaksbr|urlize }}
+                                {%else%}
+                                    {%say_hi_people quip.account.user.id%}
+                                {%endifequal%}
+                            {%else%}
+                                {%ifequal quip.type 2%}
+                                        {% if is_single %}
+                                        {{ quip.formated|safe|linebreaksbr|urlize }}
+                                        {% else %}
+                                        {{ quip.formated|safe|urlize|truncatewords:40 }}
+                                        {% endif %}
+                                {%else%}
+				{%ifequal quip.account.user.username 'kwippy' %}
+					{{ quip.formated|safe|urlize }}
+				{%else%}
+                                        {% if is_single %}
+                                        {% showquipsimple quip.id %}
+                                        {% else %}
+                                        {{ quip.formated|safe|urlize|truncatewords:40 }}
+                                        {% endif %}
+				{%endifequal%}
+                                {%endifequal%}
+			    {%endifequal%}			
+		 
+		        {% ifequal quip.account.user.username login %}
+			    <div class="post_byuser" id="{{quip.id}}">
+		        {% else%}
+			    <div class="post_otherusers" id="{{quip.id}}">
+		        {%endifequal%}
+		        {% if user.is_authenticated %}					   
+                              {%if page_type %}	
+                                {%ifequal page_type 'favorite'%}
+                                    {%ifequal user.id 3%}
+                                    <form id="mailer" action="/console/featuring/" name="mailer" method="post">
+                                        <input type="submit" value="feature"></input>
+                                        <input type="hidden" name="kwip_id" value="{{quip.id}}"></input>
+                                    </form>
+                                {%endifequal%}
+                              {%endifequal%}								
+                            {%endif%}										
+			{% endif %}				 
+				by 
+			    {%if quip.account.user %}
+                              {%ifequal quips_for 'everyone'%}
+				<a href="/{{quip.account.user.username}}/?src=everyone_uname">
+                              {%else%}
+                                <a href="/{{quip.account.user.username}}/?src=kwipspage_uname">
+                              {%endifequal%}
+					{{quip.account.user.username}} 
+				</a>
+			    {%else%}
+				anonymous
+			    {%endif%}				 
+				from {% displayprovider quip.id %}
+				({{quip.created_at|timesince}} ago)
+				
+			    {%if quip.account.user and quip.account.user.username %}
+				{% if not is_single %}
+                                  {%ifequal quips_for 'everyone'%}
+				    <a href="/{{ quip.user.username }}/kwip/{{ quip.id }}/?src=everyone_clink">
+                                  {%else%}
+                                    <a href="/{{ quip.user.username }}/kwip/{{ quip.id }}/?src=kwipspage_clink">
+                                  {%endifequal%}
+				    {% ifequal quip.comment_count 0 %}go comment
+                                        <img class="go_icon" src="/images/icons/arrow_right.gif" />
+                                    {%else%} 
+				        {% ifequal quip.comment_count 1 %}
+					    1 Comment 
+				        {% else %}
+					    {{ quip.comment_count }} Comments 
+					{% endifequal %}
+				    {% endifequal%}</a> 
+			        {% endif %}
+			    {% endif %}
+				{% ifequal login quip.account.user.username %}
+				    {% ifnotequal quip.type 1%}
+                                        {% ifequal user.username login %}
+                                            {%ifnotequal quips_for 'everyone'%}
+				                |<a href="/{{user.username}}/kwip/delete/{{quip.id}}/" onClick="return confirm('Are you sure you want to delete? you won\'t be able to bring it back');">delete</a> 
+                                            {%endifnotequal%}
+					{%endifequal%}
+                                    {%endifnotequal%}
+			        {%endifequal%}
+{% if is_single %}               
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">addthis_pub  = 'kwippy';</script><br>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s9.addthis.com/button1-share.gif" width="125" height="16" border="0" alt="" /></a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+{%endif%}
+		            </div>
+		        </div>
+                        {% ifnotequal quip.account.user.username login %}			
+  			    <div class="float_left" style="padding-top:5px;">
+                                <a href="/{{ quip.user.username }}/kwip/{{ quip.id }}/?src=kwipspage_img">
+					<img class="user_pic_16" src="{% show_follower_pic quip.account.user.id %}" alt="{{quip.account.user.username}}" >
+                                </a>
+                            </div>
+                        {%endifnotequal%}
+
+		</div>
+                <div class="clear"></div>
+		{% include "favorites_area.html" %}
+		<div class="clear"></div>
+		{% include "comment_area.html" %}
+		<div class="clear"></div>
+	{% endif %}
+    {% endfor %}
+{% else %}
+    {%if page_type %}
+	{% ifequal page_type 'favorite' %}
+            <p class="kwip"> {{login}} has no favorite kwips yet </p>
+        {%else%} 
+	    <p class="kwip" >{{login}} has no kwips.</p>
+        {%endifequal%}
+    {%else%}
+	<p class="kwip" >{{login}} has no kwips.</p>
+    {% endif %}
+{% endif %}	

@@ -1,0 +1,25 @@
+{% load show_followee_pic %}
+	<div class="following_box">
+		<h4>
+			Users found for "{{searched}}":
+		</h4>
+                  {% if users %}
+		  {%for userp in users%}
+			<div class="following_user">
+			  <a title="{{ userp.user.username }}" href="/{{ userp.user.username }}/"> 
+					<img class="user_pic_following" src="{% show_followee_pic userp.user.id %}" alt="{{userp.user.username}}" />
+			  </a>				
+			  <div class="following_name">
+				<a title="{{ userp.user.username }}" href="/{{ userp.user.username }}/"> {{ userp.user.username }} </a>
+			  </div>
+			</div>
+		  {% endfor %}
+		<div class="clear"></div>
+                  {% else %}
+                 No users found
+                 <div class="clear"></div>
+                  {% endif %}
+			<!--<span class="float_right">
+			  <a href="/{{ login }}/friends/">see all <img class="go_icon" src="/images/icons/arrow_right.gif" /></a>
+			</span>-->
+	</div>

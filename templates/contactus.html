@@ -1,0 +1,46 @@
+{% extends "static_pages/base_static.html" %}
+{% load format_quipper_displayname%}
+
+{% block title %}
+    kwippy - contact us 
+{% endblock %}
+
+{%block menu%}	
+	{%if user.is_authenticated%}
+	{%else%}
+				<div class="menu" >					
+					<ul>
+						  <li class="selected"><a href="/">Home</a></li>
+						  <li class="link"><a href="/signup/">Signup</a></li>
+						  <li class="link"><a href="/login/">Login</a></li>
+						  <li class="link"><a href="/help/">Help</a></li>
+					</ul>
+				</div>		
+	{%endif%}
+{% endblock %}
+
+{% block content %}
+
+          <span id="flash" style="display:block;" class="flash_message">
+            {{ flash }}
+          </span>
+    <div class="content">
+			<h1 style="float:left;"><a href="/" class="onwhite"> Home</a> &raquo;<b> Contact Us</b></h1>
+		    {%if user.is_authenticated%}			
+	             {%include "static_pages/include_logged_in.html"%}
+				  <br class="clear"/>
+			     <hr/>
+		    {%endif%}
+		<form method="post" action=".">			
+			{% if not user.is_authenticated %}
+				<br/><br/>
+				<label for="id_username">e-mail<br/>
+				<input id="user_title" name="email" class="textbox" type="text" /><br/>
+			{% endif %}
+			<label for="id_username">write to us<br/>
+			<textarea id="user_title" name="msg" class="textarea"></textarea>
+			<input class="button" type="submit" value="Go &raquo;"/>
+		</form>
+
+    </div>
+{% endblock %}

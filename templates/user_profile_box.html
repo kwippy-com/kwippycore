@@ -1,0 +1,46 @@
+{% load show_profile_pic %}
+{% load show_buzz %}
+<div class="user_profile"> <!-- profile div-->
+	<a href="/{{login}}/profile/?src=main_pic"> <img src="{% show_profile_pic dict.user_profile.user.id %}" alt="{{dict.user_profile.user.username}}" /></a>
+	{% displaybuzz login 'photo' %}
+		<div class="clear"></div>
+			<b><a href="/{{login}}/">{{ login }}</a></b>
+			{% if dict.user_profile %}
+			  <br />  
+			  <div><b>
+				  {% if dict.user_age %}
+					{{dict.user_age }} 
+				  {%endif%}
+
+				  {% if dict.profile_for_display.gender %}
+				   {% if dict.user_age %}
+					|
+				   {%endif%}
+				   {{ dict.profile_for_display.gender }} 
+				  {%endif%} 
+				  
+				  {% if dict.location %}
+    			   {% if dict.profile_for_display.gender or dict.user_age %}
+				     |
+				   {%endif%}
+				  {{  dict.location }}
+				  {%endif%} <!--need to add link for more -->
+				</b>  <br/>
+     			  {% if dict.user_profile.about_me %}				  
+				   {{  dict.user_profile.about_me|urlize|linebreaksbr|truncatewords:100  }}<br/>
+				  {%endif%}
+                         {%ifnotequal login 'kwippy'%}
+			  <a href="/{{login}}/profile/?src=full_link"><b>View full profile</a><span class="new"><img src="/images/icons/new.gif"/></span></b></a><br/>
+                         {%endifnotequal%}
+		  	  </div> 
+			  {%ifnotequal login 'kwippy'%}
+				<div><div style="float:left;width:75px;"><img src="/images/icons/kwip.gif"></div><div style="float:left;"><a href="/{{login}}/kwips/">{{kwip_count}} kwips</a></div></div>
+				<div class="clear"></div>
+				<div><div style="float:left;width:75px;"><img src="/images/icons/talking.gif"></div><div style="float:left;"> <a href="/{{login}}/comments/">{{comment_count}} comments</a></div></div>
+				<div class="clear"></div>
+			  {%endifnotequal%}
+
+			{% endif %}
+</div>
+					
+				

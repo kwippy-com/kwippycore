@@ -1,0 +1,30 @@
+{% ifnotequal login user.username %}
+	{% ifnotequal login 'kwippy' %}
+	<div class="follow_userlink" style="width:100%">
+			{%if dict.is_following %}
+				<div class=""  style="">
+                                    {%ifequal dict.are_friends 1%}
+					<a href="/friendships/remove/{{login}}/" id="unfollow">
+						<span class="follow_icon"><img src="/images/icons/minus.gif" /></span><b> remove as friend</b>
+					</a>
+                                    {%else%}		
+					<a href="/follow/{{ login }}?to_do=unfollow" id="unfollow">
+						<span class="follow_icon"><img src="/images/icons/minus.gif" /></span><b> unfollow {{ login }}</b>
+					</a>
+                                    {%endifequal%}
+					<br />
+					<a href="javascript:void(0);" onClick="show_hide_followsettings_box('show');"/>change settings</a>
+				</div>
+			{% else %}
+				<a href="/follow/{{ login }}?to_do=follow" id="follow" >
+					<span class="follow_icon"><img src="/images/icons/plus.gif" /></span> follow {{ login }}
+				</a>
+			{% endif%}
+			<div class="clear"></div>
+			<div class="change_follow_setting" id="follow_setting" style="display:none" >
+			{% include "im_friendship_settings.html" %}					
+			</div>
+			<div class="clear" ></div>
+	</div>
+	{%endifnotequal%}
+{%endifnotequal%}

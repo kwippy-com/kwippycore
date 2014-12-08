@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				Metrics to track kwippy's invites to conversations.<br/><br/>	
+								Total Anon Users: {{total_anon_users}} <br>
+								Total Anon Comments: {{total_anon_comments}} <br>
+                                Daywise Comments: <br/><br/>
+                                    &nbsp; date &nbsp;&nbsp;&nbsp;&nbsp; no of invite to conv<br/><br/>
+                                {%for item,key in daily_convinvites%}
+    `                              {{key}} &nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+                                {%endfor%}<br/><br/>
+                                 &nbsp; date &nbsp;&nbsp;&nbsp;&nbsp; no of kwips invited to<br/><br/>
+                                {%for item,key in daily_convinvites_onkwips%}
+    `                              {{key}} &nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+                                {%endfor%}
+                                
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

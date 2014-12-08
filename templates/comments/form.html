@@ -1,0 +1,48 @@
+{% load comments %}
+{% load append_revision_number %}
+<script type="text/javascript">
+ 			 function submit_comment_form(){
+
+				string = document.getElementById('id_comment').value
+			 	string = string.replace(new RegExp(/^\s+/),""); // START
+				string = string.replace(new RegExp(/\s+$/),""); // END
+
+				
+				 if (string!='')
+				 {
+					 document.comment_form.submit();
+				 }
+				 else{
+					alert('please insert something');
+				 }
+
+			 }
+</script>
+<script type="text/javascript" src="{% append_revision_number '/js/comments.js' %}"></script> 
+{% load comment_subscription %}
+{% if is_single %}
+{% get_comment_form for kwippy.quip quip.id as form %}
+
+<form action="/comments/post/" method="post" name="comment_form" style="padding:5px;">
+		<textarea class="textarea" name="comment" style="height:auto;" id="id_comment" rows="6" cols="60"></textarea>
+		{{ form.content_type }}
+		{{ form.object_pk }}
+		{{ form.timestamp }}
+		{{ form.security_hash }}
+		<div class="textarea_bolt">
+			<div id="commentsubscribe" class="checkbox">
+				{% show_comment_subscription request.user.id quip.id%}
+			</div>
+		<div class="clear"></div>
+			<input  class="button float_left" type="button" name="post" id="preview" value="Post&raquo;" onClick="submit_comment_form();">
+		</div>
+	</form>
+
+	{% if user.is_authenticated and dict.has_followers %}
+	{% load show_follower_pic %}
+	<br><div class="" id="invite_to_discussion"><a class="" href="javascript:void(0);" onClick="invite_to_conversation({{quip.id}});"><b>invite members & non-members to join/start conversation </b><img class="go_icon" src="/images/icons/arrow_right.gif" title="permalink"/><img src="/images/icons/new.gif"/></a></div>
+	<div class="" id="prog_bar" style="display:none"><img src='/images/icons/ajax_loading.gif'/></div>
+	<div class="" id="invite_conv_box"></div>
+	{%endif%}
+	
+{% endif %}

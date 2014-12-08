@@ -1,0 +1,33 @@
+{% extends "base_adminpage.html" %}
+
+{% block title %}
+    Invites
+{% endblock %}
+
+{% block header_invites %}
+	<li class="selected">Invites</li>
+{% endblock%}
+
+{% block content %}
+	<div class="content">
+		<form id="invites" method="post" action="">
+			<input type="submit" name="btn_generate" value="generate"/>			   
+			<textarea class="textarea" name="e-mail" id="email_box"></textarea>
+			<textarea class="textarea" name="mail_text" id="email_box"></textarea>
+			{% for key, value in invite_hash.items %}
+				<input type="text"  name="txtbox_code" value="{{ value }}">
+			{% endfor %}
+			{% if invite_hash %}
+				{% ifnotequal hash_length 0%}			
+				   <!--<input type="text"  name="txtbox_code" value="{{ invite_hash }}">-->
+				   <!--<textarea class="textarea" name="codes" id="codes"></textarea>-->	
+				{%else%}			   
+				   {% for key, value in invite_hash.items %}				     
+				     <textarea class="textarea" name="codes" id="codes" value="{{value}}"></textarea>
+				   {% endfor %}
+				{%endifnotequal%}
+			{% else %}			
+			{% endif%}
+		</form>
+	</div>
+{% endblock %}

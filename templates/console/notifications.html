@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>Tracking Notifications<br><br>
+	                 All Email notifications ON (user count):   {{not_settings_all_email_on}}<br>
+                         All IM notifications ON (user count):      {{not_settings_all_im_on}} <br>
+                         All Email notifications OFF (user count):  {{not_settings_all_email_off}}<br>
+                         All IM notifications OFF (user count):     {{not_settings_all_im_off}}<br>
+                         Both notifications OFF (user count):       {{both_not_off}}<br>
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}/css/base_signup.css{% endblock %}" >
+  </head>
+  <body>
+    <div>
+	<!-- Header -->
+	<div class="header" id="header">
+	   <img src="/images/logo.gif" />
+	      <div class="menu" >					
+		<ul>
+		 {% block header_home %}<li class="selected" ><a href="/about/">Invites</a></li>{% endblock %}
+		 {% block header_signup %}<li class="link"><a href="/register/">Feedback</a></li>{% endblock %}
+		</ul>
+	      </div>			
+	</div>
+	<!-- END Header -->		
+	<!-- Content -->
+	<div id="content">			
+	    {% block content %}
+		{{ content }}
+	    {% endblock %}
+	    <br class="clear" />
+	</div>
+	<!-- END Content -->
+    </div>
+      <div class="small_text">&copy;2007 kwippy</div>
+  </body>
+</html>
+		

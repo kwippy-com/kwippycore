@@ -1,0 +1,148 @@
+source main1
+{
+	type				= mysql
+	sql_host			= localhost
+	sql_user			= kwippy_user
+	sql_pass			= helloworld69
+	sql_db				= kwippy_staging
+	sql_port			= 3306	# optional, default is 3306
+	sql_query_pre			= REPLACE INTO sph_counter SELECT 1,MAX(id) FROM kwippy_quip
+	sql_query			= \
+		SELECT kwippy_quip.id,kwippy_quip.original,UNIX_TIMESTAMP(kwippy_quip.created_at) as created_at,kwippy_account.user_id AS user_id \
+		FROM kwippy_quip,kwippy_account WHERE kwippy_account.id=kwippy_quip.account_id AND kwippy_quip.id <= (SELECT max_id FROM sph_counter WHERE id=1) 
+	sql_attr_uint			= user_id
+	sql_attr_timestamp		= created_at
+}
+source delta1 : main1
+{
+	sql_query_pre                   = 
+        sql_query                       = \
+                SELECT kwippy_quip.id,kwippy_quip.original,UNIX_TIMESTAMP(kwippy_quip.created_at) as created_at,kwippy_account.user_id AS user_id \
+                FROM kwippy_quip,kwippy_account WHERE kwippy_account.id=kwippy_quip.account_id AND kwippy_quip.id > (SELECT max_id FROM sph_counter WHERE id=1)
+}
+source main2
+{
+        type                            = mysql
+        sql_host                        = localhost
+        sql_user                        = kwippy_user
+        sql_pass                        = helloworld69
+        sql_db                          = kwippy_staging
+        sql_port                        = 3306  # optional, default is 3306
+        sql_query_pre                   = REPLACE INTO sph_counter SELECT 2,MAX(id) FROM comments_comment
+        sql_query                       =  \
+		SELECT id,user_id,comment,UNIX_TIMESTAMP(submit_date) AS submit_date FROM comments_comment WHERE id <= (SELECT max_id FROM sph_counter WHERE id=2)
+	sql_attr_uint                   = user_id
+        sql_attr_timestamp              = submit_date
+}
+source delta2 : main2
+{
+        sql_query_pre                   = 
+        sql_query                       =  \
+                SELECT id,user_id,comment,UNIX_TIMESTAMP(submit_date) AS submit_date FROM comments_comment WHERE id > (SELECT max_id FROM sph_counter WHERE id=2)
+}
+source main3
+{
+        type                            = mysql
+        sql_host                        = localhost
+        sql_user                        = kwippy_user
+        sql_pass                        = helloworld69
+        sql_db                          = kwippy_staging
+        sql_port                        = 3306  # optional, default is 3306
+        sql_query_pre                   = REPLACE INTO sph_counter SELECT 3,MAX(id) FROM auth_user
+        sql_query                       =  \
+		SELECT kwippy_user_profile.id,auth_user.first_name,auth_user.last_name,auth_user.email,auth_user.username,UNIX_TIMESTAMP(auth_user.date_joined) as date_joined,\
+		kwippy_user_profile.display_name,kwippy_user_profile.age,kwippy_user_profile.gender,kwippy_user_profile.about_me,kwippy_user_profile.sexual_tendency,kwippy_user_profile.relationship_status,kwippy_user_profile.location_city,kwippy_user_profile.location_country,kwippy_user_profile.website \
+		FROM auth_user,kwippy_user_profile WHERE auth_user.id=kwippy_user_profile.user_id AND auth_user.id <=  (SELECT max_id FROM sph_counter WHERE id=3)
+
+	sql_attr_uint			= age
+	sql_attr_uint			= gender
+	sql_attr_uint			= sexual_tendency
+	sql_attr_uint			= relationship_status
+        sql_attr_timestamp              = date_joined
+}
+source delta3 : main3
+{
+	sql_query_pre                   = 
+        sql_query                       =  \
+                SELECT kwippy_user_profile.id,auth_user.first_name,auth_user.last_name,auth_user.email,auth_user.username,UNIX_TIMESTAMP(auth_user.date_joined) as date_joined,\
+                kwippy_user_profile.display_name,kwippy_user_profile.age,kwippy_user_profile.gender,kwippy_user_profile.about_me,kwippy_user_profile.sexual_tendency,kwippy_user_profile.relationship_status,kwippy_user_profile.location_city,kwippy_user_profile.location_country,kwippy_user_profile.website \
+                FROM auth_user,kwippy_user_profile WHERE auth_user.id=kwippy_user_profile.user_id AND auth_user.id > (SELECT max_id FROM sph_counter WHERE id=3)
+
+}
+
+index index1
+{
+	source			= main1
+	path			= /var/data/index1
+	docinfo			= extern
+	mlock			= 0
+	morphology 		= stem_en
+	charset_type		= utf-8
+	min_word_len		= 2
+	min_prefix_len		= 0
+	min_infix_len		= 0
+}
+
+index index1d : index1
+{
+        source                  = delta1
+        path                    = /var/data/index1d
+}
+
+index index2
+{
+        source                  = main2
+        path                    = /var/data/index2
+        docinfo                 = extern
+        mlock                   = 0
+        morphology              = stem_en
+        charset_type            = utf-8
+        min_word_len            = 2
+        min_prefix_len          = 0
+        min_infix_len           = 0
+}
+
+index index2d : index2
+{
+        source                  = delta2
+        path                    = /var/data/index2d
+}
+
+index index3
+{
+        source                  = main3
+        path                    = /var/data/index3
+        docinfo                 = extern
+        mlock                   = 0
+        morphology              = stem_en
+        charset_type            = utf-8
+        min_word_len            = 2
+        min_prefix_len          = 0
+        min_infix_len           = 0
+}
+
+index index3d : index3
+{
+        source                  = delta3
+        path                    = /var/data/index3d
+}
+
+indexer
+{
+	mem_limit			= 32M
+}
+
+searchd
+{
+	# address				= 127.0.0.1
+	port				= 3312
+	log					= /var/log/searchd.log
+	query_log			= /var/log/query.log
+	read_timeout		= 5
+	max_children		= 30
+	pid_file			= /var/log/searchd.pid
+	max_matches			= 1000
+	seamless_rotate		= 1
+}
+
+# --eof--

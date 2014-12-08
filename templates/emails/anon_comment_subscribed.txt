@@ -1,0 +1,11 @@
+subject: new comment from #_2
+body_text:  hi,\n #_2 has left a comment on the kwip\n\n "#_3" \n\n click ssiittee/#_1 to read and reply!\n\n #_2 posted the comment at #_5 \n\n click ssiittee/#_7 to unsubscribe \n\n
+body_html:  hi,<br /> <a href="ssiittee/#_6">#_2</a> has left a comment on the kwip <br /><br /> "<i>#_3</i>"<br /><br />  <b><a href="ssiittee/#_1">go read and reply</a></b>!<br /><br /><font color="gray"> <a href="ssiittee/#_6">#_2</a> posted the comment at #_5<br /><br />click <a href="ssiittee/#_7">here</a> to unsubscribe.
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('comment_follower_anon','new comment from #_2',
+'hi,\n #_2 has commented on the kwip\n\n "#_3" \n\n click ssiittee/#_4 to read and reply!\n\n #_2 posted the comment at #_5 \n\n >complete kwippy signup  ssiittee/signup/#_7 to signup for kwippy \n\n click ssiittee/#_1 to unsubscribe'
+,'hi,<br /> <a href="ssiittee/#_6">#_2</a> has commented on the kwip <br /><br /> "<i>#_3</i>"<br /><br />  <b><a href="ssiittee/#_4">go read and reply</a></b>!<br /><br /><font color="gray"> <a href="ssiittee/#_6">#_2</a> posted the comment at #_5<br /><br />  <a href="ssiittee/signup/#_7">complete kwippy signup</a> <br><br> <a href="ssiittee/#_1">here</a> to unsubscribe')
+
+
+insert into kwippy_im(type,body) values('comment_follower','#_1 has commented on the kwip:<br>"#_2"<br><br>you can read and reply here:<br>ssiittee/#_3');

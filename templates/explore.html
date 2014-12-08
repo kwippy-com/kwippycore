@@ -1,0 +1,67 @@
+<html>
+{% load format_url %}
+{% load show_quip_provider %}
+{% load append_revision_number %}
+{% load format_quipper_displayname%}
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% append_revision_number '/css/reset-fonts-grids.css' %}{% endblock %}"> 
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% append_revision_number '/css/user_page.css' %}{% endblock %}" >
+  <body >
+	<div class="wrap"> 
+	      {% include "feedback_link.html" %}
+      <div class="clear"></div>
+	  <span id="flash" style="display:block;" class="flash_message">
+	    {{ flash }}
+	  </span>
+<!--important maintain indentation-->
+	 <h2> Random Kwips </h2>
+	 <div class="content"><!--this has all the content-->				 
+		<div class="kwipsarea"><!--left col begins-->
+		 <br>		 
+		 <br>
+		{% include "explore_kwips_area.html" %}	
+			<br style="clear:both;" />
+			<div> 
+				{% if has_next %}
+					<span class="float_left prev_link"> 
+						<a href=".?page={{ next }}">&larr;older</a>
+					</span>
+				{% endif %}
+				{% if has_previous %}
+					<span class="float_right next_link">
+						<a href=".?page={{ previous }}">newer&rarr;</a>
+					</span>
+				{% endif %}
+			</div>
+			
+		</div><!--left col ends -->
+
+		<div class="networkarea"><!--right col begins-->
+			<div>
+				<a href="/" title="home"><img src="/images/logo.gif"/></a>
+				<br />
+				{% include "login_logout.html" %}
+				<br />
+				{% include "user_profile_box.html" %}
+			</div>
+		</div><!--right col ends -->
+	 </div><!-- content ends-->
+	 <br class="clear" />
+	  <br/>
+	 <!--footer begins--> 	
+	{% include "footer.html" %}
+	<!--footer ends-->
+    </div>	 <!--wrap ends-->
+</body>
+<script language="javascript">
+			function show_hide_fb_box(){
+			  if(document.getElementById('fback').style.display=="none"){
+			  	document.getElementById('fback').style.display="block";
+			  }
+			  else{
+			  document.getElementById('fback').style.display="none";
+			  }
+			 }
+</script>
+
+
+</html>

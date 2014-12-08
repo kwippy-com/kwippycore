@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				Kwipps Averages.<br/><br/>	
+				Avg kwips: {{avg_kwips}}<br>
+				Avg IM Integrations(Yahoo and gtalk): {{avg_ims}}<br>
+				Avg Comments: {{avg_comments}} <br>
+				Avg PM's: {{avg_pms}} <br>
+				Avg Buzzes: {{avg_buzzes}} <br>
+				Avg Follows: {{avg_follows}} <br>
+				Avg Friendships: {{avg_friendships}}<br>
+				Avg Favorites: {{avg_favorites}} <br>
+				Avg Invites: {{avg_invites}}<br>
+				Avg Conv Invites: {{avg_conv_invites}}<br>
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

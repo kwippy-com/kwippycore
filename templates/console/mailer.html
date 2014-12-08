@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	{%load format_username%}
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+		 {% load show_account_status %}
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<form id="mailer" action="/console/featuring/" name="mailer" method="post">
+				<div>
+				<!--	<label>subject:</label>
+					<input id="mail_subject" name="mail_subject"></input><br/><br/><br/><br/>
+					<label>body:</label><br/>
+					<textarea style="width:50%;height: 120px;" id="mail_body" name="mail_body"></textarea>  -->
+					<input type="submit" value="send mail"></input>
+				</div>
+				</form>
+<br><br>	 list of featured kwips:  <br>
+ kwip_text, kwip_username , email_sent <br> 
+         {% for kwip in featured_kwips %}
+                 {{kwip.id}}) {{kwip.quip.formated}}, {{kwip.quip.account.user.username}}, {{kwip.email_sent}}<br>					
+ {%endfor%}		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

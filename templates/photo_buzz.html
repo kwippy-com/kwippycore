@@ -1,0 +1,18 @@
+{%if user.is_authenticated and dict.is_receiver_following %}
+	{%ifnotequal request.user.username login%}		
+		<form method="post" action="/{{request.user.username}}/buzz/" id="buzz_form" name="buzz_form"> 
+			 <div class="buzz_imageupload"><a href = "javascript:void(0)" onclick = "document.getElementById('buzz_pic_box').style.display='block';document.getElementById('white_overlay1').style.display='block'">buzz</a></div>
+
+			  <div id="buzz_pic_box" class="white_content" style="width:350px;height:170px;">
+				just say how much you miss {{login}}'s profile pic :P
+				<textarea cols="2" id="" rows="5" name="buzz" class="textarea"></textarea> 
+				<input class="button" type="submit" value="send"/>
+				or
+				<a href="javascript:void(0)" onclick="document.getElementById('buzz_pic_box').style.display='none';document.getElementById('white_overlay1').style.display='none'">Close </a>
+			  </div>
+			  <div id="white_overlay1" class="white_overlay"></div>
+		          <input type="hidden" id="buzz_receiver" name="buzz_receiver" value="{{login}}">
+			  <input type="hidden" id="buzz_type"     name="buzz_type" value="2">
+		</form>			
+	{%endifnotequal%}
+{%endif%}

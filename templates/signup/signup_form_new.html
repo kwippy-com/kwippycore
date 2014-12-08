@@ -1,0 +1,83 @@
+{% extends "signup/base_unloggeduser.html" %}
+{% block custom_js %}
+    {% load append_revision_number %}
+    <script type="text/javascript" src="{% append_revision_number '/js/signup.js' %}"></script> 
+{% endblock %}
+
+{% block title %}
+    kwippy - signup 
+{% endblock %}
+
+ {% block header_signup %}
+	 <li class="selected">Signup</li>
+ {% endblock %}
+
+{% block content %}
+		{%if form.username.errors or form.email.errors. or form.password1.errors or form.password2.errors %}
+		   <span id="flash" style="display:block;" class="flash_message">
+			{{flash}}
+		   </span>			
+		{%endif%}
+
+<br>
+<br>
+	<div class="content text_center" >
+		<form method="post" action="." class="form">
+				<div class="">
+					<label for="id_username" class="float_left">
+						<b>username:</b>*
+					</label>
+					<div class="float_right">kwippy.com/{{ form.username }}	</div>
+				</div>
+				<div class="clear"></div>
+
+				<div style="height:30px;">					
+					<div id='username_positive_feedback' style="display:none" class="positive_feedback">&nbsp; </div> 
+					<div id='username_negative_feedback' style="display:none" class="negative_feedback">&nbsp;  </div> 
+					<div id='username_status' class="feedback"></div> 
+				</div>
+				<div class="clear"></div>
+				<div>
+					<label for="id_password1" class="float_left"><b>password:</b>*</label>
+					 <div class="float_right">{{ form.password1 }} 
+					 </div>
+				</div>
+				<div class="clear"></div>
+				<div style="height:30px;">					
+					<div id='password1_positive_feedback' style="display:none" class="positive_feedback">&nbsp; </div> 
+					<div id='password1_negative_feedback' style="display:none" class="negative_feedback">&nbsp; </div> 
+					<div id='password1_status' class="feedback"></div> 
+				</div>
+				<div class="clear"></div>
+				<div>
+					<label for="id_password2" class="float_left"><b>confirm password:</b>*</label>
+					<div class="float_right">{{ form.password2 }} 
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div style="height:30px;">
+					<div id='password2_positive_feedback' style="display:none" class="positive_feedback">&nbsp; </div> 
+					<div id='password2_negative_feedback' style="display:none" class="negative_feedback">&nbsp; </div> 
+					<div id='password2_status' class="feedback"></div> 
+				</div>
+			
+		<div class="clear"></div>
+				<div>
+					<label for="id_password" class="float_left"><b>email:</b>*</label>
+					<div class="float_right">{{ form.email }} 
+					</div>
+				</div>
+		<div class="clear"></div>
+				<div style="height:30px;">
+					<div id='email_positive_feedback' style="display:none" class="positive_feedback">&nbsp; </div> 
+					<div id='email_negative_feedback' style="display:none" class="negative_feedback">&nbsp; </div> 
+					<div  id='email_status' class="feedback"></div> 
+				</div>
+		<div class="clear"></div><br /><br />
+			{{ form.tos }} <label for="id_tos">I have read and agree to the <a class="onwhite" target="_blank" href="/home/tos">Terms of Service</a>:</label><br/> 
+{% if form.tos.errors %}
+<p class="flash_message"> <img src="/images/icons/cancel.gif" /> You need to accept the <a class="onwhite" target="_blank" href="/home/tos">Terms Of Service</a> to signup.</p>
+{% endif %}		<br/><input type="submit" value="Submit" class="button" />
+			</form>
+	</div>
+{% endblock %}

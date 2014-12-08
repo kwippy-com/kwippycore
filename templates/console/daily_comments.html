@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				Metrics to track kwippy's comments.<br/><br/>	
+                                
+									 People with zero comments: {{zero_comment_users}}<br><br>
+                                Total kwips(by these users) that were commented: {{no_of_kwips_commented}}<br><br>
+                                Total Comment Count on these people's kwips: {{total_comments_for_zero_comment_users}}<br><br>
+                                {{comments_on_featured}} Comments on {{featured_kwip_count}} Featured Kwips<br><br>
+                                {{comments_on_favorited}} Comments on {{favorite_kwip_count}} Favorited Kwips(Avg {{fav_comm_ratio}})<br><br>
+                                Daywise Comments: <br/><br/>
+                                    &nbsp; date &nbsp;&nbsp;&nbsp;&nbsp; no of comments<br/><br/>
+                                {%for item,key in daily_comments%}
+    `                              {{key}} &nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+                                {%endfor%}
+
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

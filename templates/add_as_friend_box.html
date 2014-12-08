@@ -1,0 +1,8 @@
+{% if user.is_authenticated %}
+    {% load is_friend%}
+    {% ifnotequal login user.username %}
+            {% ifnotequal login 'kwippy' %}
+                    {% show_is_friend user.username login %}							
+            {%endifnotequal%}
+    {%endifnotequal%}
+{% endif %}

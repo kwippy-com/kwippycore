@@ -1,0 +1,121 @@
+body {
+text-align:center;
+margin:0 auto;
+padding-top:30px;
+background-color:f9f9f9;
+}
+
+.wrap {
+text-align:center;
+margin:0 auto;
+width:880px;
+}
+
+
+.content {
+padding:20px 15px 20px 15px;
+font-family:georgia,sans-serif;
+font-size:100%;
+text-align:left;
+}
+
+
+a {
+color:blue;
+text-decoration:underline;
+}
+a:hover {
+background-color:#fff;
+color:black;
+text-decoration:none;
+}
+
+h1 {
+color:#fff;
+font-size:25px;
+padding-bottom:10px 
+padding-left:7px;
+font-weight:bold;
+}
+
+h2 {
+color:#fff;
+font-size:20px;
+}
+
+.post_box {
+padding: 7px;
+margin:10px auto 0 auto ;
+background-color:#fff;
+}
+
+.textbox{
+width:100%;
+border-top:1px solid grey;
+border-left:1px solid grey;
+height:35px;
+font-size:25px;
+font-family:georgia;
+padding-left:5px;
+margin-bottom:10px;
+}
+
+.textarea{
+width:100%;
+border-top:1px solid grey;
+border-left:1px solid grey;
+height:150px;
+font-family:georgia;
+font-size:25px;
+padding:5px 10px 10px 5px;
+}
+
+fieldset {
+font-size:18px;
+color:grey;
+padding:10px 10px 15px 10px;
+}
+fieldset legend label{
+padding-left:25px;
+}
+.header{
+clear:both;
+width:100%;
+display:block;
+}
+
+.nav {
+list-style:none;
+float:left;
+}
+
+.nav li {
+background-color:#BBD26C;
+color:grey;
+float:left;
+margin-right:10px;
+padding:3px 3px 6px 3px;
+color:white;
+}
+
+.header_logo{
+float:right;
+}
+
+select {
+border-top:1px solid grey;
+border-left:1px solid grey;
+padding:3px;
+font-size:18px;
+font-family:georgia;
+}
+
+ul {
+list-style:none;
+}
+
+.im_names{
+padding:auto 10px auto 10px;
+padding-left:10px;
+float:left;
+}

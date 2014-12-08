@@ -1,0 +1,420 @@
+<html><head><!--loading all the templatetags needed --><title>Living on the edge's kwips page</title>
+	
+	
+	
+  
+    	
+	<link rel="stylesheet" type="text/css" href="Living%20on%20the%20edge%27s%20kwips%20page_files/reset-fonts-grids.2"> 
+	<link rel="stylesheet" type="text/css" href="Living%20on%20the%20edge%27s%20kwips%20page_files/user_page.2"><link href="Living%20on%20the%20edge%27s%20kwips%20page_files/highlighter.css" type="text/css" rel="stylesheet"></head><body>
+	<div class="wrap"> 
+      
+	<a href="javascript:void(0);" style="color: black;" onclick="show_hide_fb_box();">
+		<span class="feedback_link">Feedback</span>
+	</a>
+	<form method="post" action="/feedback/add/" id="feedback_form"> 		
+		<div id="fback" style="display: none;">
+			<textarea id="feedback_box" class="" style="width: 500px; height: 50px;" name="feedback_box"></textarea>
+			<br>
+			<input id="submit_fb" class="button" value="submit" name="submit" type="submit">
+			<a href="javascript:void(0);" onclick="show_hide_fb_box();">or  close </a>
+		</div>
+	</form>
+
+      <div class="clear"></div>
+  	  <span id="flash_perm" style="display: block;" class="flash_message">
+	     
+	  </span>
+	  <span id="flash" style="display: none;" class="flash_message">
+	    
+	  </span>
+<!--important maintain indentation-->		
+     
+	 <div class="content"><!--this has all the content-->	
+		
+		  <div class="float_left">
+			  
+				<span class="follow_link">
+				<a href="http://staging.kwippy.com/mayank">all kwips</a>		
+				</span>
+				<span class="selected">
+				 <a href="http://staging.kwippy.com/mayank/kwips">Living on the edge's kwips</a>
+				</span>
+			   
+		</div>
+		
+		<br class="clear">
+
+		
+		<div class="kwipsarea"><!--left col begins-->
+			 <div class="follow_userlink">
+	 
+		
+			<a href="http://staging.kwippy.com/follow/mayank?to_do=unfollow" id="unfollow">
+				<span class="follow_icon"><img src="Living%20on%20the%20edge%27s%20kwips%20page_files/minus.gif"></span> unfollow mayank
+			</a>
+		
+	 
+</div>
+			  								
+		 <br>
+		 
+		 <br>
+		
+
+
+
+
+
+
+	
+	   
+	     <div class="kwip">				   
+			   Feelings are not supposed to be logical. Dangerous is the man who has rationalized his emotions  						
+		 </div>
+		 
+			  <div class="post_byuser">
+		 
+				 
+					   
+							<a href="http://staging.kwippy.com/kwip/favourite/1618" align="left">fav it!!</a> |
+							<a href="http://staging.kwippy.com/kwip/unfavourite/1618" align="left">unfav it!!</a> |
+					   
+				 	
+				 
+				 by 
+				 
+					<a href="http://staging.kwippy.com/mayank/"> Living on the edge </a>
+				 
+
+				 
+				 from Web
+				
+				(10 hours, 45 minutes ago)
+				
+				
+					
+				
+								
+				| <a href="http://staging.kwippy.com/mayank/kwips/2008/mar/06/190455/"> <img class="link_icon" title="permalink" src="Living%20on%20the%20edge%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+						  
+					
+		      </div>
+				
+
+
+<div class="comment_area">
+ 
+   <br>
+   		
+	<table cellpadding="0" cellspacing="0">
+	<tbody>
+	<tr>
+	<td><h3>Comments</h3></td>
+	</tr>
+	</tbody>
+	</table>
+
+		
+			<br>
+			<h3>Post a comment</h3>
+			
+
+	<form action="/comments/post/" method="post" name="comment_form">
+		<textarea class="textarea" name="comment" id="id_comment" rows="10" cols="60"></textarea>
+		<input name="options" value="ip" type="hidden">
+		<input name="target" value="19:1618" type="hidden">
+		<input name="gonzo" value="2db726a196ad6c3369e5d24bb914b153" type="hidden">
+		<input name="url" value="/mayank/kwips/2008/mar/06/190455/" type="hidden">
+		 
+		<br>
+		<div class="textarea_bolt">
+                <div id="commentsubscribe" class="float_left"><br>
+			<input id="subscribe_comments" value="true" class="float_left" name="subscribe_comments" type="checkbox"><h3>  Email follow-up comments</h3>
+			
+		</div><br class="clear">
+			<input class="button float_left" name="post" id="preview" value="Go»" type="submit">
+		</div>
+	</form>
+
+
+		
+ 
+</div>
+
+	
+		
+			<br style="clear: both;">
+			<div> 
+				
+				
+			</div>
+			
+		</div><!--left col ends -->
+
+		<div class="networkarea"><!--right col begins-->
+			<div>
+				<a href="http://staging.kwippy.com/" title="home"><img src="Living%20on%20the%20edge%27s%20kwips%20page_files/logo.gif"></a>
+				<br>
+				
+<div class="right_links">
+	
+		 Hi, <a href="http://staging.kwippy.com/kaa/">kaa</a> |
+			 <a href="http://staging.kwippy.com/kaa/dashboard">dashboard</a> |
+			 <a href="http://staging.kwippy.com/logout">logout</a>
+	
+</div>
+
+				<br>
+				
+<div class="user_profile"> <!-- profile div-->
+	<img src="Living%20on%20the%20edge%27s%20kwips%20page_files/3.bin">
+		<div class="clear"></div>
+			<a href="http://staging.kwippy.com/mayank/">Living on the edge</a>
+			
+			  <br>
+			  <span class="grey_text">
+				  
+					25 
+				  
+
+				   
+				  
+				  
+				  | New Delhi
+				   <!--need to add link for more -->
+				  <br>
+     			  				  
+				   I need to believe that something extraordinary is possible
+				  
+		  	  </span> 
+   			  <br>
+			
+</div>
+					
+				
+				<br>
+				
+
+<div class="following_box">
+	<h4>
+		<a href="http://staging.kwippy.com/mayank/following/">following(15):</a>
+	</h4>
+	
+	  
+		<div class="following_user">
+		  <a title="dipankar" href="http://staging.kwippy.com/dipankar/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/6.following">
+		  </a>				
+		  <div class="following_name">
+			<a title="dipankar" href="http://staging.kwippy.com/dipankar/"> dipankar </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="maitrayee" href="http://staging.kwippy.com/maitrayee/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/52.following">
+		  </a>				
+		  <div class="following_name">
+			<a title="maitrayee" href="http://staging.kwippy.com/maitrayee/"> maitrayee </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="kaa" href="http://staging.kwippy.com/kaa/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/4_002.bin">
+		  </a>				
+		  <div class="following_name">
+			<a title="kaa" href="http://staging.kwippy.com/kaa/"> kaa </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="smriti" href="http://staging.kwippy.com/smriti/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/11_002.bin">
+		  </a>				
+		  <div class="following_name">
+			<a title="smriti" href="http://staging.kwippy.com/smriti/"> smriti </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="varun" href="http://staging.kwippy.com/varun/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/27.following">
+		  </a>				
+		  <div class="following_name">
+			<a title="varun" href="http://staging.kwippy.com/varun/"> varun </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="22" href="http://staging.kwippy.com/saurabh/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/unisex.following">
+		  </a>				
+		  <div class="following_name">
+			<a title="22" href="http://staging.kwippy.com/saurabh/"> 22 </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="golak" href="http://staging.kwippy.com/golak/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/unisex.following">
+		  </a>				
+		  <div class="following_name">
+			<a title="golak" href="http://staging.kwippy.com/golak/"> golak </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="lalit" href="http://staging.kwippy.com/lalit/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/48.following">
+		  </a>				
+		  <div class="following_name">
+			<a title="lalit" href="http://staging.kwippy.com/lalit/"> lalit </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="gauravgupta" href="http://staging.kwippy.com/gauravgupta/"> 
+				<img class="user_pic_following" src="Living%20on%20the%20edge%27s%20kwips%20page_files/dude.following">
+		  </a>				
+		  <div class="following_name">
+			<a title="gauravgupta" href="http://staging.kwippy.com/gauravgupta/"> gauravgupta </a>
+		  </div>
+		</div>
+	  
+	
+	<div class="clear"></div>
+	<span class="float_right">
+	  <a href="http://staging.kwippy.com/mayank/following/">see details <img class="go_icon" src="Living%20on%20the%20edge%27s%20kwips%20page_files/arrow_right.gif"></a>
+	</span>
+</div>
+
+				<div class="clear"></div>
+				
+
+<div class="followers_box">
+	<h4><a href="http://staging.kwippy.com/mayank/followers/">followers(9):</a></h4>
+	
+		
+			<div class="follower_user">
+				<a title="dipankar" href="http://staging.kwippy.com/dipankar/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/6.follower">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="kaa" href="http://staging.kwippy.com/kaa/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/4.bin">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="smriti" href="http://staging.kwippy.com/smriti/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/11.bin">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="varun" href="http://staging.kwippy.com/varun/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/27.follower">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="22" href="http://staging.kwippy.com/saurabh/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/unisex.follower">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="yatender" href="http://staging.kwippy.com/yatender/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/unisex.follower">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="asd" href="http://staging.kwippy.com/admin/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/1.follower">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="Nirav" href="http://staging.kwippy.com/nirav/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/dude.follower">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="Faded Glory" href="http://staging.kwippy.com/hina/"> 
+					<img class="user_pic_follower" src="Living%20on%20the%20edge%27s%20kwips%20page_files/16.bin">
+				</a>
+			</div>
+		
+	
+	<div class="clear"></div>
+	<span class="float_right">
+		<a href="http://staging.kwippy.com/mayank/followers/">see details <img class="go_icon" src="Living%20on%20the%20edge%27s%20kwips%20page_files/arrow_right.gif"></a>
+	</span>
+</div>	
+
+
+			</div>
+		</div><!--right col ends -->
+	 </div><!-- content ends-->
+	 
+	 <br class="clear">
+	  <br>
+	 <!--footer begins--> 	
+	<div class="footer">
+	<ul>
+		<li><a href="http://blog.kwippy.com/" class="onwhite">blog</a></li>
+		<li><a href="http://staging.kwippy.com/help/" class="onwhite">help</a></li>
+		<li><a href="http://staging.kwippy.com/contactus/" class="onwhite">contact us</a></li>
+		<li><a href="http://staging.kwippy.com/tos/" class="onwhite">TOS</a></li>
+		<li><a href="http://staging.kwippy.com/privacy/" class="onwhite">privacy policy</a></li>
+	</ul>
+	<div>©2008 kwippy</div>
+</div>
+
+	<!--footer ends-->
+    </div>	 <!--wrap ends-->
+<script type="text/javascript" src="Living%20on%20the%20edge%27s%20kwips%20page_files/jquery-1.js"></script>
+<script language="javascript">
+			intval=window.setInterval("hide_flash()",5000)
+			 function hide_flash(){
+				document.getElementById('flash').style.display="none"
+				window.clearInterval(intval)
+			 }
+
+			 function hide_perm_flash_message(){
+				 document.getElementById('flash_perm').style.display='none'
+			 }			 
+			 
+			 function show_hide_fb_box(){
+			  if(document.getElementById('fback').style.display=="none"){
+			  	document.getElementById('fback').style.display="block";
+				document.getElementById('feedback_box').focus();
+			  }
+			  else{
+			  document.getElementById('fback').style.display="none";
+			  }
+			 }
+
+			 function submit_form(){
+			 if (document.getElementById('kwip_box').value!='')
+			 {
+				 document.kwip_form.submit();
+			 }
+			 else{
+				alert('please insert something');
+			 }
+
+			 }
+
+			/*$(document).ready(function() {
+				
+			}*/
+</script>
+</body></html>

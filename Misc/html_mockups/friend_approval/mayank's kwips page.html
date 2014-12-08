@@ -1,0 +1,1175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+	
+	
+	
+	
+	  
+	
+  
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="A microblogging and Instant Messenger status logger with a social network optimized for close friends">
+	<meta name="keywords" content="microblogging, microblog, nanoblogging, nanoblog, social network, Gtalk status, Yahoo messenger status, store status, archive status">
+    	<title>mayank's kwips page</title>
+	<link rel="stylesheet" type="text/css" href="mayank%27s%20kwips%20page_files/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="mayank%27s%20kwips%20page_files/user_page.css">
+	<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon">
+    	<script type="text/javascript" src="mayank%27s%20kwips%20page_files/jquery-1.js"></script> 
+	<script type="text/javascript" src="mayank%27s%20kwips%20page_files/mypage.js"></script> 
+
+  <style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+
+.firebugHighlight {
+    z-index: 2147483647;
+    position: absolute;
+    background-color: #3875d7;
+}
+
+.firebugLayoutBoxParent {
+    z-index: 2147483647;
+    position: absolute;
+    background-color: transparent;
+    border-right: 1px dashed #BBBBBB;
+    border-bottom: 1px dashed #BBBBBB;
+}
+
+.firebugRulerH {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background: url(chrome://firebug/skin/rulerH.png) repeat-x;
+    border-top: 1px solid #BBBBBB;
+    border-right: 1px dashed #BBBBBB;
+    border-bottom: 1px solid #000000;
+}
+
+.firebugRulerV {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 14px;
+    height: 100%;
+    background: url(chrome://firebug/skin/rulerV.png) repeat-y;
+    border-left: 1px solid #BBBBBB;
+    border-right: 1px solid #000000;
+    border-bottom: 1px dashed #BBBBBB;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.firebugLayoutBoxOffset {
+    z-index: 2147483647;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.firebugLayoutBoxMargin {
+    background-color: #EDFF64;
+}
+
+.firebugLayoutBoxBorder {
+    background-color: #666666;
+}
+
+.firebugLayoutBoxPadding {
+    background-color: SlateBlue;
+}
+
+.firebugLayoutBoxContent {
+    background-color: SkyBlue;
+}
+
+/*.firebugHighlightGroup .firebugLayoutBox {
+    background-color: transparent;
+}
+
+.firebugHighlightBox {
+    background-color: Blue !important;
+}*/
+
+.firebugLayoutLine {
+    z-index: 2147483647;
+    background-color: #000000;
+    opacity: 0.4;
+}
+
+.firebugLayoutLineLeft,
+.firebugLayoutLineRight {
+    position: fixed;
+    width: 1px;
+    height: 100%;
+}
+
+.firebugLayoutLineTop,
+.firebugLayoutLineBottom {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px;
+    border-top: 1px solid #999999;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px;
+    border-left: 1px solid #999999;
+}
+</style></head><body onload="flashy();">
+	<div class="wrap"> 
+      
+	<a href="javascript:void(0);" style="color: black;" onclick="show_hide_fb_box();">
+		<span class="feedback_link">Feedback</span>
+	</a>
+	<form method="post" action="/feedback/add/" id="feedback_form"> 		
+		<div id="fback" style="display: none;">
+			<textarea id="feedback_box" class="textbox grey_text" onclick="if (this.value =='likes/dislikes ..bugs or suggestions if any, all are welcome :)') {this.value=''}" onblur="if (this.value==''){this.value='likes/dislikes ..bugs or suggestions if any, all are welcome :)'}" value="likes/dislikes ..bugs or suggestions if any, all are welcome :)" style="width: 500px; height: 50px;" name="feedback_box"></textarea>
+			<br>
+			<input id="submit_fb" class="button" value="submit" name="submit" type="submit">
+			<a href="javascript:void(0);" onclick="show_hide_fb_box();">or  close </a>
+		</div>
+	</form>
+
+      <div class="clear"></div>
+	  <span id="flash_update" style="display: block;" class="flash_message">
+	  	
+	  </span>
+  	  <span id="flash_perm" style="display: block;" class="flash_message">
+	     
+	  </span>
+	  <span id="flash" style="display: none;" class="flash_message">
+	    
+	  </span>
+
+     
+	 <div class="content">
+		<div class="left_col">
+ 
+ 
+			<div class="clear"></div>
+			  
+				<span class="float_left" style="height: 19px;">
+					<a class="selected" href="http://www.kwippy.com/mayank">mayank's network</a>
+					<a class="unselected" href="http://www.kwippy.com/mayank/kwips">mayank's kwips</a>
+					</span>
+					<span class="float_right">
+					<a class="unselected" href="http://www.kwippy.com/everyone/">everyone's kwips</a>
+					</span>
+
+			    
+
+		
+		<br class="clear">
+
+		
+		<div class="kwipsarea">
+		
+	
+	<div class="follow_userlink" style="width: 100%;">
+			
+				 
+			
+			<div class="clear"></div>
+			<div class="change_follow_setting" id="follow_setting" style="display: block;">
+						<form method="post" action="/im_notification/mayank/">friend request from [username] 
+								 
+								 
+								   
+
+									
+									<span class="float_right">
+									<a href="javascript:void(0);" onclick="show_hide_followsettings_box('hide');" class="darkblue" style="color: rgb(0, 134, 255);"> or cancel </a></span>
+									<input value="approve" class="button float_right" type="submit">
+									<div class="clear"></div>
+						</form>
+					
+			</div>
+			<div class="clear"></div>
+	</div>
+	
+
+
+
+		
+
+
+			<div class="clear"></div>
+		
+
+
+			None
+
+		 
+   	     
+			
+		 
+		 
+		 <br>
+
+		
+
+
+
+
+
+
+
+  
+	 
+	   
+	     <div class="kwip">
+				
+					Logged Out  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19159">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19159)" href="javascript:void(0);" id="favorite_19159"><img id="fav_image_19159" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/brokenglassstudios/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/369.follower" alt="brokenglassstudios" width="16" height="16">
+						brokenglassstudios 
+					</a>
+				 
+
+				 
+				 from GTalk
+				
+				(7 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/brokenglassstudios/kwips/2008/jun/27/061211/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/brokenglassstudios/kwips/2008/jun/27/061211/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip">
+				
+					<a target="_blank" href="http://sanskritvoice.com/" rel="nofollow">http://sanskritvoice.com</a>
+..Web 2.0 enabled, non-profit website...creating community of Sanskrit
+lovers and spread awareness about the ancient language... </div>
+		 
+			  <div class="post_otherusers" id="19156">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19156)" href="javascript:void(0);" id="favorite_19156"><img id="fav_image_19156" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/kaushalchandak/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/111.follower" alt="kaushalchandak" width="16" height="16">
+						kaushalchandak 
+					</a>
+				 
+
+				 
+				 from Web
+				
+				(52 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/kaushalchandak/kwips/2008/jun/27/052752/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/kaushalchandak/kwips/2008/jun/27/052752/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip">
+				
+					Some Names are so Disturbing  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19155">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19155)" href="javascript:void(0);" id="favorite_19155"><img id="fav_image_19155" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/adheeth/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/116.follower" alt="adheeth" width="16" height="16">
+						adheeth 
+					</a>
+				 
+
+				 
+				 from GTalk
+				
+				(56 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/adheeth/kwips/2008/jun/27/052402/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/adheeth/kwips/2008/jun/27/052402/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip">
+				
+					Alibaug, here we come  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19152">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19152)" href="javascript:void(0);" id="favorite_19152"><img id="fav_image_19152" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/capoindiano/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/dude.jpeg" alt="capoindiano" width="16" height="16">
+						capoindiano 
+					</a>
+				 
+
+				 
+				 from GTalk
+				
+				(1 hour, 8 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/capoindiano/kwips/2008/jun/27/051147/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/capoindiano/kwips/2008/jun/27/051147/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip">
+				
+					says hallo to the kwippy world :)!!  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19149">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19149)" href="javascript:void(0);" id="favorite_19149"><img id="fav_image_19149" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/mizellw/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/502.follower" alt="mizellw" width="16" height="16">
+						mizellw 
+					</a>
+				 
+
+				 
+				 from Web
+				
+				(1 hour, 20 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/mizellw/kwips/2008/jun/27/045935/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/mizellw/kwips/2008/jun/27/045935/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip"> hey mizellw this is a
+demo kwip. you could integrate your Gtalk and Yahoo messenger status,
+share links, write a poem, meet old friends and make new ones; and 100
+other things you can think of. Read <a target="_blank" href="http://blog.kwippy.com/2008/04/07/kwippy/" rel="nofollow">http://blog.kwippy.com/2008/04/07/kwippy/</a> for more  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19146">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19146)" href="javascript:void(0);" id="favorite_19146"><img id="fav_image_19146" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/mizellw/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/502.follower" alt="mizellw" width="16" height="16">
+						mizellw 
+					</a>
+				 
+
+				 
+				 from Web
+				
+				(1 hour, 26 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/mizellw/kwips/2008/jun/27/045333/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/mizellw/kwips/2008/jun/27/045333/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip">
+				
+					Want Date with Katrina ? <a target="_blank" href="http://apps.facebook.com/youandkatrina/" rel="nofollow">http://apps.facebook.com/youandkatrina/</a>  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19145">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19145)" href="javascript:void(0);" id="favorite_19145"><img id="fav_image_19145" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/abhishek1711/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/480.follower" alt="abhishek1711" width="16" height="16">
+						abhishek1711 
+					</a>
+				 
+
+				 
+				 from GTalk
+				
+				(1 hour, 28 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/abhishek1711/kwips/2008/jun/27/045148/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/abhishek1711/kwips/2008/jun/27/045148/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip">
+				
+					Want Date with Katrina ?  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19144">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19144)" href="javascript:void(0);" id="favorite_19144"><img id="fav_image_19144" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/abhishek1711/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/480.follower" alt="abhishek1711" width="16" height="16">
+						abhishek1711 
+					</a>
+				 
+
+				 
+				 from GTalk
+				
+				(1 hour, 28 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/abhishek1711/kwips/2008/jun/27/045130/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/abhishek1711/kwips/2008/jun/27/045130/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip">
+				
+					congrats to kwippy  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19143">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19143)" href="javascript:void(0);" id="favorite_19143"><img id="fav_image_19143" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/rahulg/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/unisex.jpeg" alt="rahulg" width="16" height="16">
+						rahulg 
+					</a>
+				 
+
+				 
+				 from GTalk
+				
+				(1 hour, 37 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/rahulg/kwips/2008/jun/27/044227/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/rahulg/kwips/2008/jun/27/044227/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	 
+	   
+	     <div class="kwip">
+				
+					Indian B-School teachers lack basic awareness <a target="_blank" href="http://trak.in/tags/business/2008/05/21/indian-bschool-teacher-awareness/" rel="nofollow">http://trak.in/tags/business/2008/05/21/indian-bschool-teacher-awareness/</a>  
+Shocking!  						
+				
+					
+		 </div>
+		 
+			  <div class="post_otherusers" id="19127">
+		 
+				 					   
+					<a align="left" onclick="favorite_unfavorite(19127)" href="javascript:void(0);" id="favorite_19127"><img id="fav_image_19127" class="go_icon" title="favorite this kwip" src="mayank%27s%20kwips%20page_files/favorite.gif"></a> |							
+				 	
+				 
+				 by 
+				 
+					
+					<a href="http://www.kwippy.com/kaushalchandak/"><img class="user_pic_16" src="mayank%27s%20kwips%20page_files/111.follower" alt="kaushalchandak" width="16" height="16">
+						kaushalchandak 
+					</a>
+				 
+
+				 
+				 from Web
+				
+				(2 hours, 50 minutes ago)
+				
+				
+					
+					<a href="http://www.kwippy.com/kaushalchandak/kwips/2008/jun/27/032945/">
+						 go reply<img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a> 
+					
+				
+								
+				| <a href="http://www.kwippy.com/kaushalchandak/kwips/2008/jun/27/032945/"> <img class="link_icon" title="permalink" src="mayank%27s%20kwips%20page_files/icon_link.gif"></a> 
+
+					
+		      </div>
+				
+
+
+
+
+<div class="comment_area">
+ 
+</div>
+
+	 
+  
+	
+	
+			<br style="clear: both;">
+			<div> 
+				
+					<span class="float_left prev_link"> 
+						<a href="http://www.kwippy.com/mayank/?page=1">←older</a>
+					</span>
+				
+				
+			</div>
+			
+		</div>
+		</div>
+		<div class="right_col">
+			<div class="logo_box" style="background-color: rgb(255, 255, 255);">
+				<a href="http://www.kwippy.com/" title="home"><img src="mayank%27s%20kwips%20page_files/logo.gif"></a>
+				<br>
+					<div class="right_links">
+	
+		 Hi, <a href="http://www.kwippy.com/kaa/">kaa</a> |
+			 <a href="http://www.kwippy.com/kaa/dashboard">dashboard</a> |
+			 <a href="http://www.kwippy.com/logout">logout</a>
+	
+</div>
+
+					
+		<form method="get" action="/search/" id="search_form" name="search_form"> 
+			<div class="search_box">
+			    <input name="query" class="textbox grey_text" onclick="if (this.value =='people or kwips') {this.value=''}" onblur="if (this.value==''){this.value='people or kwips'}" value="people or kwips" id="query">
+				<input value="Search" class="button" type="submit">
+			</div>	
+	    </form>
+
+
+
+	<br>	
+			</div>
+			<div class="clear"></div>
+			<div class="networkarea">
+				<div>
+							
+					
+<div class="user_profile"> <!-- profile div-->
+	<img src="mayank%27s%20kwips%20page_files/3.main" alt="mayank">
+	<!--<div class="buzz_imageupload"><a href="" >buzz!</a></div>--><!-- link for buzz image upload- verfiy if the image is the default or the  user uploaded and than show the link-->
+		<div class="clear"></div>
+			<b><a href="http://www.kwippy.com/mayank/">Mayank Dhingra</a></b>
+			
+			  <br>
+			  <div><b>
+				  
+					25 
+				  
+
+				  
+				   
+					|
+				   
+				   Male 
+				   
+				  
+				  
+    			   
+				     |
+				   
+				  New Delhi
+				   <!--need to add link for more -->
+				</b>  <br>
+     			  				  
+				   <p>I am a simple man with complex tastes...</p> <p>Co-Founder/CEO Kwippy...</p> <p>My blog <a target="_blank" href="http://mayank.name/" rel="nofollow">http://mayank.name</a></p> <p></p>
+				  
+			
+		  	  </div> 
+			  
+				  <div class="grey_text"><b><a href="http://www.kwippy.com/mayank/kwips">824 kwips</a>, 1158 comments </b></div>
+			  
+
+			
+</div>
+					
+				
+				
+					
+		
+			<form method="post" action="/kaa/pvt_message/" id="pvt_msg_form" name="pvt_msg_form"> 
+				<!--
+				<div> 
+					<p>
+						<b><a onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" href="javascript:void(0)"><img src="/images/icons/email_go.gif" class="link_icon" />send private message
+						</a></b>
+					</p>
+					<div class="white_content" id="light" style="display: none;">
+					<div id="fade" class="white_overlay"></div>
+						<b>send private message</b>
+						<textarea cols="2" id="pvt_msg" rows="5" name="pvt_msg" class="textarea"></textarea> 
+						<input type="submit" value="send" class="button"/> or 
+						<a onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" href="javascript:void(0)">Close
+						</a>
+				</div>
+
+
+-->
+	
+			<b>
+			<a onclick="document.getElementById('mail_area').style.display='block';" href="javascript:void(0)"><img src="mayank%27s%20kwips%20page_files/email_go.gif" class="link_icon">send private message
+			</a>
+			</b>
+
+		  <div id="mail_area" class="white_content" style="position: relative; top: 0pt; left: 0pt; width: auto; margin-top: -20px;">
+			send private message
+			<textarea cols="2" id="pvt_msg" rows="5" name="pvt_msg" class="textarea"></textarea> 
+			<input value="send" class="button" type="submit"> or 
+			<a onclick="document.getElementById('mail_area').style.display='none';" href="javascript:void(0)">Close
+			</a>
+		  </div>
+		<!--  <div id="white_overlay2" class="white_overlay"></div>-->
+		  
+
+
+
+
+
+
+
+
+				<input id="receiver_username" name="receiver_username" value="mayank" type="hidden">
+			</form>
+		
+
+					<br>
+<div class="">
+<a href="http://www.kwippy.com/mayank/favoritekwips" title="mayank's favorite kwips"> <img src="mayank%27s%20kwips%20page_files/unfavorite.gif"> 57 favorite kwips</a>
+<br>
+					
+	
+
+
+
+
+					<br>
+					
+
+
+<div class="following_box">
+	<h4>
+		<a href="http://www.kwippy.com/mayank/following/">following(364):</a>
+	</h4>
+	
+	  
+		<div class="following_user">
+		  <a title="kaa" href="http://www.kwippy.com/kaa/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/4_002.bin" alt="kaa">
+		  </a>				
+		  <div class="following_name">
+			<a title="kaa" href="http://www.kwippy.com/kaa/"> kaa </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="seoparas" href="http://www.kwippy.com/seoparas/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/dude_002.jpeg" alt="seoparas">
+		  </a>				
+		  <div class="following_name">
+			<a title="seoparas" href="http://www.kwippy.com/seoparas/"> seoparas </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="jasdeep" href="http://www.kwippy.com/jasdeep/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/178.following" alt="jasdeep">
+		  </a>				
+		  <div class="following_name">
+			<a title="jasdeep" href="http://www.kwippy.com/jasdeep/"> jasdeep </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="mizellw" href="http://www.kwippy.com/mizellw/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/502.following" alt="mizellw">
+		  </a>				
+		  <div class="following_name">
+			<a title="mizellw" href="http://www.kwippy.com/mizellw/"> mizellw </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="brokenglassstudios" href="http://www.kwippy.com/brokenglassstudios/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/369.following" alt="brokenglassstudios">
+		  </a>				
+		  <div class="following_name">
+			<a title="brokenglassstudios" href="http://www.kwippy.com/brokenglassstudios/"> brokenglassstudios </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="kaushalchandak" href="http://www.kwippy.com/kaushalchandak/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/111.following" alt="kaushalchandak">
+		  </a>				
+		  <div class="following_name">
+			<a title="kaushalchandak" href="http://www.kwippy.com/kaushalchandak/"> kaushalchandak </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="kco048" href="http://www.kwippy.com/kco048/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/276.following" alt="kco048">
+		  </a>				
+		  <div class="following_name">
+			<a title="kco048" href="http://www.kwippy.com/kco048/"> kco048 </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="yatender" href="http://www.kwippy.com/yatender/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/43.following" alt="yatender">
+		  </a>				
+		  <div class="following_name">
+			<a title="yatender" href="http://www.kwippy.com/yatender/"> yatender </a>
+		  </div>
+		</div>
+	  
+		<div class="following_user">
+		  <a title="mohit" href="http://www.kwippy.com/mohit/"> 
+				<img class="user_pic_following" src="mayank%27s%20kwips%20page_files/dude_002.jpeg" alt="mohit">
+		  </a>				
+		  <div class="following_name">
+			<a title="mohit" href="http://www.kwippy.com/mohit/"> mohit </a>
+		  </div>
+		</div>
+	  
+	
+	<div class="clear"></div>
+
+		<span class="float_right">
+		  <a href="http://www.kwippy.com/mayank/following/">see all <img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a>
+		</span>
+</div>
+
+
+					<div class="clear"></div>
+					
+
+<div class="followers_box">
+	<h4><a href="http://www.kwippy.com/mayank/followers/">followers
+	
+		(246)
+		
+	:
+	</a></h4>
+	
+		
+			<div class="follower_user">
+				<a title="kaa" href="http://www.kwippy.com/kaa/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/4.bin" alt="kaa">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="seoparas" href="http://www.kwippy.com/seoparas/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/dude.jpeg" alt="seoparas">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="jasdeep" href="http://www.kwippy.com/jasdeep/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/178.follower" alt="jasdeep">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="mizellw" href="http://www.kwippy.com/mizellw/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/502.follower" alt="mizellw">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="brokenglassstudios" href="http://www.kwippy.com/brokenglassstudios/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/369.follower" alt="brokenglassstudios">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="kaushalchandak" href="http://www.kwippy.com/kaushalchandak/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/111.follower" alt="kaushalchandak">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="kco048" href="http://www.kwippy.com/kco048/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/276.follower" alt="kco048">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="yatender" href="http://www.kwippy.com/yatender/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/43.follower" alt="yatender">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="mohit" href="http://www.kwippy.com/mohit/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/dude.jpeg" alt="mohit">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="teaguzzler" href="http://www.kwippy.com/teaguzzler/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/343.follower" alt="teaguzzler">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="mikeward" href="http://www.kwippy.com/mikeward/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/240.follower" alt="mikeward">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="dipankar" href="http://www.kwippy.com/dipankar/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/6.follower" alt="dipankar">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="JegErPhil" href="http://www.kwippy.com/JegErPhil/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/431.follower" alt="JegErPhil">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="mahesh" href="http://www.kwippy.com/mahesh/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/unisex.jpeg" alt="mahesh">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="delgado" href="http://www.kwippy.com/delgado/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/386.follower" alt="delgado">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="KeMOO" href="http://www.kwippy.com/KeMOO/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/491.follower" alt="KeMOO">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="Azeez" href="http://www.kwippy.com/azeez541/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/465.follower" alt="azeez541">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="..." href="http://www.kwippy.com/smriti/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/11.follower" alt="smriti">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="CNpaoe" href="http://www.kwippy.com/CNpaoe/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/135.follower" alt="CNpaoe">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="warren_g" href="http://www.kwippy.com/warren_g/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/226.follower" alt="warren_g">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="samrat1004" href="http://www.kwippy.com/samrat1004/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/dude.jpeg" alt="samrat1004">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="rick" href="http://www.kwippy.com/rick/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/dude.jpeg" alt="rick">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="brianritchie" href="http://www.kwippy.com/brianritchie/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/212.follower" alt="brianritchie">
+				</a>
+			</div>
+		
+			<div class="follower_user">
+				<a title="tjgillies" href="http://www.kwippy.com/tjgillies/"> 
+					<img class="user_pic_follower" src="mayank%27s%20kwips%20page_files/421.follower" alt="tjgillies">
+				</a>
+			</div>
+		
+	
+	<div class="clear"></div>
+	
+	<span class="float_right">
+		<a href="http://www.kwippy.com/mayank/followers/">see all <img class="go_icon" src="mayank%27s%20kwips%20page_files/arrow_right.gif"></a>
+	</span>
+	
+</div>	
+
+
+				</div>
+			</div>
+		</div>
+	 </div>
+	 
+	 <br class="clear">
+	  <br>
+	<div class="footer">
+	<ul>
+		<li><a href="http://blog.kwippy.com/" class="onwhite">blog</a></li>
+                <li><a href="http://www.kwippy.com/home/team/" class="onwhite">team</a></li>
+		<li><a href="http://www.kwippy.com/help/" class="onwhite">help</a></li>
+		<li><a href="http://www.kwippy.com/home/contactus/" class="onwhite">contact us</a></li>
+		<li><a href="http://www.kwippy.com/home/tos/" class="onwhite">TOS</a></li>
+	</ul>
+	<div>©2008 kwippy</div>
+</div>  
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="mayank%27s%20kwips%20page_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3116342-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+    </div>
+</div></body></html>

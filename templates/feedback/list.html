@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Feedback listing for user</h1>
+<ul>
+{% for fb in fbs %}
+<li><a href="/feedback/view/{{ fb.id }}/">{{ fb.subject }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>

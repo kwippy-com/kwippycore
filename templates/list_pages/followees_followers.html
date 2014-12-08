@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>
+		{%ifequal type 'followers'%}
+		   	{{ user_profile.user.username }}'s followers
+		{%else%}
+			{{ user_profile.user.username }} is following these people
+		{%endifequal%}
+	  
+	</title>		 
+	<link rel="stylesheet" type="text/css"    href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}/css/list_page.css{% endblock %}" >	
+ </head>
+ <body> 
+ 	{% load show_profile_pic %}
+	{% load show_gender_list_pages %}
+	{% load show_followee_pic %}
+	{% load is_following_list_page%}
+	 <div id="flash" style="display:block">	    
+	 </div>	 					
+	 <div class="content">				
+     <div class="wrap">
+		<h1 class="float_left">
+		 {%ifequal type 'followers'%}
+			followers of <a href="/{{user_profile.user.username}}/">{{ user_profile.user.username }} </a>
+		 {%else%}
+			<a href="/{{user_profile.user.username}}/">{{ user_profile.user.username }} </a> is following 
+		 {%endifequal%}
+		</h1> 
+		<div class="col2">
+				<div class="h2"><a href="/"><img src="/images/logo.gif" /></a><br />
+					{% include "login_logout.html" %}
+				</div>
+		</div>
+
+	</div>
+	<div style="clear:both;" ></div>
+	<ul>
+		 {%if followers_profiles%}
+	      {% for profile in followers_profiles %}
+			<li>
+				<div class="user_image">
+					<a href="/{{ profile.user.username }}/">
+						<img src="{% show_followee_pic profile.user_id %}" /> 
+					</a>
+				</div>
+				<div class="user_details">
+					<div style="width: 750px;"><a href="/{{ profile.user.username }}/" class="" >{{  profile.user.username }}</a><br/>
+					  {% if profile.gender %}{% show_gender profile.id%} {%endif %} {% if profile.age %} | {{ profile.age }} {%endif%} {% if profile.location_city %} | {{ profile.location_city }} {% endif%} {% if profile.location_country %} | {{ profile.location_country }} {% endif %} &nbsp; 
+					  {% if user.is_authenticated %}
+					  {%ifequal type 'followers'%}
+							{% show_is_following_list user.id profile.user_id%}
+					  {%else%}
+						  {%ifnotequal user user_profile.user %}
+							{% show_is_following_list user.id profile.user_id%}
+	   					  {%endifnotequal%}
+					 {%endifequal%}
+					  {% endif %}
+					  <br /> {% if profile.about_me %} {{ profile.about_me|urlize|linebreaks|truncatewords:100}} {%endif%} 
+					  </div>
+				</div>
+			</li>
+		<div style="clear:both;" ></div>		
+		<hr />
+		{%endfor%}
+		{%else%}
+			<br>
+			{%ifequal type 'followees'%}
+			<a href="/{{user_profile.user.username}}/">	{{ user_profile.user.username }}</a> is not following anyone right now
+			{%else%}
+				<a href="/{{user_profile.user.username}}/">{{user_profile.user.username}}</a> doesn't have any followers. Would u like to <follow> :) ?
+			{%endifequal%}
+		{%endif%}
+	</ul>
+				<div> 
+				{% if has_next %}
+					<span class="float_right next_link"> 
+						<a href=".?page={{ next }}">next&rarr;</a>
+					</span>
+				{% endif %}
+				{% if has_previous %}
+					<span class="float_left prev_link">
+						<a href=".?page={{ previous }}">&larr;previous</a>
+					</span>
+				{% endif %}
+			</div>
+
+	</div>	
+	{% include "footer.html" %}
+	
+  </body>	
+  <script language="javascript">
+	intval=window.setInterval("hide_flash()",1000)
+	 function hide_flash(){
+		document.getElementById('flash').style.display="none"
+		window.clearInterval(intval)
+	 }
+
+  </script>
+
+</html>

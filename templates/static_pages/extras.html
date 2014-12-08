@@ -1,0 +1,100 @@
+{% extends "static_pages/base_static.html" %}
+
+{% load format_quipper_displayname%}
+{% block title %}
+
+    kwippy - extras
+
+{% endblock %}
+
+
+
+{%if user.is_authenticated%}
+
+	{%block menu%}	
+
+	{%endblock%}
+
+{%endif%}
+
+
+
+{% block content %}
+
+	<div class="content">
+
+		    {%if user.is_authenticated%}
+
+				<h1 style="float:left;"><a href="/" class="onwhite"> Home</a> &raquo; <b>extras</b></h1>
+				<div style="float:right;">Hi, 
+					<a class="onwhite" href="/{{user}}/">{% formatdisplayname user.id %}</a> |
+					<a class="onwhite"  href="/{{user}}/dashboard">dashboard</a> |
+					<a class="onwhite"  href="/logout"> logout</a>
+				</div>
+				<br class="clear"/>
+				<hr/>
+		   {%endif%}
+
+
+
+	<h3><b>badges - copy code and embed</b></h3>
+	<br>
+		<div>
+		
+			<div style="border-bottom:1px dotted;padding-bottom:15px;padding-top:15px;">
+				<div style="width:30%;float:left;"><img src="/images/badge_kwippy.gif"></div>
+				<div style="width:70%;float:left;"><label class="" style="font-size:11px;">150 X 51 px</label><br>
+				 {%if user.is_authenticated%}
+					<input type="textbox" class="textbox" style="float:left;" id="badge_code" value="<a href='http://www.kwippy.com/{{user.username}}'><img src='http://www.kwippy.com/images/badge_kwippy.gif'/></a>" onclick="document.getElementById('badge_code').select();copy_to_clipboard(badge_code);" readonly="">
+				{%else%}
+					<input type="textbox" style="float:left;" id="badge_code" onclick="document.getElementById('badge_code').select();copy_to_clipboard(badge_code);" class="textbox" value="<a href='http://www.kwippy.com'><img src='http://www.kwippy.com/images/badge_kwippy.gif'/></a>" readonly="">
+				{%endif%}
+				<span style="float:left;"><a href="javascript:void(0);" onClick="copy_to_clipboard(badge_code);$('#badge_code_copied')[0].style.display='block';$('#badge_code_copied').animate({opacity: 1.0}, 3000).fadeToggle('slow');" class="onwhite">copy code</a></span> <span style="float:left;display:none" id="badge_code_copied"> copied</span> </div>
+				<div class="clear"></div>
+			</div>			
+			<div style="border-bottom:1px dotted;padding-bottom:15px;padding-top:15px;">
+				<div style="width:30%;float:left;"><img src="/images/kwippy_50.png"></div>
+				<div style="width:70%;float:left;">
+					<label class="" style="font-size:11px;">16 X 16 px</label><br>
+					{%if user.is_authenticated%}
+						<input type="textbox" style="float:left;" onclick="document.getElementById('logo_16').select();copy_to_clipboard(logo_16);" id="logo_16" name="logo_16" value="<a href='http://www.kwippy.com/{{user.username}}'><img src='http://www.kwippy.com/images/kwippy_16.png'/></a>" class="textbox" readonly="">
+					{%else%}
+						<input type="textbox" style="float:left;" onclick="document.getElementById('logo_16').select();copy_to_clipboard(logo_16);" id="logo_16" name="logo_16" value="<a href='http://www.kwippy.com/'><img src='http://www.kwippy.com/images/kwippy_16.png'/></a>" class="textbox" readonly="">						
+					{%endif%}
+					<span style="float:left;"><a  href="javascript:void(0);" onClick="copy_to_clipboard(logo_16);$('#logo_16_copied')[0].style.display='block';$('#logo_16_copied').animate({opacity: 1.0}, 3000).fadeToggle('slow');" class="onwhite">copy code</a></span><span style="display:none" id="logo_16_copied"> copied</span><div class="clear"></div><br> 
+					<label class="" style="font-size:11px;">50 X 50 px</label><br>
+					{%if user.is_authenticated%}
+						<input type="textbox" id="logo_50" style="float:left;" name="logo_50" onclick="document.getElementById('logo_50').select();copy_to_clipboard(logo_50);" value="<a href='http://www.kwippy.com/{{user.username}}'><img src='http://www.kwippy.com/images/kwippy_50.png'/></a>" class="textbox"
+						 readonly="">
+					{%else%}
+						<input type="textbox" id="logo_50" name="logo_50" style="float:left;"  onclick="document.getElementById('logo_50').select();copy_to_clipboard(logo_50);" value="<a href='http://www.kwippy.com/'><img src='http://www.kwippy.com/images/kwippy_50.png'/></a>" class="textbox"  readonly="">						
+					{%endif%}
+				<span style="float:left;">	<a  href="javascript:void(0);" onClick="copy_to_clipboard(logo_50);$('#logo_50_copied')[0].style.display='block';$('#logo_50_copied').animate({opacity: 1.0}, 3000).fadeToggle('slow');" class="onwhite">copy code</a></span><span style="display:none" id="logo_50_copied"> copied</span><div class="clear"></div><br> 
+
+					<label class="" style="font-size:11px;">100 X 100 px</label><br>
+					{%if user.is_authenticated%}
+						<input type="textbox" id="logo_100" style="float:left;" name="logo_100" onclick="document.getElementById('logo_100').select();copy_to_clipboard(logo_100);" value="<a href='http://www.kwippy.com/{{user.username}}'><img src='http://www.kwippy.com/images/kwippy_100.png'/></a>" class="textbox" readonly="">
+					{%else%}
+						<input type="textbox" id="logo_100" name="logo_100" style="float:left;" onclick="document.getElementById('logo_100').select();copy_to_clipboard(logo_100);" value="<a href='http://www.kwippy.com/'><img src='http://www.kwippy.com/images/kwippy_100.png'/></a>" class="textbox" readonly="">						
+					{%endif%}
+				<span style="float:left;">	<a href="javascript:void(0);" onClick="copy_to_clipboard(logo_100);$('#logo_100_copied')[0].style.display='block';$('#logo_100_copied').animate({opacity: 1.0}, 3000).fadeToggle('slow');"  class="onwhite">copy code</a></span><span style="display:none" id="logo_100_copied"> copied</span><div class="clear"></div><br> 
+
+
+
+					<label class="" style="font-size:11px;">512 X 512 px</label><br>
+					{%if user.is_authenticated%}
+						<input type="textbox" id="logo_512" name="logo_512" style="float:left;" onclick="document.getElementById('logo_512').select();copy_to_clipboard(logo_512);" value="<a href='http://www.kwippy.com/{{user.username}}'><img src='http://www.kwippy.com/images/kwippy_512.png'/></a>" class="textbox" readonly="">
+					{%else%}
+						<input type="textbox" id="logo_512" name="logo_512" style="float:left;" onclick="document.getElementById('logo_512').select();copy_to_clipboard(logo_512);" value="<a href='http://www.kwippy.com/'><img src='http://www.kwippy.com/images/kwippy_512.png'/></a>" class="textbox" readonly="">						
+					{%endif%}
+				<span style="float:left;">	<a href="javascript:void(0);" onClick="copy_to_clipboard(logo_512);$('#logo_512_copied')[0].style.display='block';$('#logo_512_copied').animate({opacity: 1.0}, 3000).fadeToggle('slow');"  class="onwhite">copy code</a></span><span style="display:none" id="logo_512_copied"> copied</span><div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+		</div>
+
+
+	</div>
+
+{% endblock %}

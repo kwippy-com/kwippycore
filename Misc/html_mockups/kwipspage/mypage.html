@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>
+
+	</title>		 
+	<link rel="stylesheet" type="text/css"    href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="user_page.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+
+		<div id="flash" style="display:block">
+		
+		</div>
+<!--important maintain indentation-->
+		
+		 <div class="content"><!--this has all the content-->
+			
+			<div class="kwipsarea"><!--left col begins-->
+					asdfasdfsaf
+			</div><!--left col ends -->
+
+			<div class="networkarea"><!--right col begins-->
+			
+			asdfsdf
+			</div><!--right col ends -->
+
+		 </div><!-- content ends-->
+		 
+		 
+		 
+		 
+		
+			   <!--<div id="content" class="flex"
+		style="font-size:10px;">{{results_per_page}} results per page &bull;
+		{{hits}} total</div> -->
+ 	
+		 
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">asdf
+
+		 </div><!--footer ends-->
+
+</div>	 <!--wrap ends-->
+
+
+
+
+
+
+
+
+
+
+</body>
+ <script language="javascript">
+			intval=window.setInterval("hide_flash()",1000)
+			 function hide_flash(){
+				document.getElementById('flash').style.display="none"
+				window.clearInterval(intval)
+			 }
+			 
+			 function show_hide_reply(qp_id){	 	
+				reply_id = 'reply_' + qp_id
+				if (document.getElementById(reply_id).style.display=="none"){
+					document.getElementById(reply_id).style.display="block";
+				}
+				else{
+					document.getElementById(reply_id).style.display="none";
+				}
+			 }
+</script>
+</html>

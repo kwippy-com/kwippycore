@@ -1,0 +1,47 @@
+{% ifequal quips_for 'all' %}
+	<span class="float_left" style="">
+		{% if user.is_authenticated %}
+			{%ifequal user.username login%}
+				<a class="selected"href="/{{login}}/active/">your network</a>
+				<a class="unselected" href="/{{ login }}/kwips/active/">your kwips</a>
+			{%else%}
+				<a class="selected"href="/{{login}}/active/">{{ login }}'s network</a>
+				<a class="unselected" href="/{{ login }}/kwips/active/">{{ login }}'s kwips</a>
+			{%endifequal%}
+             	{%else%}
+		    <a class="selected"href="/{{login}}/active/">{{ login }}'s network</a>
+		    <a class="unselected" href="/{{ login }}/kwips/active/">{{ login }}'s kwips</a>
+		{%endif%}
+	</span>
+	<span class="float_right">
+		<a  class="unselected" href="/everyone/active/">everyone's kwips</a>
+	</span>
+{%else%}
+	{% ifequal quips_for 'everyone' %}
+	    <span class="float_left">
+		<a class="unselected" href="/{{login}}/active/">your network</a>
+		<a  class="unselected"  href="/{{ login }}/kwips/active/">your kwips</a>
+	    </span>
+	    <span class="float_right">
+		<a class="selected" href="/everyone/active/">everyone's kwips</a>
+	    </span>
+	{%else%}
+	    <span class="float_left">
+		{% if user.is_authenticated %}
+			{%ifequal user.username login%}
+				<a class="unselected" href="/{{login}}/active/">your network</a>
+				<a class="selected" href="/{{ login }}/kwips/active/">your kwips</a>
+			{%else%}
+				<a class="unselected" href="/{{login}}/active/">{{login}}'s network</a>
+				<a class="selected" href="/{{ login }}/kwips/active/">{{login}}'s kwips</a>
+			{%endifequal%}
+        	{%else%}
+	            <a class="unselected" href="/{{login}}/active/">{{login}}'s network</a>
+		    <a class="selected" href="/{{ login }}/kwips/active/">{{login}}'s kwips</a>
+		{%endif%}
+	    </span>
+	    <span class="float_right">
+		<a class="unselected"  href="/everyone/active/">everyone's kwips</a>
+            </span>	
+        {%endifequal%}
+{%endifequal%}

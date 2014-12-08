@@ -1,0 +1,109 @@
+{% load comments %}
+{% load format_url %}
+{% load is_favourited%}
+{% load format_date_time %}
+{% load show_quip_provider %}
+{% load show_follower_pic %}
+{% load generate_invite %}
+{% load comment_active%}
+{% load snip_to_more%}
+{% if featured_quips %}
+    <b>Kwip of the Day</b>
+    {% for feat_quip in featured_quips %}
+	{%if feat_quip.quip.account.user %}
+	    {% get_comment_count for kwippy.quip feat_quip.quip.id as comment_count %}
+	        <div class="kwip">
+                    {% ifequal feat_quip.quip.account.user.username login %}			
+			<div class="float_left" style="padding-top:5px;padding-left:10px;">
+                            {%ifequal quips_for 'everyone'%}
+                                <a href="/{% formattime feat_quip.quip.id%}/?src=everyone_featimg">
+                            {%else%}
+                                <a href="/{% formattime feat_quip.quip.id%}/?src=kwipspage_uimg">
+                            {%endifequal%}
+                                    <img class="user_pic_16" src="{% show_follower_pic feat_quip.quip.account.user.id %}" alt="{{feat_quip.quip.account.user.username}}" >
+                                </a>
+                        </div>
+                    {%endifequal%}
+            
+		        <div style="padding-left:10px;float:left;width:492px;padding-right:8px;">
+			    {%ifequal feat_quip.quip.type 1%}
+                                {% ifequal feat_quip.quip.account.user.username login %}
+                                    {{ feat_quip.quip.formated|safe|linebreaksbr|urlize }}
+                                {%else%}
+                                    {%say_hi_people feat_quip.quip.account.user.id%}
+                                {%endifequal%}
+
+                            {%else%}
+				{%ifequal feat_quip.quip.account.user.username 'kwippy' %}
+					{{ feat_quip.quip.formated|safe|urlize }}
+				{%else%}
+                                        {% sniptomore feat_quip.quip.id %}
+				{%endifequal%}
+			    {%endifequal%}			
+		 
+		        {% ifequal feat_quip.quip.account.user.username login %}
+			    <div class="post_byuser" id="{{feat_quip.quip.id}}">
+		        {% else%}
+			    <div class="post_otherusers" id="{{feat_quip.quip.id}}">
+		        {%endifequal%}
+		        {% if user.is_authenticated %}					   
+			    {% show_is_favourite user.id feat_quip.quip.id %}							
+			{% endif %}				 
+				by 
+			    {%if feat_quip.quip.account.user %}
+                              {%ifequal quips_for 'everyone'%}
+				<a href="/{{feat_quip.quip.account.user.username}}/?src=everyone_featuname">
+                              {%else%}
+                                <a href="/{{feat_quip.quip.account.user.username}}/?src=kwipspage_uname">
+                              {%endifequal%}
+					{{feat_quip.quip.account.user.username}} 
+				</a>
+			    {%else%}
+				anonymous
+			    {%endif%}				 
+				from {% displayprovider feat_quip.quip.id %}
+				({{feat_quip.quip.created_at|timesince}} ago)
+				
+			    {%if feat_quip.quip.account.user and feat_quip.quip.account.user.username %}
+				{% if not is_single %}
+                                  {%ifequal quips_for 'everyone'%}
+				    <a href="/{% formattime feat_quip.quip.id%}/?src=everyone_featclink">
+                                  {%else%}
+                                    <a href="/{% formattime feat_quip.quip.id%}/?src=kwipspage_clink">
+                                  {%endifequal%}
+				    {% ifequal comment_count 0 %}go comment
+                                        <img class="go_icon" src="/images/icons/arrow_right.gif" />
+                                    {%else%} 
+				        {% ifequal comment_count 1 %}
+					    1 Comment 
+				        {% else %}
+					    {{ comment_count }} Comments 
+					{% endifequal %}
+				    {% endifequal%}</a> 
+			        {% endif %}
+			    {% endif %}
+			    {% comment_active feat_quip.quip.id %}
+                                {%ifequal quips_for 'everyone'%}
+                                    |<a href="/{% formattime feat_quip.quip.id%}/?src=everyone_featplink">
+                                {%else%}
+                                    |<a href="/{% formattime feat_quip.quip.id%}/?src=kwipspage_plink">
+                                {%endifequal%}
+                                    <img class="link_icon" title="permalink" src="/images/icons/icon_link.gif" />
+                                </a> 
+		            </div>
+		        </div>
+                        {% ifnotequal feat_quip.quip.account.user.username login %}			
+  			    <div class="float_left" style="padding-top:5px;">
+                                <a href="/{% formattime feat_quip.quip.id%}/?src=kwipspage_featimg">
+                                    <img class="user_pic_16" src="{% show_follower_pic feat_quip.quip.account.user.id %}" alt="{{feat_quip.quip.account.user.username}}" >
+                                </a>
+                            </div>
+                        {%endifnotequal%}
+
+		</div>
+		<div class="clear"></div>
+		{% include "comment_area.html" %}
+		<div class="clear"></div>
+	{% endif %}
+    {% endfor %}
+{% endif %}	

@@ -1,0 +1,74 @@
+{% extends "static_pages/base_static.html" %}
+{% load format_quipper_displayname%}
+
+{% block title %}
+    kwippy - help 
+{% endblock %}
+
+{%if user.is_authenticated%}
+	{%block menu%}	
+	{%endblock%}
+{%endif%}
+
+{% block content %}
+	<div class="content">
+	    {%if user.is_authenticated%}
+			<h1 style="float:left;">help</h1>
+			<div style="float:right;">Hi, 
+				<a class="onwhite" href="/{{user}}/">{% formatdisplayname user.id %}</a> |
+				<a class="onwhite" href="/{{user}}/dashboard">dashboard</a> |
+  			    <a class="onwhite" href="/logout"> logout</a>
+			</div>
+			<br class="clear"/>
+		<hr/>
+		{%endif%}
+		<ul><li>
+				<h3><b>Q.</b>what does a kwip mean?</h3>
+				<div>Ans. kwip could be your status message, it could be a link you want to share, a funny quote, your attitude, your emotions, ... btw it could also be a quip. </div>
+			</li>
+			<br>
+			<li>
+				<h3><b>Q.</b>what does following a user mean?</h3>
+				<div>Ans.Following a user would show their new kwips in your page itself. So whenever you find interesting people, and you follow them, you would'nt have to go to their page to see their kwips.  </div>
+			</li>
+			<br>
+			<li>
+				<h3><b>Q.</b>what is the difference between a follower and a followee?</h3>
+				<div>Ans.A followee is someone you are following. While followers are all those who like your kwips and are following you.</div>
+			</li>
+			<br>
+			<li>
+				<h3><b>Q.</b>what is a "friend"?</h3>
+				<div>Ans.A friend is just that, what in the real world you would call a friend. We recommend that you only add as friend people that you know (and they know you :). We are going to introduce more features in the future which will play on the trust that friendship entails.</div>
+			</li>
+			<br>
+			<li>
+				<h3><b>Q.</b>how to record statuses from your IM?</h3>
+				<div>Ans.go to your <a class="onwhite" href=/dashboard>dashboard</a>. click the IM of choice. follow the instructions below.</div>
+			</li>
+			<br>
+			<li>
+				<h3><b>Q.</b>How can I find my friends who are already on kwippy?</h3>
+				<div>Ans.There are two ways - first, you can <a href="http://www.kwippy.com/search/" class="onwhite">search</a>. We have made people as the focus of the search. So if you search for anything, you would also get the person involved. This works well if you know a bit about that person (which might be there in the profile or one of their kwips/comments). If you have been a twitter user and have lots of friends on twitter, you can use "<a href="http://www.kwippy.com/kaa/dashboard/invite/" class="onwhite">find twitter followers</a>". There are more ways to find friends in the pipeline, just wait a lil bit :).</div>
+			</li>
+			<br>
+			<li>
+				<h3><b>Q.</b>how do I know if someone has responded to one of my comments?</h3>
+				<div>Ans. when you comment, there is a "notify on follow-up comments". if you click on the checkbox, you'll be notified by email on subsequent comments. you can unsubscribe by clicking on the "unsubscribe" link if you don't want the mails. </div>
+			</li>
+<br>
+			<li>
+				<h3><b>Q.</b>is there a way to control how and what I want to get notifications on?</h3>
+				<div>Ans. yes you can specify what notifications you want and by email or instant message. go to your <a class="onwhite" href="/dashboard/account/">dashboard>account</a> and check the boxes which you notifications for.</div>
+			</li>
+<br>
+			<li>
+				<h3><b>Q.</b>what is this <i>buzz</i> thing?</h3>
+				<div>Ans. if you haven't seen one of your followers kwips in a while, the buzz link appears on follower's kwip page. you could buzz and write a line or two saying how much you miss their kwips.</div>
+			</li>
+<br>
+			</ul>
+		
+
+	</div>
+{% endblock %}

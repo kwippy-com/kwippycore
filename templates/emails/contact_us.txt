@@ -1,0 +1,4 @@
+insert into kwippy_email(type,subject,body_text,body_html)
+values('contactus','#_1 has contacted kwippy',
+'Hi ,\n\n  here\'s what #_1(#_2) has written:  \n\n   "#_3"  ssiittee/#_4\n\n.',
+'Hi ,<br /> here\'s what #_1(#_2) has written: <br /><br />   "#_3"  <br /><br /> <a href="ssiittee/#_4">#_4\'s</a>.')

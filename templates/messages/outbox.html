@@ -1,0 +1,82 @@
+{% extends "messages/base_messages.html" %}
+{% load show_flash_message%}
+{% load show_follower_pic %}
+{%block perm_flash%}
+   <span id="flash" style="display:block;" class="flash_message">
+   {% if request.session.first_login %}
+	 {% show_flash_message user.id 'first_login' 'import'%}
+   {%endif%}
+   </span>
+ {%endblock%}
+
+{% block nav_inbox %}
+	<li >
+		<a id="li_import" style="display:block" href="/{{user}}/messages/inbox/">  
+                  {% if unread_incoming_msgs %}
+                       <b>Inbox({{unread_incoming_msgs }})</b>
+                    {%else%}
+                        Inbox
+                    {%endif%}</a>
+	</li>	
+{%endblock%}
+{% block nav_outbox %}
+	<li >
+		<a id="li_import" style="display:block" href="/{{user}}/messages/outbox/"> Sent</a>		
+	</li>	
+{%endblock%}
+
+{% block content %}
+	<br>
+	<fieldset id="field_import" class="dashboard_fieldset" style="display: block;">
+	  <legend>private messages sent</legend>
+	
+
+	<div class="clear"></div>
+
+		  <div id="buddy" style="display: block;" name="buddy">
+			<table>
+				<tbody>
+					<tr><td width="150"><i>To</i></td>
+						<td width="650"><i>Message</i></td>
+					</tr>
+					{%if messages %}
+					{% for message in messages %}
+					<tr><td width="150"><img src="{% show_follower_pic message.pm.receiver.id%}" width="32"><br>
+						<span class="small_text"><a href="/{{message.pm.receiver}}/">{{message.pm.receiver.username}}</a></span></td>
+						<td width="" valign="center"><a href="/{{user}}/messages/outbox/{{message.pm.id}}/">{{message.pm.message|truncatewords:"12"}}</a>
+						</td>
+						<td>
+					<span class="small_text">{{message.created_at|timesince}} ago</span>
+						</td>
+
+					</tr>	
+					{%endfor%}
+					{%else%}
+						<tr>
+							<td></td>
+							<td>no messages</td>
+							<td></td>
+						<tr>
+					{%endif%}
+				</tbody>
+				
+			</table>
+			
+		  </div>	
+			<br style="clear:both;" />
+			<div> 
+				{% if has_next %}
+					<span class="float_left prev_link"> 
+						<a href=".?page={{ next }}">&larr;older</a>
+					</span>
+				{% endif %}
+				{% if has_previous %}
+					<span class="float_right next_link">
+						<a href=".?page={{ previous }}">newer&rarr;</a>
+					</span>
+				{% endif %}
+			</div>		
+	</fieldset>
+
+
+{%endblock%}

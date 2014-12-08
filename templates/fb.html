@@ -1,0 +1,131 @@
+<html>
+	<!--loading all the templatetags needed -->
+	{% load show_flash_message%}
+	{% load append_revision_number %}
+  <head>
+    	<title>kwippy feedback page</title>
+	<link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/reset-fonts-grids.css' %}"> 
+	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% append_revision_number '/css/user_page.css' %}{% endblock %}" >
+  </head>
+  <body >
+	<div class="wrap"> 
+      {% include "feedback_link.html" %}
+      <div class="clear"></div>
+  	  <span id="flash_perm" style="display:block;" class="flash_message">
+	     {% if user.is_authenticated and request.session.first_login %}
+			 {% show_flash_message user.id 'first_login' 'mypage'%}
+		{%endif%}
+	  </span>
+	  <span id="flash" style="display:block;" class="flash_message">
+	    {{ flash }}
+	  </span>
+<!--important maintain indentation-->		
+     <div class="content"><!--this has all the content-->	
+		
+		  <div class="float_left">
+			  {% ifequal quips_for 'all' %}
+				<span class="selected">
+				  <a href="/feedback/">all feedback</a>
+				</span>
+				<span class="follow_link">
+				  <a href="/feedback/self">your feedback</a>
+				</span>
+				
+			 {%else%}
+				<span class="follow_link">
+				   <a href="/feedback/">all feedback</a>
+				</span>
+				<span class="selected">
+				  <a href="/feedback/self">your feedback</a>
+				</span>
+			 {%endifequal%}  
+		</div>
+		
+		<br class="clear" />		
+		<div class="kwipsarea"><!--left col begins-->
+		 {% if not is_single %}
+   	     {% if user.is_authenticated %}
+			{%ifequal user.username login %}
+			  <form method="post" action="/kwip/add/" id="kwip_form" name="kwip_form"> 
+				<div id="kwip_area">
+			      <textarea class="textarea" name="kwip_box" id="kwip_box"></textarea><!--u may reference ss community post thing, there might be a trick involved, as the "shoot"has to be grey but when the user writes it should be black...aslo in ss the default text only comes at first on clicking it goes forever-->
+					<div class="textarea_bolt">
+    					<input  class="button float_left" type="button" name="btnkwip" onClick="submit_form();" id="btnkwip" value="post&raquo;">
+					</div>
+				</div>		
+	    	  </form>
+			{% endifequal %}
+		 {% endif %}
+		 {% endif %}
+		 <br>
+		{% include "fb_area.html" %}	
+			<br style="clear:both;" />
+			<div> 
+				{% if has_next %}
+					<span class="float_left prev_link"> 
+						<a href=".?page={{ next }}">&larr;older</a>
+					</span>
+				{% endif %}
+				{% if has_previous %}
+					<span class="float_right next_link">
+						<a href=".?page={{ previous }}">newer&rarr;</a>
+					</span>
+				{% endif %}
+			</div>
+			
+		</div><!--left col ends -->
+
+		<div class="networkarea"><!--right col begins-->
+			<div>
+				<a href="/" title="home"><img src="/images/logo.gif"/></a>
+				<br />
+				{% include "login_logout.html" %}
+				<br />
+			</div>
+		</div><!--right col ends -->
+	 </div><!-- content ends-->
+	 <br class="clear" />
+	  <br/>
+	 <!--footer begins--> 	
+	{% include "footer.html" %}
+	<!--footer ends-->
+    </div>	 <!--wrap ends-->
+</body>
+<script type="text/javascript" src="/js/jquery-1.2.2.js"></script>
+<script language="javascript">
+			intval=window.setInterval("hide_flash()",5000)
+			 function hide_flash(){
+				document.getElementById('flash').style.display="none"
+				window.clearInterval(intval)
+			 }
+
+			 function hide_perm_flash_message(){
+				 document.getElementById('flash_perm').style.display='none'
+			 }			 
+			 
+			 function show_hide_fb_box(){
+			  if(document.getElementById('fback').style.display=="none"){
+			  	document.getElementById('fback').style.display="block";
+				document.getElementById('feedback_box').focus();
+			  }
+			  else{
+			  document.getElementById('fback').style.display="none";
+			  }
+			 }
+
+			 function submit_form(){
+			 if (document.getElementById('kwip_box').value!='')
+			 {
+				 document.kwip_form.submit();
+			 }
+			 else{
+				alert('please insert something');
+			 }
+
+			 }
+
+			/*$(document).ready(function() {
+				
+			}*/
+</script>
+</html>

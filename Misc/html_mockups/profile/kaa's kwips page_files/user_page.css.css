@@ -1,0 +1,267 @@
+HTML {
+	BACKGROUND-COLOR: #dddddd
+}
+BODY {
+	FONT: 83%/1.4 lucida sans, verdana, sans-serif; COLOR: #3f3f3f; BACKGROUND-REPEAT: repeat-x; TEXT-ALIGN: center
+}
+
+
+.float_right {
+	FLOAT: right
+}
+.float_left {
+	FLOAT: left
+}
+.grey_text {
+	
+}
+
+.profile_area {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; WIDTH: 100%; PADDING-TOP: 10px; BACKGROUND-COLOR: #3f3f3f; TEXT-ALIGN: left
+}
+
+.left_col {
+	FLOAT: left; WIDTH: 580px
+}
+
+.right_col {
+	FLOAT: right; WIDTH: 265px
+}
+
+.logo_box {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; OVERFLOW: hidden; PADDING-TOP: 10px; BACKGROUND-COLOR: #eff7ff; TEXT-ALIGN: center
+}
+.logo_box {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; OVERFLOW: hidden; PADDING-TOP: 10px; BACKGROUND-COLOR: #eff7ff; TEXT-ALIGN: center
+}
+.clear {
+	CLEAR: both; OVERFLOW: hidden; HEIGHT: 1px
+}
+.kwip {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; PADDING-BOTTOM: 7px; MARGIN: 18px auto 0px; OVERFLOW: hidden; PADDING-TOP: 7px; BACKGROUND-COLOR: #fff
+}
+.kwip A {
+	COLOR: #0086ff; TEXT-DECORATION: none
+}
+A {
+	COLOR: #0086ff; TEXT-DECORATION: none
+}
+.kwip A:hover {
+	TEXT-DECORATION: underline
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.textbold {
+	FONT-WEIGHT: bold
+}
+.col2 A {
+	COLOR: #0086ff; TEXT-DECORATION: none
+}
+.col2 A:hover {
+	TEXT-DECORATION: underline
+}
+.right_links {
+	FONT-SIZE: 12px; COLOR: #333
+}
+.post_byuser {
+	PADDING-RIGHT: 35px; BACKGROUND-POSITION: right top; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(/images/bubble_1.gif); COLOR: #ccc; LINE-HEIGHT: 1.6; BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: right
+}
+.textarea_bolt {
+	PADDING-RIGHT: 35px; BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(/images/bubble_1.gif); PADDING-BOTTOM: 16px; COLOR: #ccc; BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: right
+}
+.post_otherusers {
+	PADDING-LEFT: 35px; FONT-SIZE: 11px; BACKGROUND-IMAGE: url(/images/bubble_0.gif); PADDING-BOTTOM: 5px; COLOR: #ccc; LINE-HEIGHT: 1.6; BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: left
+}
+.content {
+	WIDTH: 100%; PADDING-TOP: 2em
+}
+
+.kwipsarea P {
+	
+}
+.post_byuser A {
+	COLOR: #a7d4ff
+}
+.post_otherusers A {
+	COLOR: #a7d4ff
+}
+.footer A {
+	COLOR: #a7d4ff
+}
+.follow_userlink A {
+	COLOR: #a7d4ff
+}
+.prev_link A {
+	COLOR: #a7d4ff
+}
+.next_link A {
+	COLOR: #a7d4ff
+}
+.textarea_bolt A {
+	COLOR: #a7d4ff
+}
+.manage A {
+	COLOR: #a7d4ff
+}
+.buzz_kwips A {
+	COLOR: #a7d4ff
+}
+.post_byuser A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.post_otherusers A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.footer A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.follow_userlink A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.prev_link A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.next_link A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.textarea_bolt A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.manage A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.buzz_kwips A:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.follow_userlink {
+	FLOAT: right
+}
+
+.networkarea {
+	PADDING-RIGHT: 10px; MARGIN-TOP: 4px; PADDING-LEFT: 10px; OVERFLOW: hidden; PADDING-TOP: 10px; BACKGROUND-COLOR: #eff7ff; TEXT-ALIGN: center
+}
+
+H1 {
+	FONT-SIZE: 20px; COLOR: #fff
+}
+.h2 {
+	FONT-SIZE: 20px; PADDING-BOTTOM: 30px; COLOR: #fff
+}
+.tagline {
+	FONT-SIZE: 15px; COLOR: white
+}
+.textarea {
+	WIDTH: 100%; HEIGHT: 70px; TEXT-ALIGN: left
+}
+.textbox {
+	BORDER-RIGHT: #cdcdcd 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 15px; BORDER-LEFT: 1px solid; WIDTH: 60%; BORDER-BOTTOM: #cdcdcd 1px solid; HEIGHT: 25px
+}
+.prev_link {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; BACKGROUND-COLOR: #3f3f3f
+}
+.next_link {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; BACKGROUND-COLOR: #3f3f3f
+}
+.button {
+	BORDER-RIGHT: 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: 1px solid; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; BORDER-LEFT: 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: 1px solid; HEIGHT: 25px; BACKGROUND-COLOR: #bbd26c; TEXT-ALIGN: center
+}
+A.unselected {
+	BORDER-RIGHT: #a7d4ff 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #a7d4ff 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; MARGIN: 5px; BORDER-LEFT: #a7d4ff 1px solid; COLOR: black; PADDING-TOP: 3px; BORDER-BOTTOM: #a7d4ff 1px solid; BACKGROUND-COLOR: #a7d4ff; TEXT-DECORATION: none
+}
+A.unselected:hover {
+	BORDER-RIGHT: #a7d4ff 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #a7d4ff 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; BORDER-LEFT: #a7d4ff 1px solid; COLOR: #a7d4ff; PADDING-TOP: 3px; BORDER-BOTTOM: #a7d4ff 1px solid; BACKGROUND-COLOR: #3f3f3f; TEXT-DECORATION: none
+}
+A.selected {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 2px; COLOR: #a7d4ff; PADDING-TOP: 3px; BACKGROUND-COLOR: #3f3f3f
+}
+A.selected:hover {
+	COLOR: #a7d4ff; TEXT-DECORATION: underline
+}
+.user_pic_following {
+	BORDER-RIGHT: #0086ff 1px solid; BORDER-TOP: #0086ff 1px solid; BORDER-LEFT: #0086ff 1px solid; BORDER-BOTTOM: #0086ff 1px solid; HEIGHT: 64px
+}
+.user_pic_follower {
+	BORDER-RIGHT: #0086ff 1px solid; BORDER-TOP: #0086ff 1px solid; BORDER-LEFT: #0086ff 1px solid; BORDER-BOTTOM: #0086ff 1px solid
+}
+.user_pic_16 {
+	BORDER-RIGHT: #a7d4ff 1px solid; BORDER-TOP: #a7d4ff 1px solid; VERTICAL-ALIGN: middle; BORDER-LEFT: #a7d4ff 1px solid; BORDER-BOTTOM: #a7d4ff 1px solid
+}
+.footer {
+	FONT-SIZE: 10px; COLOR: #cdcdcd; BOTTOM: 0px; POSITION: relative; BACKGROUND-COLOR: #3f3f3f; TEXT-ALIGN: center
+}
+.footer UL {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; FONT-SIZE: 12px; PADDING-BOTTOM: 0pt; MARGIN: 0pt; WIDTH: auto; PADDING-TOP: 0pt; HEIGHT: auto
+}
+.footer LI {
+	PADDING-RIGHT: 7px; LIST-STYLE: none none outside; DISPLAY: inline; PADDING-LEFT: 7px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; TEXT-ALIGN: center
+}
+.wrap {
+	MARGIN: 0pt auto; WIDTH: 860px; TEXT-ALIGN: center
+}
+.user_profile {
+	FONT-SIZE: 13px; PADDING-TOP: 10px
+}
+.user_profile IMG {
+	BORDER-RIGHT: #cdcdcd 1px solid; BORDER-TOP: #cdcdcd 1px solid; BORDER-LEFT: #cdcdcd 1px solid; BORDER-BOTTOM: #cdcdcd 1px solid
+}
+.following_user {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; FLOAT: left; PADDING-BOTTOM: 2px; WIDTH: 68px; PADDING-TOP: 8px
+}
+.follower_user {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FLOAT: left; PADDING-BOTTOM: 2px; WIDTH: 36px; PADDING-TOP: 2px
+}
+.followers_box {
+	FONT-SIZE: 12px
+}
+.following_box {
+	FONT-SIZE: 12px
+}
+.followers_box H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px
+}
+.following_box H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px
+}
+.follower_name {
+	OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 15px
+}
+.following_name {
+	OVERFLOW: hidden; WIDTH: 100%; HEIGHT: 15px
+}
+.go_icon {
+	MARGIN: auto 3px; POSITION: relative; TOP: 3px
+}
+.follow_icon {
+	MARGIN: auto 3px; POSITION: relative; TOP: 3px
+}
+.link_icon {
+	MARGIN: auto 3px; POSITION: relative; TOP: 3px
+}
+.feedback_link {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; RIGHT: 190px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #bbd26c
+}
+.flash_message {
+	BACKGROUND-COLOR: #fff4bf
+}
+.comment_area H3 {
+	COLOR: white
+}
+.checkbox {
+	MARGIN-RIGHT: 5px; PADDING-TOP: 3px
+}
+.new {
+	Z-INDEX: 1000; FLOAT: right; WIDTH: 16px; POSITION: absolute
+}
+.img_overlay {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; BACKGROUND: #000000 0% 50%; LEFT: 93px; PADDING-BOTTOM: 5px; WIDTH: 70px; COLOR: #ffffff; PADDING-TOP: 5px; POSITION: absolute; TOP: 0pt; opacity: 0.5
+}
+.buzz_kwips {
+	COLOR: white
+}
+.white_overlay {
+	DISPLAY: none; Z-INDEX: 1001; FILTER: alpha(opacity=80); LEFT: 0%; WIDTH: 100%; POSITION: absolute; TOP: 0%; HEIGHT: 100%; BACKGROUND-COLOR: white; opacity: .80; moz-opacity: 0.8
+}
+.white_content {
+	BORDER-RIGHT: #a7d4ff 5px solid; PADDING-RIGHT: 16px; BORDER-TOP: #a7d4ff 5px solid; DISPLAY: none; PADDING-LEFT: 16px; Z-INDEX: 1002; LEFT: 25%; PADDING-BOTTOM: 16px; OVERFLOW: auto; BORDER-LEFT: #a7d4ff 5px solid; WIDTH: 30%; PADDING-TOP: 16px; BORDER-BOTTOM: #a7d4ff 5px solid; POSITION: absolute; TOP: 25%; HEIGHT: 20%; BACKGROUND-COLOR: white
+}

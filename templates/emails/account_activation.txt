@@ -1,0 +1,4 @@
+insert into kwippy_email(type,subject,body_text,body_html)
+values('account_activation','kwippy account activation',
+'hi #_1, \n\n you are almost there :)\n just click ssiittee/activate/#_2 and start using kwippy.\n\n see you there!\nkwippy team.',
+'hi #_1, <br /> <br />you are almost there :)<br /> just click this <a href="ssiittee/activate/#_2">link</a> and start using <a href="ssiittee">kwippy</a>.<br /> see you there! kwippy team.')

@@ -1,0 +1,43 @@
+	part one- for ppl ho from now on click on follow - the follow changes to unfollow like it does now...
+	in addition the change setting box opens. 
+
+
+	****************************************************************************
+	part two - 
+		      
+			
+			for ppl who are already following or like right now when we are launching this feature
+			just below the unfollow "change settings" will come
+
+
+			 <DIV class="follow_userlink"  style="">
+			<a id="unfollow" href="/follow/kalooram?to_do=unfollow">
+				<span class="follow_icon"><img src="/images/icons/minus.gif"/></span><b>unfollow kalooram</b>
+			</a><br />
+			<a href="" />change settings</a>
+			</DIV>
+
+			 
+	*****************************************************************************		 
+	part three - 
+			 
+			 
+			 
+			 
+			 this is the box below which has the otpions ..right now it has for IM notifications on and off.
+			 later it can have privacy or whatever inside.
+			 
+			 <!-- code to copy..this below code will come when the change settings is clicked-->
+			<div class="clear"></div>
+			<div class="change_follow_setting">
+			IM notifications 	<input id="" type="radio" checked="" value="text" name="mode"/>
+								<label for="">on</label>
+								<input id="" type="radio" checked="" value="text" name="mode"/>
+								<label for="">off</label> <br />
+								
+								<span class="float_right"> <a href=""  > or cancel </a></span>
+								<input type="button" value="save" class="button float_right" />
+								<div class="clear" ></div>
+				
+			</div>
+			<!--till here -->

@@ -1,0 +1,69 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% load show_flash_message%}
+{%block perm_flash%}
+   <span id="flash" style="display:block;" class="flash_message">
+   {% if request.session.first_login %}
+	 {% show_flash_message user.id 'first_login' 'import'%}
+   {%endif%}
+   </span>
+ {%endblock%}
+
+{% block nav_import %}
+	<li >
+		<a id="li_import" style="display:none" href="/{{user}}/dashboard/import/"> Import</a>
+		<span id="import" style="display:block">Import</span>
+	</li>	
+{%endblock%}
+
+{% block content %}
+	<br>
+	<fieldset id="field_import" class="dashboard_fieldset" style="display:block">
+	  <legend>import status messages from (Gtalk, Yahoo, Facebook)</legend>
+	  
+	 <!-- <br />
+	  We support these IMs -->
+		 follow these steps: <br>		
+<ul>
+	<li  class="im_names"  style="display:block">
+	 <a href="javascript:void(0);" id="GTalk" style="display:none" onClick="show_buddy('GTalk');">Google Talk</a>
+	 <span id="GTalk_text" style="display:block">Google Talk</span>
+	</li> 
+	<li class="im_names"  style="display:block">
+	  <a href="javascript:void(0);" id="Yahoo" onClick="show_buddy('Yahoo');">Yahoo!</a>
+	  <span id="Yahoo_text" style="display:none">Yahoo!</span>
+	</li>
+	<li class="im_names"  style="display:block">
+	  <a href="javascript:void(0);" id="Facebook" onClick="show_buddy('Facebook');">Facebook<span class="new"><img src="/images/icons/new.gif"/></span></a>
+		
+	  <span id="Facebook_text" style="display:none">Facebook<span class="new"><img src="/images/icons/new.gif"/></span></span>
+	</li>
+</ul>
+
+	<div class="clear"></div>
+
+		  <div style="display:block" name="add_GTalk" id="add_GTalk">
+
+			<h5>From GTalk</h5>
+			step1 -  add <em id="email">beta@kwippy.com</em><a href="javascript:void(0);" onClick="copy_to_clipboard('beta@kwippy.com');">(copy)</a> as a buddy to your gTalk.<br>
+			step2 - <a href="javascript:void(0);" onClick="copy_to_clipboard('@%{{user_profile.hash}}');">copy this passcode</a> ( <b>@%{{user_profile.hash}}</b> ) and instant message it to <em>beta@kwippy.com</em>
+		and you are done. 
+		  </div>		
+
+		  <div  style="display:none" name="add_Yahoo" id="add_Yahoo">
+
+			<h5>From Yahoo</h5>
+			step1 -  add <em id="email">kwippy_beta1</em><a href="javascript:void(0);" onClick="copy_to_clipboard('kwippy_beta1');">(copy)</a> as a buddy to your Yahoo messenger.<br>
+			step2 - <a href="javascript:void(0);" onClick="copy_to_clipboard('@%{{user_profile.hash}}');">copy this passcode</a> ( <b>@%{{user_profile.hash}}</b> ) and instant message it to <em>kwippy_beta</em>
+		and you are done. 
+		  </div>		
+
+
+		  <div style="display:none" name="add_Facebook" id="add_Facebook" >
+
+			<h5>From Facebook</h5>
+			step1 -  add  <a href="http://www.new.facebook.com/apps/application.php?id=6806564434">this</a> application to your Facebook account.<br>
+			step2 -  <a href="http://apps.new.facebook.com/kwippyfb/integrate">integrate</a> the application with your kwippy account, grant all the necessary permissions and you are done. 
+		  </div>		
+
+	</fieldset>
+{%endblock%}

@@ -1,0 +1,75 @@
+.kwip, .profile_box{
+padding: 7px;
+margin:5px auto 0 ;
+background-color:#fff;
+overflow:hidden;
+width:97%px;
+text-align:left;
+}
+.kwip a, a,a.darkblue {
+color:#0086FF;
+text-decoration:none;
+}
+.kwip a:hover ,.change_follow_setting a:hover, a:hover,a:hover.darkblue {
+text-decoration:underline;
+}
+
+
+.post_byuser{
+padding-right:5px;
+text-align:right;
+background-repeat:no-repeat;
+background-position:top right;
+color:#ccc;
+font-size:11px;
+line-height:1.6;
+}
+
+.kwipsarea {
+width:571px;
+padding:20px 5px 0 5px ;
+background-color:#E8FFCF;
+text-align:left;
+}
+.post_otherusers{
+font-size:11px;
+line-height:1.6;
+padding-left:5px;
+text-align:left;
+background-repeat:no-repeat;
+padding-bottom:5px;
+color:#ccc;
+}
+.post_byuser a,.post_otherusers a, .footer a,.follow_userlink a,.prev_link a, .next_link a,.textarea_bolt a,.manage a, .buzz_kwips a, .on_black a{
+color:#427F00;
+}
+.post_byuser a:hover,.post_otherusers a:hover,  .footer a:hover, .follow_userlink a:hover,.prev_link a:hover, .next_link a:hover,.textarea_bolt a:hover,.manage a:hover, .buzz_kwips a:hover, .on_black a:hover{
+color:#427F00;
+text-decoration:underline;
+}
+
+a.unselected{
+padding:3px 3px 0px 3px;
+margin:5px 5px 5px 0;
+color:#E8FFCF;
+background-color:#427F00;
+text-decoration:none;
+border:1px solid #427F00;
+}
+a.unselected:hover{
+padding:3px 3px 0px 3px;
+color:#a7d4ff;
+background-color:#b84b4b;
+border:1px solid #b84b4b;
+text-decoration:none;
+}
+
+a.selected{
+background-color:#E8FFCF;
+padding:3px 3px 2px 3px;
+color:#427F00;
+}	
+a.selected:hover{
+color:#427F00;
+text-decoration:underline;
+}

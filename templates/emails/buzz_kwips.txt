@@ -1,0 +1,14 @@
+subject: #_2 has sent you a buzz
+body_text:  hi #_1,\n\n #_2 is missing your kwips, here's what #_2 has written:  \n\n   "#_3"  \n\n  p.s.  if #_2 goes out of action you can buzz too, on #_2's kwips page - ssiittee/#_4.  \n\nyou can choose not to get these messages. you can change the options here - #_10
+body_html:  hi #_1,<br /> <a href="ssiittee/#_4">#_2</a>is missing you kwips, here's what <a href="ssiittee/#_4">#_2</a> has written: <br /><br />   "#_3"  <br /><br /> p.s.  if #_2 goes out of action you can buzz too, on <a href="ssiittee/#_4">#_2's</a> kwips page.  <br><br> you can choose not to get these messages. you can change the options <a href="#_10">here</a> 
+
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('buzz','#_2 has sent you a buzz',
+'Hi #_1,\n\n #_2 is missing your kwips, here\'s what #_2 has written:  \n\n   "#_3"  \n\n  p.s:  if #_2 goes out of action you can buzz them too, on #_2\'s kwips page - ssiittee/#_4. you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/',
+'Hi #_1,<br /> <a href="ssiittee/#_4">#_2</a> is missing your kwips, here\'s what <a href="ssiittee/#_4">#_2</a> has written: <br /><br />   "#_3"  <br /><br /> p.s.  if #_2 goes out of action you can buzz too, on <a href="ssiittee/#_4">#_2\'s</a> kwips page. you can choose not to get these messages by changing the options here - <a href="ssiittee/dashboard/account/">here</a> ')
+
+insert into kwippy_im(type,body) values('buzz',' #_2 is missing your kwips, here is what #_2 has written:<br><br>"#_3"<br><br>p.s. you can check his profile out here - ssiittee/#_4');
+
+you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/
+you can choose not to get these messages by changing the options here - <a href="ssiittee/dashboard/account/">here</a> 

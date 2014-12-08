@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+                        <b>Please remember to update the footer.txt file in templates/email with whatever changes you make here:</b><br>
+			<div>
+                        <form id="mail_footer" name="mail_footer" method="post" action="/console/mailfooter/">
+                        Email Footer html: <input type="text"  name="mail_html" value="{{footer.body_html}}"><br/><br>
+                        {{footer.body_html}} <br><br>
+
+                        Email Footer text:  <input type="text"  name="mail_text" value="{{footer.body_text}}"><br/><br>
+                        {{footer.body_text}}
+                        <input  class="button" type="submit" name="savefooter" id="btnkwip" value="save">
+                        </form>
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

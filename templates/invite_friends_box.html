@@ -1,0 +1,13 @@
+{% if user.is_authenticated %}
+	{%ifequal user.username login %}
+	    <br/>
+		<form method="post" action="/invite_user/" id="user_invite_form" name="user_invite_form"> 
+			<div class="invite_box">
+				<h4><b>Invite friends</b> </h4>
+				<input name="e-mail" class="textbox grey_text" onclick="if (this.value =='enter an email id') {this.value=''}" onblur="if (this.value==''){this.value='enter an email id'}" value="enter an email id" id="e-mail">				<input value="invite" class="button" type="button" onClick=submit_invite_form();>		</div>	
+	    </form>
+		<a href="/{{user}}/dashboard/invite/"><b><img src="/images/icons/invite.gif" class="link_icon">find & invite gmail,hotmail friends</b></a><br>
+	{% endifequal %}
+{% endif %}
+
+

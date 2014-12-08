@@ -1,0 +1,9 @@
+
+'hi #_1,\n\n Congratulations! you are a featured user on kwippy :). checkout ssiittee/everyone. \n\n keep rocking \n\n kwippy team',
+'hi #_1,<br /> Congratulations! you are a featured user on kwippy :). checkout ssiittee/everyone. <br>  keep rocking<br> kwippy team') 
+
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('featured_user','you are a featured user on kwippy',
+'hi #_1,\n\n Congratulations! you are a featured user on kwippy :). checkout ssiittee/everyone . \n\n keep rocking \n\n kwippy team',
+'hi #_1,<br /> Congratulations! you are a featured user on kwippy :). checkout ssiittee/everyone . <br>  keep rocking<br> kwippy team') 

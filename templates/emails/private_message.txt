@@ -1,0 +1,11 @@
+subject: #_2 has sent you a private message
+body_text:  hi #_1,\n\n #_2 has sent you a private message.  \n\n   "#_3"  \n\n  p.s. this is a private message, you can reply privately on #_2's profile page - ssiittee/#_2.  \n\n you can choose not to get these messages. you can change the options here - #_10
+body_html:  hi #_1,<br /> <a href="ssiittee/#_2">#_2</a> has sent you a private message.  <br /><br />   "#_3"  <br /><br /> p.s. this is a private message, you can reply privately on <a href="ssiittee/#_2">#_2's</a> profile page - ssiittee/#_2.   <br><br> you can choose not to get these messages. you can change the options <a href="#_10">here</a>
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('private_message','#_2 has sent you a private message',
+'hi #_1,\n\n #_2 has sent you a private message.  \n\n   "#_3"  \n\n  p.s. this is a private message, you can reply privately here - ssiittee/#_1/pvt_message/#_4/view.  \n\n you can choose not to get these messages by changing the options here - ssiittee/dashboard/account ',
+'hi #_1,<br /> <a href="ssiittee/#_2">#_2</a> has sent you a private message.  <br /><br />   "#_3"  <br /><br /> p.s. this is a private message, you can reply privately <a href="ssiittee/#_1/pvt_message/#_4/view">here</a>.   <br><br> you can choose not to get these messages by changing the options <a href="ssiittee/dashboard/account/">here</a>')
+
+
+insert into kwippy_im(type,body) values('private_message','<a href="ssiittee/#_2">#_2</a> has sent you a private message <br><br>"#_3"<br><br>p.s. you can reply privately here - ssiittee/#_1/pvt_message/#_4/view');

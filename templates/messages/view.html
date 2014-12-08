@@ -1,0 +1,85 @@
+{% extends "messages/base_messages.html" %}
+{% load show_flash_message%}
+{% load show_follower_pic %}
+{% load snip_to_more%}
+{% load is_following%}
+{%block perm_flash%}
+
+   <span id="flash" style="display:block;" class="flash_message">
+   {% if request.session.first_login %}
+	 {% show_flash_message user.id 'first_login' 'import'%}
+   {%endif%}
+   </span>
+ {%endblock%}
+
+{% block nav_inbox %}
+	<li >
+		<a id="li_import" style="display:block" href="/{{user}}/messages/inbox/">  
+                  {% if unread_incoming_msgs %}
+                       <b>Inbox({{unread_incoming_msgs }})</b> 
+                    {%else%}
+                        Inbox
+                    {%endif%}</a>
+	</li>	
+{%endblock%}
+
+{% block content %}
+	<br>
+	<fieldset id="field_import" class="dashboard_fieldset" style="display: block;">
+	  <legend>inbox for private messages</legend>
+	
+
+	<div class="clear"></div>
+
+		  <div id="buddy" style="display: block;" name="buddy">
+			<table>
+				<tbody>
+					<tr>
+						<td width="150"><i>From</i></td>
+						<td style="border-bottom:1px dotted;" width="650"><i>Message</i></td>
+					</tr>			
+					<tr>
+						<td width="150">
+							<img src="{% show_follower_pic message.pm.sender.id%}" width="32"><br>
+							<span class="small_text"><a href="/{{message.pm.sender}}/">{{message.pm.sender.username}}</a><br>
+							{{message.created_at|timesince}} ago</span>
+						</td>
+						<td width="" valign="center">{{message.pm.message|urlize|linebreaksbr}} <br>
+							<br><hr>
+                                                        {%if is_following %}
+							<a href="javascript:void(0);" onclick="$('#msg_area')[0].style.display='block';
+                                                        $('#submit_close')[0].style.display='block'">reply<img class="go_icon" src="/images/icons/arrow_right.gif"></a> |{%endif%} <a href="/{{user}}/inbox/{{message.pm.id}}/delete/" onClick="return confirm('Are you sure you want to delete? you won\'t be able to bring it back');">delete<img class="go_icon" src="/images/icons/delete.gif"></a>
+						</td>
+						<td>
+						</td>		
+					</tr>		
+					<tr>
+						<td></td>
+                                                 
+						<td>{%if is_following or sender_is_team%}<form method="post" action="."  id="reply_pvt_msg_form" name="reply_pvt_msg_form"> 
+							<div id="msg_area" style="display:block">
+								<label><i>reply:</i>
+									<textarea id="pvt_msg" class="textarea" name="pvt_msg"></textarea>
+								</label>
+								<div class="" id="prog_bar" style="display:none"><img src='/images/icons/ajax_loading.gif'/></div>
+								<div id="submit_close">														
+									<input id="btnkwip" class="button float_left" type="button" value="send&raquo;" onclick="submit_form();" name="btnkwip"/> or
+									<a onclick="$('#msg_area')[0].style.display='none';" href="javascript:void(0)">Close	</a>
+								</div>
+								
+							</div>
+							<input type="hidden" id="receiver" name="receiver" value="{{message.pm.sender.username}}">
+						</form>	{%endif%}	
+						</td>
+					</tr>							
+					
+
+				</tbody>
+				
+			</table>
+			
+		  </div>		
+	</fieldset>
+
+
+{%endblock%}

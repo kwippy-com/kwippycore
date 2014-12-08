@@ -1,0 +1,57 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% load show_flash_message%}
+{% load show_follower_pic %}
+{%block perm_flash%}
+   <span id="flash" style="display:block;" class="flash_message">
+   {% if request.session.first_login %}
+	 {% show_flash_message user.id 'first_login' 'profile'%}
+   {%endif%}
+   </span>
+ {%endblock%}
+
+{% block nav_profile %}
+	<li>
+		  <a id="li_profile" style="display:none" href="/{{user}}/dashboard/profile" >Profile</a>
+		  <span id="profile" style="display:block">Profile</span>
+	</li>
+{%endblock%}
+
+{% block content %}	
+<style>
+.textbox{width:auto;}
+</style>
+
+	<br>	
+	<fieldset id="field_profile" class="dashboard_fieldset" style="display:block">
+		<legend>Profile settings</legend>
+		  <form enctype="multipart/form-data" action="." method="post" style="width:600px;">
+			<div style="width:370px;"
+			  <label for="id_displayname">Display Name<div class="clear"></div> {{ form.display_name }}</label> 
+			  <div class="clear"></div>
+                          <label for="id_age">Birthdate<div class="clear"></div>{{form.birth_day}}{{form.birth_month}}{{form.birth_year}}</label> 
+			  <div class="clear"></div>
+                          <label for="id_gender">Gender<div class="clear"></div>  {{ form.gender }}</label> 
+			  <div class="clear"></div>
+                          <label for="id_aboutme">About me<div class="clear"></div>  {{form.about_me}}</label> 
+			  <div class="clear"></div>
+                          <label for="id_city">City<div class="clear"></div>  {{form.location_city}}</label>
+			  <div class="clear"></div>
+                          <label for="id_country">Country<div class="clear"></div>  {{form.country}}</label>		
+                          <div class="clear"></div> 
+			  {%if eagle_integrated %}
+				{{form.update_fire_eagle}} update Fire Eagle location
+                          {%else%}
+                                <input type="hidden" value="0" id="id_update_fire_eagle" name="update_fire_eagle"/> <span class="small_text"> <a href="http://blog.kwippy.com/2008/09/22/kwippy-loves-fireeagle/?src=profile" >integrate fireeagle</a></span>
+                          {%endif%}
+			  <div class="clear"></div>
+                          <label for="id_picture">Picture<div class="clear"></div> {{form.picture}}</label> 
+			  <div class="clear"></div>
+			  <div class="float_left">
+                           <img class="user_pic_follower" src="{%show_follower_pic user.id%}" alt="{{follower.username}}" /><br><span class="small_font">current pic</span>
+			</div>    <div class="clear"></div>
+
+			<input class="button" style="float:right;" type="submit" value="Save" />
+		  </form>
+	</fieldset>
+
+{% endblock %}

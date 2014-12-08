@@ -1,0 +1,9 @@
+for interaction for the checkbox for everyone.
+
+it should be checked by default.
+
+when user unchecks it all the check below should also get unchecked.
+
+
+
+if the everyone checkbox is checked ...and the user unchecks any users checkbox, the everyone checkbox should also get unchecked at once.

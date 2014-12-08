@@ -1,0 +1,43 @@
+
+<html>
+	<head>
+
+		<title>{% block title %}{% endblock %}</title>
+    		<link rel="stylesheet" type="text/css" href="{% block stylesheet %}/css/base_signup.css{% endblock %}" >
+                <script type="text/javascript" src="/js/jquery-1.2.2.js"></script>
+                {% block custom_js %}
+                {%endblock%}
+
+
+	</head>
+	{% load i18n %}
+	<body>
+		<div class="wrap">
+			<!-- Header -->
+			<div class="header" id="header">
+				<img src="/images/logo.gif" />
+				<div class="menu" >					
+					<ul>
+						  {% block header_home %}<li class="link"><a href="/">Home</a></li>{% endblock %}
+						  {% block header_signup %}<li class="link"><a href="/signup/">Signup</a></li>{% endblock %}
+						  {% block header_login %}<li class="link"><a href="/login/">Login</a></li>{% endblock %}
+						  {% block header_help %}<li class="link"><a href="/help/">Help</a></li>{% endblock %}
+					</ul>
+				</div>			
+			</div>
+			<!-- END Header -->				
+			<!-- Content -->
+			<div id="content">			
+				{% block content %}
+					{{ content }}
+				{% endblock %}
+				<br class="clear" />
+			</div>
+			<!-- END Content -->
+		</div>
+		<!--footer -->
+		{% include "footer.html" %}
+		<!--footer ends-->
+		
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>	
+	{% load show_flash_message%}
+	{% load append_revision_number %}
+	{% load show_news%}
+	{% load ifusergroup%}  
+	{% load show_buzz %}
+        {% load theme %}
+  <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="A microblogging and Instant Messenger status logger with a social network optimized for close friends" />
+	<meta name="keywords" content="microblogging, microblog, nanoblogging, nanoblog, social network, Gtalk status, Yahoo messenger status, store status, archive status" />
+        <title>Search results for "{{ searched }}"</title>
+	<link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/reset-fonts-grids.css' %}"> 
+	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% append_revision_number '/css/user_page.css' %}{% endblock %}" >
+	<link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/custom_default.css' %}" >
+        <link rel="stylesheet" type="text/css" href="{% append_revision_number '/css/global.css' %}" >
+	<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon"/>
+    	<script type="text/javascript" src="/js/jquery-1.2.2.js"></script> 
+	<script type="text/javascript" src="{% append_revision_number '/js/mypage.js' %}"></script> 
+  </head>
+  <body>
+ 
+  {% include "top_bar_login.html" %} 
+	<div class="wrap"> 
+      {% include "feedback_link.html" %}
+      <div class="clear"></div>
+  	  <span id="flash_perm" style="display:block;" class="flash_message">
+	     {% if user.is_authenticated and request.session.first_login %}
+			 {% show_flash_message user.id 'first_login' 'mypage'%}
+	     {%endif%}
+	  </span>
+	  <span id="flash" style="display:block;" class="flash_message">
+	    {{ flash }}
+	  </span>
+
+	 <div class="content">
+		<div class="left_col">
+			 {% include "unlogged_mypage.html" %} 
+			<div class="clear" ></div>
+			{% include "kwip_tabs.html" %} 
+		<br class="clear" />
+
+		
+		<div class="kwipsarea">
+                    You have searched for "{{ searched }}".
+		 <br class="clear" />
+
+<div class="">
+{% if not is_single %}                
+{% if not no_show %}
+                {% ifequal filtercount 1 %}
+                    <b>Recent kwips</b> |
+                {% else %}
+                    <b><a href="/search/?page={{ page }}&query={{ searched }}">Recent kwips<img class="go_icon" src="/images/icons/arrow_right.gif"></a></b> |
+                {% endifequal %}
+                {% ifequal filtercount 2 %}
+                    <b>Recently active kwips</b>                
+                {% else %}
+                    <b><a href="/search/active/?page={{ page }}&query={{ searched }}">Recently active kwips<img class="go_icon" src="/images/icons/arrow_right.gif"></a></b>
+                {% endifequal %}
+
+    {% ifequal user.username login %}
+        {% ifnotequal quips_for 'self' %}
+                {% if user.is_authenticated %}
+                        {% ifequal feagle 1 %}
+                                {% ifequal filtercount 3 %}
+                                     | <b>Kwips from {{ dict.location }}</b>
+                                {% else %}
+                                     | <b><a href="{{link}}geo/">Kwips from {{ dict.location }}<img class="go_icon" src="/images/icons/arrow_right.gif"></a></b>
+                                {% endifequal %}
+                        {% endifequal %}
+                {% endif %}
+        {% endifnotequal %}
+    {% endifequal %}
+{% endif %}
+{% endif %}
+</div>
+
+<div class="clear"></div>
+                {% if quips %}
+		{% include "kwips_area_new.html" %}
+                {% else %}
+                <br class="clear" />
+                No quips found
+                {% endif %}
+		<div align ="center" class=""><br>
+		</div>
+
+			<br style="clear:both;" />
+			{% include "search_links.html" %}	
+			
+		</div>
+		</div>
+		<div class="right_col">
+			<div class="logo_box" style="background-color:#fff;">
+				<a href="/" title="home"><img src="/images/logo.gif"/></a>
+				<br />
+				
+					{% include "search_box.html" %}	<br />	
+			</div>
+			<div class="clear"></div>
+			<div class="networkarea">
+				<div>
+                                            {% include "search_user.html" %}
+                                            <div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	 </div>
+	 <br class="clear" />
+	  <br/>
+	{% include "footer.html" %}
+    </div>
+</body>
+
+</html>

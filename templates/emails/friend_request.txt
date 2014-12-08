@@ -1,0 +1,13 @@
+subject: #_2 has sent you a friend request :)
+body_text:  hi #_1,\n\n #_4 has sent you a friend request.  \n\n  Go view #_4's page(ssiittee/#_4). \n approve or deny the friendship request here:ssiittee/#_1 \n\n  p.s. we recommend that you only add your real friends as your friends on kwippy.\n\n you can choose not to get these messages. you can change the options here - #_10
+body_html:  hi #_1,<br /> <a href="ssiittee/#_4">#_4</a> has sent you a friend request.  <br /><br /> Go view <a href="ssiittee/#_4">#_4</a>'s page.<br /> approve or deny the friendship request <a href="ssiittee/#_1>here</a>.<br><br> p.s. we recommend that you only add your real friends as your friends on kwippy.<br><br> you can choose not to get these messages. you can change the options <a href="#_10">here</a>
+
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('friend_request','#_2 has sent you a friend request :)',
+'hi #_1,\n\n #_2 has sent you a friend request. \n\n :P, you can view #_2\'s page(ssiittee/#_2). \n. approve or deny the friendship request here ssiittee/#_1 p.s:  we recommend that you only add your real friends as your friends on kwippy. you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/',
+'hi #_1,<br /> <a href="ssiittee/#_2">#_2</a>  has sent you a friend request.  <br /><br />  you can view <a href="ssiittee/#_2">#_2</a>\'s page.<br />  approve or deny the friendship request <a href="ssiittee/#_1">here</a>.<br><br> p.s. we recommend that you only add your real friends as your friends on kwippy. you can choose not to get these messages by changing the options here - <a href="ssiittee/dashboard/account/">here</a>')
+
+insert into kwippy_im(type,body) values('friend_request','#_2 has sent you a friend request. <br><br> you can view <a href="ssiittee/#_2">#_2</a>\'s page.<br /> approve or deny the friendship request <a href="ssiittee/#_1">here</a>.');
+
+~  

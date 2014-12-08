@@ -1,0 +1,10 @@
+'hi #_1, \n\n *All the world is birthday cake, so take a piece, but not too much.* -- George Harrison \n :) wish you a very happy birthday!\n\n kwippy team.',
+'hi #_1, <br> <br><i>All the world is birthday cake, so take a piece, but not too much.</i> -- George Harrison <br>:) wish you a very happy birthday!<br><br> kwippy team.')
+
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('birthday','Happy Birthday :)',
+'hi #_1,\n\n "All the world is birthday cake, so take a piece, but not too much." --George Harrison \n\n :) wish you a very happy birthday!\n\n kwippy team.',
+'hi #_1,<br /><br><i>All the world is birthday cake, so take a piece, but not too much.</i> -- George Harrison<br><br>:) wish you a very happy birthday!<br><br> kwippy team.')
+
+insert into kwippy_im(type,body) values('birthday','hi #_1, <br> <br><i>All the world is birthday cake, so take a piece, but not too much.</i> -- George Harrison<br><br>:) wish you a very happy birthday!<br><br> kwippy team.');

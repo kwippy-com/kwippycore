@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				Metrics to track kwippy's favorite's.<br/><br/>	
+                                Daywise Favorites(excluding ours) : <br/><br/>
+                                    &nbsp; date &nbsp;&nbsp;&nbsp;&nbsp; no of favorites<br/><br/>
+                                {%for item,key in daily_favorites%}
+    `                              {{key}} &nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+                                {%endfor%}
+
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

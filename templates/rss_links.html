@@ -1,0 +1,17 @@
+{% if not is_single %}
+	{% ifequal quips_for 'self' %}
+		<img src="/images/icons/rss_icon.png" alt="feeds icon"><a href="/api/kwips/{{login}}.rss">RSS</a>|<a href="/api/kwips/{{login}}.atom">Atom</a>
+	 {%else %}
+		{% ifequal quips_for 'all' %}
+			<img src="/images/icons/rss_icon.png" alt="feeds icon"><a href="/api/network/{{login}}.rss">RSS</a>|<a href="/api/network/{{login}}.atom">Atom</a>
+		{%else%}				
+			{%ifequal filtercount 1%}
+				<img src="/images/icons/rss_icon.png" alt="feeds icon"><a href="/api/everyone.rss">RSS</a>|<a href="/api/everyone.atom">Atom</a>
+			{%else%}
+				<img src="/images/icons/rss_icon.png" alt="feeds icon"><a href="/api/everyoneactive.rss">RSS</a>|<a href="/api/everyoneactive.atom">Atom</a>
+			{%endifequal%}
+		{%endifequal%}
+	{%endifequal%}		
+{%else%}
+	<img src="/images/icons/rss_icon.png" alt="feeds icon"><a href="/api/replies/{{kwip_id}}.rss">RSS</a>|<a href="/api/replies/{{kwip_id}}.atom">Atom</a>
+{% endif %}

@@ -1,0 +1,12 @@
+<div> 
+	{% if has_next %}
+		<span class="float_left link_prev"> 
+			<a href="{{ link }}&page={{ next }}">&larr;older</a>
+		</span>
+	{% endif %}
+	{% if has_previous %}
+		<span class="float_right link_next">
+			<a href="{{ link }}&page={{ previous }}">newer&rarr;</a>
+		</span>
+	{% endif %}
+</div>

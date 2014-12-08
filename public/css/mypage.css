@@ -1,0 +1,10 @@
+	<style>
+	.left_col a{color:color2 !important;	}
+	.left_col a:hover{color:color2 !important;text-decoration:underline !important;}
+	.kwipsarea{color:color3 !important;background-color:color1 !important;}
+	a.selected:hover {color:color2 !important;}
+	a.selected,.link_prev, .link_next  {background-color:color1 !important;color:color2 !important;}
+	a.unselected:hover {background-color:color1 !important;color:color2 !important;}
+	a.unselected {background-color:color2 !important;color:color1!important;}
+	.user_pic_16 {border:1px solid color2 !important;}	
+	</style>

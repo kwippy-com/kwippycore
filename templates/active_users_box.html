@@ -1,0 +1,19 @@
+{% load show_followee_pic %}
+{% load show_follower_pic %}
+{% load format_date_time %}
+<div class="following_box">
+	{% if active_users%}
+        <h4>Recently Active Users:</h4>	
+	  {%for item in active_users %}
+		<div class="following_user">
+		  <a title="{{ item.comment.user.username }} commented on {{item.kwip.user.username}}'s kwip *{{item.kwip.formated|truncatewords:7}}* " href="/{{ item.kwip.user.username }}/kwip/{{ item.kwip.id }}/?src=everyone_act"> 
+				<img class="user_pic_following" src="{% show_followee_pic item.comment.user_id %}" alt="{{item.comment.user.username}}" />
+                                    <img class="user_pic_following" src="{% show_follower_pic item.kwip.user_id %}" width="35" height="35" style="height:auto;margin-top:-20px;margin-left:30px;" alt="{{item.kwip.user.username}}">
+                    </a>
+		</div>
+	  {% endfor %}
+        <div class="clear"></div>
+	{% endif %}
+	
+
+</div>

@@ -1,0 +1,36 @@
+{% extends "signup/base_unloggeduser.html" %}
+
+{% block title %}
+    kwippy - solutions
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+<h1 style="border-bottom:1px solid;">Solutions</h1>
+<br>
+We at kwippy are in the business of providing solutions for your conversational needs. We have been quite successful with our consumer internet product and have gone on to replicate the same success for businesses around the world. Most of the companies are very happy to use our custom solutions as they reflect the amount of passion and dedication our team has put into the product. 
+<br><br>
+<i>You are a small company ? cost cutting ? recession ?</i> All these issues will not stop growth for you or your company. Focus on your employees and customers to get the best out of them. Conversation encompasses all the needs we have as employers, employees and consumers, so use us to your advantage to get your product USP across.
+<br><br>
+<h3><b>Solutions implemented: </b></h3>
+<br><b>Consumer feedback tool</b> - Use it to find out what people like, dislike, potential improvements.
+<br><b>Business development</b> - Use this as a means to connect to new people and suggest solutions for their needs.
+<br><b>Media / Marketing</b> - Use the power of text to target thousands of people about your new offerings.
+<br/><br/>
+You tell us your needs and we will help you find the perfect solution. We at kwippy like to talk a lot and love to solve problems.
+<br/><br/>
+<b>Email</b> : <a href="mailto:solutions@kwippy.com">solutions@kwippy.com</a><br/>
+<b>Phone</b> : +1 415 670 9162<br/><br/><br/>
+<h3><b>Fill this in to know more</b></h3>
+<form method="post" action=".">
+                        {% if not user.is_authenticated %}
+                                <br/><br/>
+                                <label for="id_username">e-mail<br/>
+                                <input id="user_title" name="email" class="textbox" type="text" /><br/>
+                        {% endif %}
+                        <label for="id_username">write to us<br/>
+                        <textarea id="user_title" name="msg" class="textarea"></textarea>
+                        <input class="button" type="submit" value="Go &raquo;"/>
+                </form>
+</div>
+{% endblock %}

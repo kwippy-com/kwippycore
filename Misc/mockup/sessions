@@ -1,0 +1,16 @@
+sessions
+
+1. remember password - 
+	a) within the site - checkbox
+	b) browser specific
+
+	#in firefox there is this saved passwords list. 1a) doesnt show a saved password
+	#the browser popup which says remember - shows in the password list 
+
+2. session expire - 
+ 	a)on logout
+	b)browser close (in firefox its clear not sure abt IE)
+	c)dont do anything for 1b)
+	
+frankly since ours is not a financial/risky operation .sessions are not very crucial. we only need to see who are the recent logins, hence have to expire sessions. 	
+

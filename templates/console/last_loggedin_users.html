@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		{% load format_date_time %}
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div class="right_col"><br/><br/>
+			<b>showing last 10 signed up users</b> <br/><br/>
+			<b>	name(signed_up, last_login), twitter account<br/></b>
+				{% for user in new_users%}
+					<a href="/{{user.username}}/">{{user.username}}</a>  ({{user.date_joined|timesince}} ago, {{user.last_login|timesince}} ago) , <a href="http://twitter.com/{{user.username}}/">http://twitter.com/{{user.username}}</a>
+					<br>
+				{%endfor%}
+			<br/><br/>
+
+			<b>showing last 10 logged in users</b> <br/><br/>
+			<b>	name(last_login)<br/></b>
+				{% for user in users%}
+					<a href="/{{user.username}}/">{{user.username}}</a>  ({{user.last_login|timesince}} ago)
+					<br>
+				{%endfor%}
+			<br/><br/>
+		<b>	showing last 10 comments </b><br/><br/>			
+				<b>	User: Comment,  Time<br/></b>
+					{% for comment in comments%}
+						<b><a href="/{{comment.user.username}}/">{{comment.user.username}}</a></b>,{{comment.comment}}   ({{comment.submit_date|timesince}} ago) 
+						<a href="/{% formattime comment.object_pk%}/"> read kwip </a>
+					<br>
+				{%endfor%}
+			<br/><br/>
+		<b>	showing last 10 Follows </b><br/><br/>			
+				<b>	Follower --> Following (Time)<br/></b>
+					{% for follower in new_followers%}
+						<a href="/{{follower.follower.username}}/">{{follower.follower.username}}</a> -->
+						<a href="/{{follower.followee.username}}/">{{follower.followee.username}}</a> ({{follower.created_at|timesince}} ago)
+					<br>
+				{%endfor%}
+			<br/><br/>
+		<b>	showing last 10 Friends </b><br/><br/>			
+				<b>	Sender --> Receiver (Time) (status)<br/></b>
+					{% for friend in new_friends%}
+						<a href="/{{friend.sender.username}}/">{{friend.sender.username}}</a> -->
+						<a href="/{{friend.receiver.username}}/">{{friend.receiver.username}}</a> ({{friend.created_at|timesince}} ago)
+                                                ({{friend.status}})
+					<br>
+				{%endfor%}
+			<br/><br/>
+		<b>	showing last 10 Favorites Kwips </b><br/><br/>			
+				<b>	Favorite --> Quip (Time)<br/></b>
+					{% for fav in new_favorites%}
+						<a href="/{{fav.user.username}}/">{{fav.user.username}}</a> -->
+						{{fav.quip.formated}} ({{fav.created_at|timesince}} ago)
+						<a href="/{% formattime fav.quip.id%}/"> read kwip </a>
+					<br>
+				{%endfor%}
+			<br/><br/>
+		<b>	showing last 10 private messages </b><br/><br/>			
+				<b>	Sender --> Receipient (Time)<br/></b>
+					{% for msg in new_messages%}
+						<a href="/{{msg.sender.username}}/">{{msg.sender.username}}</a> -->
+						<a href="/{{msg.receiver.username}}/">{{msg.receiver.username}}</a> ({{msg.created_at|timesince}} ago)
+					<br>
+				{%endfor%}
+			<br/><br/>
+		<b>	showing last 10 buzzes </b><br/><br/>			
+				<b>	sender --> receipient (Time)<br/></b>
+					{% for buzz in new_buzzes%}
+						<a href="/{{buzz.sender.username}}/">{{buzz.sender.username}}</a> -->
+						<a href="/{{buzz.receiver.username}}/">{{buzz.receiver.username}}</a>({{buzz.created_at|timesince}} ago)
+					<br>
+				{%endfor%}
+		<br/><br/>
+		<b>	showing last 10 conv invites </b><br/><br/>	
+				<b>	sender --> receipient (Time) --> comment count<br/></b>
+					{% for inv in new_conv_invites%}
+						<a href="/{{inv.sender.username}}/">{{inv.sender.username}}</a> -->
+						<a href="/{{inv.receiver.username}}/">{{inv.receiver.username}}</a>({{inv.created_at|timesince}} ago)
+						no of comments at the time of invites: {{inv.comment_count}}
+						<a href="/{% formattime inv.quip.id%}/"> read kwip </a>
+					<br>
+				{%endfor%}
+		<br/><br/>
+		<b>	showing last 10 Account Delets </b><br/><br/>			
+				<b>	user (Time) (email)<br/></b>
+					{% for acc in new_acc_deletes%}
+						<a href="/{{acc.user.username}}/">{{acc.user.username}}</a> ({{acc.created_at|timesince}} ago) ({{acc.user.email}})
+					<br>
+				{%endfor%}
+		<br/><br/>
+		<b>	showing last 10 Facebook Accounts </b><br/><br/>			
+				<b>	user (Time) <br/></b>
+					{% for acc in new_fb_accounts%}
+						<a href="/{{acc.user.username}}/">{{acc.user.username}}</a> ({{acc.created_at|timesince}} ago)
+					<br>
+				{%endfor%}
+			
+
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

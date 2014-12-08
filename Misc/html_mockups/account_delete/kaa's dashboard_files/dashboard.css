@@ -1,0 +1,180 @@
+body {
+text-align:center;
+margin:0 auto;
+padding-top:30px;
+background-color:f9f9f9;
+font-family:lucida sans,verdana;
+}
+
+.wrap {
+text-align:center;
+margin:0 auto;
+width:880px;
+}
+
+.content {
+padding:10px 15px 10px 15px;
+font-size:100%;
+text-align:left;
+}
+
+a img{
+border:none;}
+a {
+color:#0086FF;;
+text-decoration:none;
+}
+a:hover {
+text-decoration:underline;
+}
+
+h1 {
+color:grey;
+font-size:25px;
+padding-bottom:10px 
+padding-left:7px;
+font-weight:bold;
+}
+
+h2 {
+color:#fff;
+font-size:20px;
+}
+
+.post_box {
+padding: 7px;
+margin:10px auto 0 auto ;
+background-color:#fff;
+}
+
+.textbox{
+width:100%;
+border-top:1px solid grey;
+border-left:1px solid grey;
+height:35px;
+font-size:16px;
+font-family:lucida sans, verdana;
+padding-left:5px;
+margin-bottom:10px;
+}
+
+.textarea{
+width:100%;
+border-top:1px solid grey;
+border-left:1px solid grey;
+height:150px;
+font-family:lucida sans,verdana, sans-serif;
+font-size:16px;
+padding:5px 10px 10px 5px;
+}
+.button {
+background-color:#BBD26C;
+border:1px solid grey;
+height:25px;
+text-align:center;
+padding:0 6px;
+}
+
+.dashboard_fieldset{
+font-size:18px;
+color:grey;
+padding:10px 10px 15px 10px;
+}
+fieldset legend label{
+padding-left:25px;
+}
+.header{
+clear:both;
+width:100%;
+display:block;
+}
+
+.nav {
+list-style:none;
+float:left;
+padding:0;
+margin:0;
+}
+
+.nav li {
+float:left;
+padding:0 15px 0 3px;
+}
+/*.nav li {
+background-color:#BBD26C;
+color:grey;
+float:left;
+margin-right:10px;
+padding:3px 3px 6px 3px;
+color:white;
+}*/
+
+.header_logo{
+float:right;
+text-align:center;
+}
+
+select {
+border:1px solid #cdcdcd;
+padding:3px;
+font-size:18px;
+font-family:glucida sans, verdana;
+}
+
+ul {
+list-style:none;
+}
+
+.im_names{
+padding:auto 10px auto 10px;
+padding-left:10px;
+float:left;
+}
+
+.footer{
+	text-align:center;
+		font-size:12px;
+		}
+		.footer ul {
+		height:auto;
+		margin:0pt;
+		padding:0pt;
+		width:auto;
+		}
+		.footer li{
+		display:inline;
+		list-style-image:none;
+		list-style-position:outside;
+		list-style-type:none;
+		padding:3px 7px;
+		text-align:center;
+		}
+
+.clear{
+clear:both;
+height:0px;
+overflow:hidden;
+}
+
+
+.forms_wrap{
+padding:20px 0 30px 0;
+
+}
+
+.flash_message{
+background-color:#FFF4BF;
+}
+.new{ 
+z-index:1000;width:16px;position:absolute;float:right;
+}
+
+.small_font{
+font-size:12px;}
+
+.float_left{
+	float:left;}
+	
+.float_right(
+float:right;
+)

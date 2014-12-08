@@ -1,0 +1,243 @@
+	<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
+	
+		<title>kaa's dashboard</title>
+		<link rel="stylesheet" type="text/css" href="kaa%27s%20dashboard_files/dashboard.css">
+		<link href="http://staging.kwippy.com/favicon.ico" rel="shortcut icon">		
+               <script type="text/javascript" src="kaa%27s%20dashboard_files/dashboard.js"></script>  
+		<script type="text/javascript" src="kaa%27s%20dashboard_files/jquery-1.js"></script> 
+	<style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+
+.firebugHighlight {
+    z-index: 2147483647;
+    position: absolute;
+    background-color: #3875d7;
+}
+
+.firebugLayoutBoxParent {
+    z-index: 2147483647;
+    position: absolute;
+    background-color: transparent;
+    border-right: 1px dashed #BBBBBB;
+    border-bottom: 1px dashed #BBBBBB;
+}
+
+.firebugRulerH {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background: url(chrome://firebug/skin/rulerH.png) repeat-x;
+    border-top: 1px solid #BBBBBB;
+    border-right: 1px dashed #BBBBBB;
+    border-bottom: 1px solid #000000;
+}
+
+.firebugRulerV {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 14px;
+    height: 100%;
+    background: url(chrome://firebug/skin/rulerV.png) repeat-y;
+    border-left: 1px solid #BBBBBB;
+    border-right: 1px solid #000000;
+    border-bottom: 1px dashed #BBBBBB;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.firebugLayoutBoxOffset {
+    z-index: 2147483647;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.firebugLayoutBoxMargin {
+    background-color: #EDFF64;
+}
+
+.firebugLayoutBoxBorder {
+    background-color: #666666;
+}
+
+.firebugLayoutBoxPadding {
+    background-color: SlateBlue;
+}
+
+.firebugLayoutBoxContent {
+    background-color: SkyBlue;
+}
+
+/*.firebugHighlightGroup .firebugLayoutBox {
+    background-color: transparent;
+}
+
+.firebugHighlightBox {
+    background-color: Blue !important;
+}*/
+
+.firebugLayoutLine {
+    z-index: 2147483647;
+    background-color: #000000;
+    opacity: 0.4;
+}
+
+.firebugLayoutLineLeft,
+.firebugLayoutLineRight {
+    position: fixed;
+    width: 1px;
+    height: 100%;
+}
+
+.firebugLayoutLineTop,
+.firebugLayoutLineBottom {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px;
+    border-top: 1px solid #999999;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px;
+    border-left: 1px solid #999999;
+}
+</style></head><body onload="default_for_import();"> 
+		<div class="wrap">
+			<div class="clear"></div>
+			
+   <span id="flash" style="display: block;" class="flash_message">
+   
+   </span>
+ 
+			<span id="flash" style="display: block;" class="flash_message wrap">   
+				
+			</span>
+			<div class="content">
+				<div class="header">
+					<div class="header_logo">
+						<a href="http://www.kwippy.com/" title="home"><img src="kaa%27s%20dashboard_files/logo.gif"></a><br>
+						<a href="http://www.kwippy.com/logout">Logout</a>
+					</div>
+					<h1>Hi  <a href="http://www.kwippy.com/kaa/">kaa</a> | messages</h1>
+					<ul class="nav">
+						
+	<li>
+		<a href="http://www.kwippy.com/kaa/dashboard/import/" style="display: none;" id="li_import"> Read</a>
+		<span style="display: block;" id="import">Inbox</span>
+	</li>	
+
+						
+							<li>
+								  <a href="http://www.kwippy.com/kaa/dashboard/profile/" id="li_profile">Write</a>
+								  <span style="display: none;" id="profile">Compose</span>
+							</li>
+						
+						
+							<li>
+								<a href="http://www.kwippy.com/kaa/dashboard/account/" id="li_accounts"><b>Notifications</b> </a>
+								<span style="display: none;" id="accounts">Notifications</span>
+							</li>
+						
+						
+							
+						
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<!-- Content -->
+				<div id="content">			
+					
+	<br>
+	<fieldset id="field_import" class="dashboard_fieldset" style="display: block;">
+	  <legend>inbox for direct messages</legend>
+	
+
+	<div class="clear"></div>
+
+		  <div id="buddy" style="display: block;" name="buddy">
+			<table>
+				<tbody>
+					<tr><td width="150">From</td>
+						<td width="650"></td>
+						
+					</tr>					
+					<!--
+					<tr><td width="150"><img src="" width="32"><br>
+						<a href="">chachafance</a></td>
+						<td width="" valign="center"><a href="">hi there asdfasfda asdfasdf asdfasd fasd f asdf ..asdfasf.</a></td>
+						<td width="100"><a href=""><img class="go_icon" src="/images/icons/delete.gif"></a></td>
+					</tr>	--><!--show 50 characters and then ... -->
+					
+					
+					<!-- this is for the message page-->
+					<tr><td width="150"><img src="" width="32"><br>
+						<a href="">chachafance</a></td>
+						<td width="" valign="center">hi there asdfasfda asdfasdf asdfasd fasd f asdf ..asdfasf...hi there asdfasfda asdfasdf asdfasd fasd f asdf ..asdfasf.hi there asdfasfda asdfasdf asdfasd fasd f asdf ..asdfasf.hi there asdfasfda asdfasdf asdfasd fasd f asdf ..asdfasf.<br>
+						<br><hr>
+						<a href="">reply<img class="go_icon" src="/images/icons/arrow_right.gif"></a> | <a href="">delete<img class="go_icon" src="/images/icons/delete.gif"></a></td><!--show 50 characters and then ... -->
+						
+					</tr>	
+				</tbody>
+				
+			</table>
+			
+		  </div>		
+	</fieldset>
+
+					<br class="clear">
+				</div>
+				<!-- END Content -->
+
+				<!--footer begins--> 	
+				<div class="footer">
+	<ul>
+		<li><a href="http://blog.kwippy.com/" class="onwhite">blog</a></li>
+                <li><a href="http://www.kwippy.com/home/team/" class="onwhite">team</a></li>
+		<li><a href="http://www.kwippy.com/help/" class="onwhite">help</a></li>
+		 <li><a href="http://www.kwippy.com/home/extras" class="onwhite">extras</a></li>
+		<li><a href="http://www.kwippy.com/home/contactus/" class="onwhite">contact us</a></li>
+		<li><a href="http://www.kwippy.com/home/tos/" class="onwhite">TOS</a></li>
+	</ul>
+	<div>©2008 kwippy</div>
+</div>  
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="kaa%27s%20dashboard_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3116342-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+				<!--footer begins--> 	
+	   
+		   </div>
+		</div>
+	</body></html>

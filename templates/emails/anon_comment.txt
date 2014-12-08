@@ -1,0 +1,13 @@
+subject: new comment from #_2
+body_text:  hi #_1,\n #_2 has left a comment on your kwip\n\n "#_3" \n\n click ssiittee/#_4 to reply!\n\n #_2 posted the comment at #_5 \n\n you can choose not to get these messages. you can change the options here - #_10
+body_html:  hi #_1,<br /> <a href="ssiittee/#_2">#_2</a> has left a comment on your kwip <br /><br /> "<a href="ssiittee/#_4">#_3</a>"<br /><br /> go <b><a href="ssiittee/#_4">reply</a></b>!<br /><br /><font color="gray"> <a href="ssiittee/#_2">#_2</a> posted the comment at #_5<br /><br /> .<br><br> you can choose not to get these messages. you can change the options <a href="#_10">here</a>
+
+insert into kwippy_email(type,subject,body_text,body_html)
+values('comment_anon','new comment from #_2',
+'hi #_1,\n #_2 has commented on your kwip\n\n "#_3" \n\n click ssiittee/#_4 to read and reply!\n\n #_2 posted the comment at #_5. \n\n you can choose not to get these messages by changing the options here - ssiittee/dashboard/account/ ',
+'hi #_1,<br /> #_2 has commented on your kwip <br /><br /> "<a href="ssiittee/#_4">#_3</a>"<br /><br /> click <b><a href="ssiittee/#_4">to read and reply</a></b>!<br /><br /><font color="gray"> #_2 posted the comment at #_5<br /><br /> .<br><br> you can choose not to get these messages by changing the options <a href="ssiittee/dashboard/account/">here</a>')
+
+
+insert into kwippy_im(type,body) values('comment','#_2 has commented on your kwip: <br>"#_3"<br><br>you can read and reply here:<br>ssiittee/#_4');
+
+

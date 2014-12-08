@@ -1,0 +1,254 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0040)http://staging.kwippy.com/kaa/dashboard/ -->
+<HTML><HEAD><TITLE>kaa's dashboard</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><LINK 
+href="kaa's dashboard_files/dashboard.css" type=text/css rel=stylesheet><!--<body onload="show_buddy_tobe_added('GTalk'); a_to_span_menu('import');"> -->
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY onload="a_to_span_menu('import');">
+<DIV class=wrap>
+<DIV class=content>
+<DIV class=header>
+<DIV class=header_logo><A title=home href="http://staging.kwippy.com/"><IMG 
+src="kaa's dashboard_files/logo.gif"></A><BR><A 
+href="http://staging.kwippy.com/logout">Logout</A> </DIV>
+<H1>Hi <A href="http://staging.kwippy.com/kaa/">kaa</A> | dashboard</H1>
+<UL class=nav>
+  <LI><A class=active id=li_import 
+  onclick="show_fieldset('import','profile,accounts,kwips_page');" 
+  href="javascript:void(0);">Import</A> <SPAN id=import 
+  style="DISPLAY: none">Import</SPAN> </LI>
+  <LI><A id=li_profile 
+  onclick="show_fieldset('profile','import,accounts,kwips_page');" 
+  href="javascript:void(0);">Profile</A> <SPAN id=profile 
+  style="DISPLAY: none">Profile</SPAN> </LI>
+  <LI><A id=li_accounts 
+  onclick="show_fieldset('accounts','import,profile,kwips_page');" 
+  href="javascript:void(0);">Account settings </A><SPAN id=accounts 
+  style="DISPLAY: none">Account Settings</SPAN> </LI>
+  <LI><A id=li_kwips_page 
+  onclick="show_fieldset('kwips_page','accounts,profile,import');" 
+  href="javascript:void(0);">Kwips Page</A> <SPAN id=kwips_page 
+  style="DISPLAY: none">Kwips Page</SPAN> </LI></UL></DIV>
+<DIV class=clear></DIV>
+<DIV class=forms_wrap>
+<FIELDSET class=dashboard_fieldset id=field_import 
+style="DISPLAY: block"><LEGEND>import status from IMs (Gtalk)</LEGEND><!-- <br />
+	  We support these IMs -->
+<UL>
+  <LI class=im_names style="DISPLAY: none"><A id=AIM 
+  onclick="show_buddy_tobe_added('AIM');" href="javascript:void(0);">AIM</A> 
+  <SPAN id=AIM_text style="DISPLAY: none">AIM</SPAN> </LI>
+  <LI class=im_names style="DISPLAY: none"><A id=Gadu 
+  onclick="show_buddy_tobe_added('Gadu');" 
+  href="javascript:void(0);">Gadu-Gadu</A> <SPAN id=Gadu_text 
+  style="DISPLAY: none">Gadu-Gadu</SPAN> </LI>
+  <LI class=im_names style="DISPLAY: none"><A id=GTalk 
+  onclick="show_buddy_tobe_added('GTalk');" href="javascript:void(0);">Google 
+  Talk</A> <SPAN id=GTalk_text style="DISPLAY: none">Google Talk</SPAN> </LI>
+  <LI class=im_names style="DISPLAY: none"><A id=ICQ 
+  onclick="show_buddy_tobe_added('ICQ');" href="javascript:void(0);">ICQ</A> 
+  <SPAN id=ICQ_text style="DISPLAY: none">ICQ</SPAN> </LI>
+  <LI class=im_names style="DISPLAY: none"><A id=MSN 
+  onclick="show_buddy_tobe_added('MSN');" href="javascript:void(0);">MSN</A> 
+  <SPAN id=MSN_text style="DISPLAY: none">MSN</SPAN> </LI>
+  <LI class=im_names style="DISPLAY: none"><A id=MySpaceIM 
+  onclick="show_buddy_tobe_added('MySpaceIM');" 
+  href="javascript:void(0);">MySpaceIM</A> <SPAN id=MySpaceIM_text 
+  style="DISPLAY: none">MySpaceIM</SPAN> </LI>
+  <LI class=im_names style="DISPLAY: none"><A id=QQ 
+  onclick="show_buddy_tobe_added('QQ');" href="javascript:void(0);">QQ</A> <SPAN 
+  id=QQ_text style="DISPLAY: none">QQ</SPAN> </LI>
+  <LI class=im_names style="DISPLAY: none"><A id=Yahoo 
+  onclick="show_buddy_tobe_added('Yahoo');" 
+  href="javascript:void(0);">Yahoo!</A> <SPAN id=Yahoo_text 
+  style="DISPLAY: none">Yahoo!</SPAN> </LI></UL>
+<DIV class=clear></DIV><!--	  <div id="buddy" style="display:none" name="buddy" >
+		<h5>From gTalk</h5>
+		Just add <em>beta@kwippy.com</em> as a buddy, send this code(417cae5bac) and you are done
+	  </div>		
+--><!-- <div id="buddy" style="display:none" name="buddy" > -->
+<DIV id=buddy name="buddy">record your gtalk status.<BR>follow these steps: 
+<BR><BR>step1 - add <EM>beta@kwippy.com</EM> as a buddy <BR>step2 - message this 
+code(417cae5bac) to beta@kwippy.com and you are done. </DIV></FIELDSET> <A 
+name=kwips_page></A>
+<FIELDSET class=dashboard_fieldset id=field_kwips_page 
+style="DISPLAY: none"><LEGEND>Kwips page settings</LEGEND>
+<FORM action=. method=post>
+<TABLE class=form>
+  <TBODY>
+  <TR>
+    <TH><LABEL for=id_title>Title:</LABEL></TH>
+    <TD><INPUT id=id_title maxLength=100 name=title></TD></TR></TBODY></TABLE><INPUT type=submit value=Submit> <INPUT 
+id=form_2 type=hidden value=form_2 name=form_2> </FORM></FIELDSET> 
+<FIELDSET class=dashboard_fieldset id=field_accounts 
+style="DISPLAY: none"><LEGEND>Account settings</LEGEND>
+
+<p> 
+<b>email notifications</b>
+</p>
+new follower - <input type="radio" checked="" name="radio1"/>yes <input type="radio" checked="" name="radio1"/>no<br />
+new comment - <input type="radio" checked="" name="radio2"/>yes <input type="radio" checked="" name="radio2"/>no<br />
+
+<P><b>change password</b></P>
+<FORM id=accounts action="" method=post>
+<P class="aligned wide"><LABEL for=id_old_password>Old password:</LABEL><INPUT 
+class="vPasswordField required" id=id_old_password type=password maxLength=30 
+size=30 name=old_password> </P>
+<P class="aligned wide"><LABEL for=id_new_password1>New password:</LABEL><INPUT 
+class="vPasswordField required" id=id_new_password1 type=password maxLength=30 
+size=30 name=new_password1> </P>
+<P class="aligned wide"><LABEL for=id_new_password2>Confirm 
+password:</LABEL><INPUT class="vPasswordField required" id=id_new_password2 
+type=password maxLength=30 size=30 name=new_password2> </P><INPUT id=form_1 
+type=hidden value=form_1 name=form_1> 
+<P><INPUT type=submit value="submit"></P></FORM></FIELDSET> <!-- this button should be for the whole form-->
+<FIELDSET class=dashboard_fieldset id=field_profile 
+style="DISPLAY: none"><LEGEND>Profile settings</LEGEND>
+<FORM action=. method=post encType=multipart/form-data>
+<TABLE class=form>
+  <TBODY>
+  <TR>
+    <TH><LABEL for=id_display_name>Display name:</LABEL></TH>
+    <TD><INPUT id=id_display_name maxLength=50 value=kaa 
+  name=display_name></TD></TR>
+  <TR>
+    <TH><LABEL for=id_age>Age:</LABEL></TH>
+    <TD><INPUT id=id_age value=26 name=age></TD></TR>
+  <TR>
+    <TH><LABEL for=id_gender>Gender:</LABEL></TH>
+    <TD><SELECT id=id_gender name=gender> <OPTION 
+        value="">---------</OPTION> <OPTION value=1 selected>Male</OPTION> 
+        <OPTION value=2>Female</OPTION></SELECT></TD></TR>
+  <TR>
+    <TH><LABEL for=id_about_me>About me:</LABEL></TH>
+    <TD><TEXTAREA id=id_about_me name=about_me rows=10 cols=40>chak de, is all i wanna say, and i dance like jimmy ray</TEXTAREA></TD></TR>
+  <TR>
+    <TH><LABEL for=id_location_city>Location city:</LABEL></TH>
+    <TD><INPUT id=id_location_city maxLength=200 value=delhi 
+      name=location_city></TD></TR>
+  <TR>
+    <TH><LABEL for=id_location_country>Location country:</LABEL></TH>
+    <TD><INPUT id=id_location_country maxLength=200 value=India 
+      name=location_country></TD></TR>
+  <TR>
+    <TH><LABEL for=id_picture>Picture:</LABEL></TH>
+    <TD><INPUT id=id_picture type=file name=picture></TD></TR><!--u can display the page in your own style just like the login page
+			  sample code
+			   <label for="id_display_name">Display Name <input id="id_display_name" type="text" name="display_name" value="kaa" maxlength="50" /></label> !--></TBODY></TABLE><INPUT type=submit value=Submit> 
+</FORM></FIELDSET> </DIV><!--footer begins-->
+<DIV class=footer>
+<UL>
+  <LI><A class=onwhite href="http://blog.kwippy.com/">blog</A> 
+  <LI><A class=onwhite href="http://staging.kwippy.com/help/">help</A> 
+  <LI><A class=onwhite href="http://staging.kwippy.com/contactus/">contact 
+  us</A> 
+  <LI><A class=onwhite href="http://staging.kwippy.com/tos/">TOS</A> 
+  <LI><A class=onwhite href="http://staging.kwippy.com/privacy/">privacy 
+  policy</A> </LI></UL>
+<DIV>©2008 kwippy</DIV></DIV><!--footer begins--></DIV></DIV>
+<SCRIPT type=text/javascript>
+
+function myIndexOf(arr,inStr){
+        for (var i = 0; i < arr.length; i++){
+            if(arr[i]==inStr){
+                return i;
+            }
+        }
+}
+function show_fieldset(show,hide){
+	a_to_span_menu(show);
+	show = 'field_'+show
+	document.getElementById(show).style.display="block"
+	var i=0;
+	h=hide.split(",")
+	for (i=0;i<=2 ;i++ )
+	{
+		field='field_'+h[i]
+		document.getElementById(field).style.display="none"
+	}
+}
+
+function a_to_span_menu(menu){
+
+	var menu_list = ['import','profile','accounts','kwips_page']
+	var in_menu_list = myIndexOf(menu_list,menu);
+	menu_list.splice(in_menu_list,1)
+
+	for (var i=0;i<menu_list.length ;i++ )
+	{
+		
+	document.getElementById(menu_list[i]).style.display='none'
+	document.getElementById('li_'+menu_list[i]).style.display='block'
+	}
+document.getElementById('li_'+menu).style.display='none'
+document.getElementById(menu).style.display='block'
+
+
+}
+
+function a_to_span(account){
+
+var account_text = account + '_text'
+var im_list = ['AIM','Gadu','GTalk','ICQ','MSN','MySpaceIM','QQ','Yahoo'];
+var in_im_list = myIndexOf(im_list,account);
+im_list.splice(in_im_list,1)
+for (var i=0 ;i<im_list.length ;i++ )
+{
+	var acc_text = im_list[i] + '_text';
+	document.getElementById(acc_text).style.display='none'
+	document.getElementById(im_list[i]).style.display='block'
+}
+document.getElementById(account_text).style.display='block'
+document.getElementById(account).style.display='none'
+
+}
+
+function show_buddy_tobe_added(account){
+a_to_span(account);
+var im_list_kwippy = ['AIM','GTalk','ICQ','MSN','MySpaceIM','Yahoo'];
+var im_list_others = ['Gadu','QQ'];
+var account_list_others = ['11901287','2130495'];
+
+var in_kwippy_list = myIndexOf(im_list_kwippy,account);
+if (in_kwippy_list >=0) {
+<!-- temp hack for IE need to clean this -->
+	if ( window.opera){
+		document.getElementById('buddy').childNodes[1].innerHTML = 'From '+ account;
+		document.getElementById('buddy').childNodes[3].innerHTML = 'beta@kwippy.com'
+	}
+	else if (window.attachEvent)
+	{
+		document.getElementById('buddy').childNodes[0].innerHTML = 'From '+ account;	
+		document.getElementById('buddy').childNodes[2].innerHTML =  'beta@kwippy.com'
+
+	}
+	else{
+		document.getElementById('buddy').childNodes[1].innerHTML = 'From '+ account;
+		document.getElementById('buddy').childNodes[3].innerHTML = 'beta@kwippy.com'
+	}
+	document.getElementById('buddy').style.display="block";
+  }
+else {
+  var in_others_list = myIndexOf(im_list_others,account);
+  <!-- temp hack for IE need to clean this -->
+	if ( window.opera){
+		document.getElementById('buddy').childNodes[1].innerHTML = 'From '+ account;
+		document.getElementById('buddy').childNodes[3].innerHTML = account_list_others[in_others_list];
+	}
+	else if (window.attachEvent)
+	{
+		document.getElementById('buddy').childNodes[0].innerHTML = 'From '+ account;	
+		document.getElementById('buddy').childNodes[2].innerHTML =  account_list_others[in_others_list];
+
+	}
+	else{
+		document.getElementById('buddy').childNodes[1].innerHTML = 'From '+ account;
+		document.getElementById('buddy').childNodes[3].innerHTML = account_list_others[in_others_list];
+	}
+  document.getElementById('buddy').style.display="block";  
+ }
+
+}
+
+</SCRIPT>
+</BODY></HTML>

@@ -1,0 +1,75 @@
+BODY {
+	MARGIN: 0px auto; PADDING-TOP: 30px; BACKGROUND-COLOR: #f9f9f9; TEXT-ALIGN: center
+}
+.wrap {
+	MARGIN: 0px auto; WIDTH: 880px; TEXT-ALIGN: center
+}
+.content {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-SIZE: 100%; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT-FAMILY: lucida sans,verdana; TEXT-ALIGN: left
+}
+A IMG {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+A {
+	COLOR: #0086ff; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 25px
+}
+H2 {
+	FONT-SIZE: 20px; COLOR: #fff
+}
+.post_box {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; PADDING-BOTTOM: 7px; MARGIN: 10px auto 0px; PADDING-TOP: 7px; BACKGROUND-COLOR: #fff
+}
+.textbox {
+	BORDER-TOP: 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 25px; MARGIN-BOTTOM: 10px; BORDER-LEFT: 1px solid; WIDTH: 100%; FONT-FAMILY: georgia; HEIGHT: 35px
+}
+.textarea {
+	PADDING-RIGHT: 10px; BORDER-TOP: 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 25px; PADDING-BOTTOM: 10px; BORDER-LEFT: 1px solid; WIDTH: 100%; PADDING-TOP: 5px; FONT-FAMILY: lucida sans,verdana, sans-serif; HEIGHT: 150px
+}
+.dashboard_fieldset {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 18px; PADDING-BOTTOM: 15px; PADDING-TOP: 10px
+}
+FIELDSET LEGEND LABEL {
+	PADDING-LEFT: 25px
+}
+.header {
+	CLEAR: both; DISPLAY: block; WIDTH: 100%
+}
+.nav {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.nav LI {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 3px; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.header_logo {
+	FLOAT: right; TEXT-ALIGN: center
+}
+SELECT {
+	BORDER-RIGHT: #cdcdcd 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #cdcdcd 1px solid; PADDING-LEFT: 3px; FONT-SIZE: 18px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cdcdcd 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #cdcdcd 1px solid; FONT-FAMILY: georgia
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+.im_names {
+	PADDING-LEFT: 10px; FLOAT: left
+}
+.footer {
+	FONT-SIZE: 12px; TEXT-ALIGN: center
+}
+.footer UL {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 0pt; MARGIN: 0pt; WIDTH: auto; PADDING-TOP: 0pt; HEIGHT: auto
+}
+.footer LI {
+	PADDING-RIGHT: 7px; LIST-STYLE: none none outside; DISPLAY: inline; PADDING-LEFT: 7px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; TEXT-ALIGN: center
+}
+.clear {
+	CLEAR: both; OVERFLOW: hidden; HEIGHT: 0px
+}
+.forms_wrap {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 30px; PADDING-TOP: 20px
+}

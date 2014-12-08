@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				Metrics to track kwippy's virality.<br/><br/>	
+				Total Invites sent(excluding ours): {{total_invites}} <br/>
+                                Total Invites converted(excluding ours): {{total_invites_converted}} <br/>
+                                Total Invitees(excluding us): {{total_invitees}} <br/>
+                                Daywise Virality: <br/><br/>
+                                    &nbsp date &nbsp;&nbsp;&nbsp;&nbsp; no of invites sent<br/><br/>
+                                {%for item,key in daily_virality%}
+    `                              {{key}} &nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+                                {%endfor%}
+
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

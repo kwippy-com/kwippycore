@@ -1,0 +1,6 @@
+kaa goes to mayanks profile and clicks on follow 
+He immediately starts following him (mayanks kwips are shown in his kwips page)
+
+mayank gets a notification saying, "Kaa's added you as a buddy so that he can follow your kwips.
+Do you want to add kaa as a buddy too? yes no"
+

@@ -1,0 +1,96 @@
+{% extends "static_pages/base_static.html" %}
+
+{% block title %}
+    kwippy - team 
+{% endblock %}
+
+	{%block menu%}	
+		{%if user.is_authenticated%}
+		{%else%}
+				<div class="menu" >					
+					<ul>
+						  <li class="selected"><a href="/">Home</a></li>
+						  <li class="link"><a href="/signup/">Signup</a></li>
+						  <li class="link"><a href="/login/">Login</a></li>
+						  <li class="link"><a href="/help/">Help</a></li>
+					</ul>
+				</div>		
+		{%endif%}
+
+	{%endblock%}
+
+
+{% block content %}
+    <div class="content">
+		    {%if user.is_authenticated%}
+			<h1 style="float:left;"><a href="/" class="onwhite"> Home</a> &raquo;<b> Team</b></h1>
+                        {%include "static_pages/include_logged_in.html"%}
+			<br class="clear"/>
+		<hr/>
+		{%endif%}
+
+
+
+        <ul>
+<li>
+<h1>Current team</h1>
+</li>
+</li>
+                        <li class="clear"></li>
+                        <br />
+<li>
+
+             <div  class="float_left"> <img  class="float_left"  style="margin-right:10px;"src="/images/dipankar.jpg" />
+            <h3  class="float_left"><b>Dipankar Sarkar</b></h3><br /><br />
+                            Technical head and the CEO.
+                Likes working on new technologies/implementation challenges. IM , search, python and django guru, you will f
+ind him writing facebook and twitter applications in his free time.<br />
+                                He kwips <a class="onwhite" href="/dipankar">here</a>, resides <a class="onwhite"  href="htt
+p://dipankar.name">here</a>  and blogs <a class="onwhite" href="http://desinerd.com">here</a>.
+            </div>
+            </li>
+                        <li class="clear"></li>
+                        <br /><br /><br />
+
+            
+			 <li>
+				 <div  class="float_left"><img class="float_left" style="margin-right:10px;" src="/images/mayank.jpg" /><h3  class="float_left"><b>Mayank Dhingra</b></h3><br /><br />				
+				Frontend engineer, PR & Customer Service hero - he's the marketing and finance guy of  the Kwippy team.
+				Hopping from the corporate rat race to the thrills of the startup bandwagon, he's loving every minute of it!
+				An admitted Teaholic and Bibliophile, he's an adventure sports freak who loves experimenting with new things.<br/>
+					He kwips <a class="onwhite" href="/mayank">here</a>, and blogs <a class="onwhite" href="http://mayank.name">here</a>.
+				</div>
+            </li>
+		<!--	<li class="clear"></li>
+			<br /><br /><br />
+            <li>
+            <div  class="float_left"><img class="float_left" style="margin-right:10px;" src="/images/matthew_120.jpg" /><h3  class="float_left"><b>Matthew Phillips</b></h3><br /><br />				
+			Community Manager for Kwippy.com  I'm the guy you talk to if you have suggestions, comments or complaints.  Chances are you've already talked to me, but if not you can reach me <a class="onwhite" href="/kestrachern/">here</a>. Wanna know what I do when not on Kwippy Check out <a class="onwhite" href="http://kestrachern.com">kestrachern.com</a> or if you are in the running for best stalker ever look  <a class="onwhite" href="http://lifestream.fm/kestrachern">here</a>.<br/>
+				
+            </div>
+            </li> -->
+			<li class="clear"></li>
+			<br />
+<li>
+<h1>Former employees</h1>
+</li>
+</li>
+                        <li class="clear"></li>
+                        <br />
+<li>
+<li>
+            <div  class="float_left"><img class="float_left" style="margin-right:10px;" src="/images/kaa.jpg" /><h3 class="float_left"><b>KA Anand aka kaa</b></h3><br /><br />
+K.A.Anand or kaa as he is called was involved in the basic concept development and design of kwippy. He quit from the day to day responsibilities in kwippy in december, and moved on to his other interests. His kwip page is <a class="onwhite" href="http://kwippy.com/kaa">here</a>, and he can be found blogging about design at <a class="onwhite" href="http://rega.in">regain</a>.
+            </div>
+            </li>
+<li class="clear"></li>
+                        <br /><br /><br />
+            <li>
+<li>
+Connect to the team and the kwippy community at <a href="http://groups.google.com/group/kwippy-community">google groups</a>. Like any other creative web company we are on the lookout for people who can add value to us. You want to intern ? biz developement is you forte ? All are welcome. Feel free to <a class="onwhite" href="/home/contactus/">contact us</a>.
+</li>
+<li class="clear"></li>
+                        <br /><br /><br />
+        </ul>
+    </div>
+{% endblock %}

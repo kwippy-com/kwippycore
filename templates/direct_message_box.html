@@ -1,0 +1,38 @@
+{% load ifusergroup%}  
+{%if user.is_authenticated %}	
+	{% ifusergroup team %}		
+		{%ifnotequal request.user.username login%}
+				<form method="post" action="/{{request.user.username}}/pvt_message/" id="pvt_msg_form" name="pvt_msg_form"> 			
+				<div><div style="float:left;width:75px;"><img src="/images/icons/email_go.gif" class="link_icon"> </div><div style="float:left;"><a onclick="document.getElementById('mail_area').style.display='block';" href="javascript:void(0)">send private message</a></div>
+				<div class="clear border_top"></div>
+
+			  <div id="mail_area" class="white_content" style="position:relative;top:0;left:0px;width:210px;height35%;margin-top:-20px;">
+				send private message
+				<textarea cols="2" id="pvt_msg" rows="5" name="pvt_msg" class="textarea"></textarea> 
+				<input type="submit" value="send" class="button"/> or 
+				<a onclick="document.getElementById('mail_area').style.display='none';" href="javascript:void(0)">Close
+				</a>
+			  </div>
+					<input type="hidden" id="receiver_username" name="receiver_username" value="{{login}}">
+				</form>
+		{%endifnotequal%}
+	{%else%}
+		{%if dict.is_receiver_following %}
+			{%ifnotequal request.user.username login%}
+				<form method="post" action="/{{request.user.username}}/pvt_message/" id="pvt_msg_form" name="pvt_msg_form"> 			
+				<div><div style="float:left;width:75px;"><img src="/images/icons/email_go.gif" class="link_icon"> </div><div style="float:left;"><a onclick="document.getElementById('mail_area').style.display='block';" href="javascript:void(0)">send private message</a></div>
+				<div class="clear border_top"></div>
+
+			  <div id="mail_area" class="white_content" style="position:relative;top:0;left:0px;width:210px;height35%;margin-top:-20px;">
+				send private message
+				<textarea cols="2" id="pvt_msg" rows="5" name="pvt_msg" class="textarea"></textarea> 
+				<input type="submit" value="send" class="button"/> or 
+				<a onclick="document.getElementById('mail_area').style.display='none';" href="javascript:void(0)">Close
+				</a>
+			  </div>
+					<input type="hidden" id="receiver_username" name="receiver_username" value="{{login}}">
+				</form>
+			{%endifnotequal%}
+		{%endif%}
+	{% endifusergroup %}
+{%endif%}

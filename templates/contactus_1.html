@@ -1,0 +1,32 @@
+{% extends "static_pages/base_static.html" %}
+{% load format_quipper_displayname%}
+
+{% block title %}
+    kwippy - team 
+{% endblock %}
+
+{%if user.is_authenticated%}
+	{%block menu%}	
+	{%endblock%}
+{%endif%}
+
+{% block content %}
+    <div class="content">
+		    {%if user.is_authenticated%}
+			<h1 style="float:left;"><a href="/" class="onwhite"> Home</a> &raquo;<b> Contact Us</b></h1>
+                        {%include "templates/include_logged_in.html"%}
+			<br class="clear"/>
+		<hr/>
+		{%endif%}
+		<form method="post" action=".">			
+			{% if not user.is_authenticated %}
+				<label for="id_username">e-mail<br/><!--for ppl not logged in since anyone can write to us-->
+				<input id="user_title" name="email" class="textbox" type="text" /><br/>
+			{% endif %}
+			<label for="id_username">write to us<br/>
+			<input id="user_title" name="msg" class="textarea" type="text" />
+			<input class="button" type="submit" value="Go &raquo;"/>
+		</form>
+
+    </div>
+{% endblock %}

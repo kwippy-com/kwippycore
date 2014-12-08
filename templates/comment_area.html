@@ -1,0 +1,95 @@
+{% load comments %}
+{% load is_favourited%}
+{% load format_date_time %}
+{% load is_favourited_comment%}
+{% load show_follower_pic %}
+
+<div class="comment_area">
+ {% if is_single %}
+    <br/>
+   {% get_comment_list for kwippy.quip quip.id as comment_list %}
+   {% get_comment_count for kwippy.quip quip.id as comment_count %}
+{% if comment_list %}
+    <h3>Comments({{comment_count}}):</h3>
+{% endif %}
+{% for comment in comment_list %}
+			<div class="kwip" id="c{{ comment.id }}">
+                            {% ifequal quip.account.user comment.user%}
+                             <div class="float_left" style="padding-top: 5px; padding-left: 10px;">
+                                <a href="/{{ comment.user.username}}/?src=commentspage_img">
+                                    <img class="user_pic_16" src="{% show_follower_pic comment.user.id %}" alt="{{comment.user.username}}" />
+                                </a>
+                            </div>
+                            {%endifequal%}
+
+                            <div style="padding-left:10px;float:left;width:492px;padding-right:8px;">
+				<a name="{{comment.id}}"></a>
+  				  {{ comment.comment|escape|urlize|linebreaksbr|wordwrap:100 }}
+			
+		        {% ifequal quip.account.user comment.user%}
+                                <div class="post_byuser" id="{{comment.id}}">
+                        {% else %}
+                                <div class="post_otherusers" id="{{comment.id}}">
+                        {% endifequal %}	
+		        {% if user.is_authenticated %}					   
+			    {% show_is_favourite_comment user.id comment.id %}							
+			{% endif %}
+                                commented by	
+                        {%ifequal comment.user.is_active 1%}
+                                    <a href="/{{comment.user}}/">{{comment.user.username}}</a>,
+                        {%else%}
+								{%ifequal comment.user.is_active 3%}
+                                    {{ comment.user.username }}(deleted),
+								{%else%}
+									{{ comment.headline}},
+								{%endifequal%}
+                        {%endifequal%}
+                                    {{ comment.submit_date|timesince}} ago 
+                        {% if user.is_authenticated %}
+                            {% ifequal user.id comment.user.id %}
+                                    | <a href="/comments/delete/{{ comment.id }}/" id="del" onClick="return confirm('please confirm deletion of your comment. there is no way to undo this');">delete</a>
+                            {% else %}
+                                {% ifequal user.id quip.account.user.id %}
+                                    | <a href="/comments/delete/{{ comment.id }}/" id="del" onClick="return confirm('please confirm deletion of your comment. there is no way to undo this');">delete</a>
+                                {% endifequal %}
+                            {% endifequal %}
+                        {% endif %}
+                                    <a href="javascript:void(0);" onclick="$('#id_comment')[0].value='@{{comment.user.username}}'"><img class="link_icon" title="permalink" src="/images/icons/reply_link.gif" /></a>
+                                </div>
+                            </div>
+                        {% ifnotequal quip.account.user comment.user%}
+                             <div class="float_left" style="padding-top: 5px; padding-left: 10px;">
+							 {%ifequal comment.user.is_active 1%}
+                                <a href="/{{ comment.user.username}}/?src=commentspage_img">
+                                    <img class="user_pic_16" src="{% show_follower_pic comment.user.id %}" alt="{{comment.user.username}}" />
+                                </a>
+							{%else%}
+								<img class="user_pic_16" src="{% show_follower_pic comment.user.id %}" alt="{{comment.user.username}}" />
+							{%endifequal%}
+                            </div>
+                        {%endifnotequal%}
+                </div>
+		<div class="clear border_top"></div>
+		{% endfor %}
+		{% if user.is_authenticated %}
+			<br/>
+                    {% if comment_list%}		
+			<h3>Post a comment</h3>
+                    {% else %}
+                        <h3>be the first one to comment</h3>
+                    {% endif %} 
+                    {%ifequal user.is_active 1%}
+			{% include "comments/form.html" %}
+                    {%else%}
+                        You are temporarily not allowed to comment.<br> Please contact admins( support AT kwippy DOT com) for more.
+                    {%endifequal%}
+                {%else%}
+					{%if allow_anon_comm %}
+						{% include "anon_comment_box.html" %}						
+					{%else%}
+                        <br/> 
+						<h3 class=""> please <a href="/login/?src=comm_area">login</a> or <a href="/home/?src=comm_area">register</a> to comment.</h3>
+					{%endif%}
+		{%endif%}
+ {%endif%}
+</div>

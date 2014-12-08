@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div>
+				There will be some stupid interesting/important metrics here.<br/><br/>	
+				Total Active Users: {{active_users}}<br/>
+				Total Inactive Users: {{inactive_users}}<br>
+				Total Active Accounts: {{active_accounts}}({{active_hellotxt_accounts}} HelloTxt + {{active_pingfm_accounts}} PingFm +{{active_gtalk_accounts}} Gtalk+{{active_yahoo_accounts}} Yahoo + {{active_fb_accounts}} Facebook + {{active_web_accounts}} Web)<br/>
+				Total Kwips: {{total_kwips}}<br/>				
+				Total Comments (excluding ours): {{total_comments}}<br/>
+				Total Private Messages: {{total_private_messages}}<br/>
+				Total Buzzs: {{total_buzzs}}<br/>
+				Total Follows(excluding kwippy): {{total_follows}} <br/>
+                                Total IM Follows(excluding kwippy): {{total_im_follows}} <br>
+                                Total Friends: {{total_friends}} <br/>
+				Total Favorites: {{total_favorites}} <br/>
+                                Total Comment Favorites: {{total_comment_favorites}} <br/>
+				Total Invites(excluding ours): {{total_invites}} <br/>
+				Total Conversation invites(excluding ours): {{total_conversation_invites}}<br>
+				Total Account Deletes: {{total_acc_deletes}}<br>
+                Total Theme Users : {{total_theme_users}}<br>
+                Total FireEagle Users : {{total_fireeagle_accounts}}<br>
+				Total Non-Users Invites : {{total_nonusers_invites}}<br>
+                                Total Secondary Emails :  {{total_secondaryemails}}<br>
+                                Total RSS User Followes: {{rss_followers}} <br>
+			</div>
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

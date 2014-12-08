@@ -1,0 +1,71 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block nav_account %}
+	<li>
+		<span id="accounts" style="display:block">Account</span>
+	</li>
+{%endblock%}
+
+{% block content %}
+	<br>
+	<fieldset  id="field_accounts" class="dashboard_fieldset"  style="display:block">
+			<legend>Account</legend>
+			{% load i18n %}	
+			{% include "dashboard/account_subtabs.html" %}
+			<div id="account_settings" style="display:block">
+				<form action="" method="post" id="accounts" name="account_settings">
+					{% include "dashboard/dashboard_notification_settings.html" %}
+					<hr>										
+					{%if secondary_email %}
+					<p><b>communication preference </b>(emails will be sent to the selected account)</p>
+					<input type="radio" value="{{user.email}}" name="commn_email" checked="checked" > {{user.email}}<br>
+					{%if secondary_email.status%}
+						<input type="radio"  value="{{secondary_email.email}}" name="commn_email"/> {{secondary_email.email}}
+					{%else%}
+						<input type="radio" disabled=""  value="today"/> {{secondary_email.email}} <span class="small_text">[kindly activate to enable. <a href="/resend_activate_email/">resend verification mail</a>]</span><span class="small_text" style="display:none;">sent!</span>
+					{%endif%}
+					{%else%}
+					<p><b>secondary email id </b>(associate another email with your account)</p>
+					<input type="textbox" id="secondary_mail" name="secondary_mail" value="enter email id" onclick="if (this.value =='enter email id') {this.value=''}" class=\"grey_text\" onblur="if (this.value==''){this.value='enter email id'}" > <input type="button" onclick="validate_n_submit();"value="add">
+					{%endif%}
+					<hr>
+					<p><b>default behavior</b></p>
+									{%if default_notification_on%}
+										<input id="notification_on" type="radio" value="1" checked="" name="def_im_notification"/>
+										<label for="notification_on">On</label>
+										<input id="notification_off" type="radio" value="0" name="def_im_notification"/>
+										<label for="notification_off">Off</label> | IM notification for kwips on following a user 
+									{%else%}
+										<input id="notification_on" type="radio" value="1" name="def_im_notification"/>
+										<label for="notification_on">On</label>
+										<input id="notification_off" type="radio" value="0"  checked="" name="def_im_notification"/>
+										<label for="notification_off">Off</label> | IM notification for kwips on following a user 
+									{%endif%}
+					<hr>
+
+                                        <p>{% if form.non_field_errors %}{{ form.non_field_errors.as_ul }} {% endif %}</p>
+
+					<p><b>{% trans "to change your password" %}</b></p>
+					{% if form.old_password.errors %}{{ form.old_password.errors }}{% endif %}
+					<p class="aligned wide">
+						<label for="id_old_password">{% trans 'Old password:' %}</label>{{ form.old_password }}
+					</p>
+					{% if form.new_password1.errors %}{{ form.new_password1.errors }}{% endif %}
+					<p class="aligned wide">
+						<label for="id_new_password1">{% trans 'New password:' %}</label>{{ form.new_password1 }}
+					</p>
+					{% if form.new_password2.errors %}{{ form.new_password2.errors }}{% endif %}
+					<p class="aligned wide">
+						<label for="id_new_password2">{% trans 'Confirm password:' %}</label>{{ form.new_password2 }}
+					</p>
+					<hr>
+					<p><input type="submit" class="button"  value="{% trans 'Save all changes' %}" /></p>
+				</form>
+				<hr>
+				<div><br><br><a href="/{{user}}/dashboard/acc_delete" onclick="return confirm('do you really want to delete your account? this is non reversible');" href="javascript:void(0);" style= "color:#FFB68F">delete kwippy account ({{user}})</a>
+			</div>
+			<div id="user_stats" style="display:none">
+				{% include "dashboard/dashboard_stats.html" %}
+			</div>
+	</fieldset>
+{% endblock %}

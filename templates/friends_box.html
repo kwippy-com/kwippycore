@@ -1,0 +1,25 @@
+{% load show_followee_pic %}
+{%if dict.users_friends %}
+	<div class="following_box">
+		<h4>
+			<a href="/{{ login }}/friends/">friends({{dict.friends_count}}):</a>
+		</h4>
+		{% if dict.users_friends %}
+		  {%for user in dict.users_friends %}
+			<div class="following_user">
+			  <a title="{{ user.username }}" href="/{{ user.username }}/"> 
+					<img class="user_pic_following" src="{% show_followee_pic user.id %}" alt="{{user.username}}" />
+			  </a>				
+			  <div class="following_name">
+				<a title="{{ user.username }}" href="/{{ user.username }}/"> {{ user.username }} </a>
+			  </div>
+			</div>
+		  {% endfor %}
+		{% endif %}
+		<div class="clear"></div>
+
+			<span class="float_right">
+			  <a href="/{{ login }}/friends/">see all <img class="go_icon" src="/images/icons/arrow_right.gif" /></a>
+			</span>
+	</div>
+{%endif%}

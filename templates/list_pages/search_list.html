@@ -1,0 +1,143 @@
+<html>
+  <head>
+	<title>Search</title>		 
+	<link rel="stylesheet" type="text/css"    href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="{% block stylesheet %}/css/list_page.css{% endblock %}" >	
+ </head>
+ <body> 
+ 	{% load show_profile_pic %}
+	{% load show_gender_list_pages %}
+	{% load show_followee_pic %}
+	{% load is_following%}
+	{% load comments %}
+	{% load format_url %}
+	{% load format_date_time %}
+	{% load show_quip_provider %}
+	{% load format_quipper_displayname%}
+	{% load search%}
+	{% load quip_search%}
+	 <div id="flash" style="display:block">	    
+	 </div>	
+	<div class="content">		
+		<div class="wrap">
+			<div class="col1">
+				<form method="get" action="/search/" id="search_form" name="search_form"> 
+					<h1>search</h1>
+					<div class="search_box">
+						<input name="query" id="query">
+						<input value="Search" class="button" type="submit">
+					</div>	
+				</form>
+				"{{ no_of_results }}" results for "{{query}}"
+			</div>
+			<div class="col2">
+					<div class="h2"><a href="/"><img src="/images/logo.gif" /></a><br />
+						{% include "login_logout.html" %}
+					</div>
+			</div>
+		</div>
+
+	<div style="clear:both;" ></div>
+	<ul>
+		 {%if followers_profiles%}
+	      {% for profile in followers_profiles %}
+			<li>
+				<div class="user_image">
+					<a href="/{{ profile.user.username }}/">
+						<img src="{% show_followee_pic profile.user_id %}" /> 
+					</a>
+				</div>
+				<div class="user_details">
+					<span><a href="/{{ profile.user.username }}/" class="" >{% formatquery query profile.display_name %}</a><br/>
+					  {% if profile.gender %}{% show_gender profile.id%} {%endif %} {% if profile.age %} | {{ profile.age }} {%endif%} {% if profile.location_city %} | {% formatquery query profile.location_city %} {% endif%} {% if profile.location_country %} | {% formatquery query profile.location_country %} {% endif %} &nbsp; 
+					  {% if user.is_authenticated %}
+						{% show_is_following user.id profile.user_id%}  
+					  {% endif %}
+  					  <br /> {% if profile.about_me %} {% formatquery query profile.about_me%} {%endif%} 
+					  </span>
+				</div>
+			</li>
+		<div style="clear:both;" ></div>		
+		<hr />
+		{%endfor%}
+		{%endif%}
+	</ul>
+	<ul>
+	{% if quips %}
+	{% for quip in quips %}
+	   {% get_comment_count for kwippy.quip quip.id as comment_count %}
+	   	<li>
+		   {%if quip.account.user %}
+			<div class="user_image">
+				<a href="/{{ quip.account.user.username }}/">
+					<img src="{% show_followee_pic quip.account.user.id %}" /> 
+				</a>
+			</div>
+			<div class="user_details">
+						<span class="username"><a href="/{{ quip.account.user.username }}/" class="" >{% formatdisplayname quip.account.user.id %}</a><br/>
+			</div>
+	<div class="clear"></div>
+			 {%endif%}
+
+			<br />
+			{%if quip.account.user %}
+				 <span class="kwip">				   
+					<em>kwip:</em>"  {% formatquipquery query quip.original %} " 						
+				 </span>
+				 {% ifequal quip.account.user.username login %}
+					  <div class="post_byuser">
+				 {% else%}
+					  <div class="post_otherusers">
+				 {%endifequal%}				 
+						 from {% displayprovider quip.id %}				
+							({{quip.created_at|timesince}} ago)				
+						 {%if quip.account.user and quip.account.user.username %}
+								{% if not is_single %}
+								<a href="/{% formattime quip.id%}/">
+									 go to kwip >>
+								</a> 
+								{% endif %}
+						  {% endif %}
+					  </div>
+					  		<hr />
+			{% endif %}
+		</li>
+		<div style="clear:both;" ></div>		
+
+	{% endfor %}
+{% endif %}
+</ul>
+<div style="clear:both;" ></div>		
+				<div> 
+				{% if has_next %}
+					<span class="float_right next_link"> 
+						<a href=".?query=india&page={{ next }}">next&rarr;</a>
+					</span>
+				{% endif %}
+				{% if has_previous %}
+					<span class="float_left prev_link">
+						<a href=".?query=india&page={{ previous }}">&larr;previous</a>
+					</span>
+				{% endif %}
+			</div>
+
+	</div>	
+	<!--footer begins--> 	
+	{% include "footer.html" %}
+	<!--footer ends-->
+					
+	 
+	   <!--<div id="content" class="flex"
+style="font-size:10px;">10 results per page &bull;
+4 total</div> -->
+  </body>	
+  <script language="javascript">
+	intval=window.setInterval("hide_flash()",1000)
+	 function hide_flash(){
+		document.getElementById('flash').style.display="none"
+		window.clearInterval(intval)
+	 }
+
+  </script>
+
+</html>

@@ -1,0 +1,26 @@
+{% load show_followee_pic %}
+{%ifnotequal login 'kwippy' %}
+<div class="following_box">
+	<h4>
+		<a href="/{{ login }}/following/">following{%if dict.users_followees %}({{dict.followees_count}}){%endif%}:</a>
+	</h4>
+	{% if dict.users_followees %}
+	  {%for followee in dict.users_followees %}
+		<div class="following_user">
+		  <a title="{{ followee.username }}" href="/{{ followee.username }}/"> 
+				<img class="user_pic_following" src="{% show_followee_pic followee.id %}" alt="{{followee.username}}" />
+		  </a>				
+		  <div class="following_name">
+			<a title="{{ followee.username }}" href="/{{ followee.username }}/"> {{followee.username }} </a>
+		  </div>
+		</div>
+	  {% endfor %}
+	{% endif %}
+
+	<div class="clear"></div>
+
+		<span class="float_right">
+		  <a href="/{{ login }}/following/">see all <img class="go_icon" src="/images/icons/arrow_right.gif" /></a>
+		</span>
+</div>
+{%endifnotequal%}

@@ -1,0 +1,54 @@
+<script type="text/javascript">
+ 			 function submit_comment_form(){
+
+				comment = $('#id_anon_comment')[0].value
+				name = $('#anon_name')[0].value
+			 	comment = comment.replace(new RegExp(/^\s+/),""); // START
+				comment = comment.replace(new RegExp(/\s+$/),""); // END
+
+			 	name = name.replace(new RegExp(/^\s+/),""); // START
+				name = name.replace(new RegExp(/\s+$/),""); // END
+
+				
+				 if (comment!='' && name!='')
+				 {
+					 document.comment_form.submit();
+				 }
+				 else{
+					if (name=='')
+					{
+						alert('please provide a name');
+					}
+					else{
+						alert('please insert comment');
+					}
+				 }
+
+			 }
+</script>
+
+<h3>Post a comment</h3>                  
+{% load anon_comment_subscription %}
+<form action="/anon_comments/post/" method="post" name="comment_form" style="padding: 5px;">
+    {%if not is_converted %}
+		<label>name*</label><br> <input style="margin-bottom:5px;" name="anon_name" id="anon_name"type ="textbox" >
+	{%else%}
+		<input style="margin-bottom:5px;" name="anon_name" id="anon_name"type ="textbox" value="{{converted_username}}">
+	{%endif%}
+	<textarea class="textarea" name="comment" style="height: auto;" id="id_anon_comment" rows="6" cols="60"></textarea>
+		<input type="hidden" name="options" value="{{ options }}" />
+		<input type="hidden" name="target" value="19:{{quip.id}}" />
+		<input type="hidden" name="gonzo" value="{{ hash }}" />
+		<input type="hidden" name="url" value="{{ request.get_full_path }}" />
+		<input type="hidden" name="inv_code" value="{{ conv_inv_code }}" />
+	<div class="textarea_bolt">
+		{%if is_converted%}
+			<div id="commentsubscribe" class="checkbox">		
+				{% show_anon_comment_subscription conv_inv_code quip.id%}
+			</div>
+		{%else%}
+		{%endif%}
+		<div class="clear"></div>
+		<input class="button float_left" name="post" id="preview" value="Post&raquo;" onclick="submit_comment_form();" type="button">
+	</div>
+</form>

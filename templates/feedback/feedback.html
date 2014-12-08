@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<form method="post" action=".">	 
+	<label for="id_name">Name {{ form.senders_name }} 	</label>
+	<br />
+	{% if not user.is_authenticated %}
+	<label for="id_email">Email(if you wish to be replied back) {{ form.senders_email }} 	</label>	
+	<br>
+	{% endif%}
+	<label for="id_subject">Subject {{ form.subject }} 	</label>
+	<br>
+	<label for="id_feedback">Feedback<br> {{ form.message }} 	</label>
+	<br>
+			<input type="submit" value="send feedback">
+</form>
+</body>
+</html>

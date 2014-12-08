@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>
+	team reports page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	<div class="wrap"> <!--wrap begins-->
+		{% load format_date_time %}
+		 <div class="content"><!--this has all the content-->
+			<h1>reports page</h1>
+			{% include "console/team_menu.html" %}
+			<div class="right_col"><br/><br/>
+			<b>showing 250 Inactive users</b> <br/><br/>
+			<b>	name(signed_up, last_login)<br/></b>
+				{% for user in zero_comment_users%}
+					<a href="/{{user.username}}/">{{user.username}}</a>  ({{user.date_joined|timesince}} ago, {{user.last_login|timesince}} ago) 
+					<br> 
+				{%endfor%}
+			<br/><br/>
+
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

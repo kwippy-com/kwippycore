@@ -1,0 +1,21 @@
+{% if rss_users %}
+<br>
+{% load show_followee_pic %}
+<div class="following_box">
+	<h4>
+		RSS Users:
+	</h4>
+	
+	  {%for user in rss_users %}
+		<div class="following_user">
+		  <a title="{{ user.username }}" href="/{{ user.username }}/profile/?src=everyone_rss"> 
+				<img class="user_pic_following" src="{% show_followee_pic user.id %}" alt="{{user.username}}" />
+		  </a>				
+		  <div class="following_name">
+			<a title="{{ user.username }}" href="/{{ user.username }}//profile/?src=everyone_rss"> {{user.username }} </a>
+		  </div>
+		</div>
+	  {% endfor %}
+	<div class="clear"></div>		
+</div>
+{% endif %}

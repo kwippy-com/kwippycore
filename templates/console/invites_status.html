@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+	{%load format_username%}
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+		 {% load show_account_status %}
+			<h1>admin page</h1>
+			{% include "console/admin_menu.html" %}
+			<div class="right_col">
+					<h2><b> user status </b></h2>
+			<table border="1">
+				<tbody>
+					<tr>
+						<td align="center"> SNo </td> 
+						<td align="center"> inviter </td> 
+						<td align="center">email</td>
+						<td align="center">username</td>
+						<td align="center">activated</td>
+						<td align="center">IM buddy status</td>
+                                                <td align="center">unique_hash</td>            
+						<td align="center">updated at</td>
+					</tr>					
+						{% for invite in invites %}
+						<tr>
+							<td align="center"> {{invite.id}} </td> 
+							<td align="center"> {% formatusername invite.user_id%}</td> 
+							<td align="center"> {{invite.invitee_email}} </td> 
+							<td align="center"> {% formatusername invite.converted_user_id%} </td> 
+							<td align="center"> {%ifequal invite.status 2%}Yes{%else%}No{%endifequal%} </td> 
+							<td align="center"> {%displayaccountstatus invite.converted_user_id %}</td> 
+                                                        <td align="center"> {{invite.unique_hash}}</td>
+							<td align="center"> {{invite.updated_at|timesince}} ago </td> 
+						</tr>
+						{% endfor %}
+					
+				</tbody>
+			</table>
+			</div>	
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

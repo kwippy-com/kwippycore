@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>
+	admin page
+	</title>		 
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/reset-fonts-grids/reset-fonts-grids.css"> 
+	<link rel="stylesheet" type="text/css" href="/css/admin.css" >
+ </head>
+ <body> 
+ 	{%load format_username%}
+	<div class="wrap"> <!--wrap begins-->
+		 <div class="content"><!--this has all the content-->
+			<h1>admin page</h1>
+                                {%if user.is_superuser %}
+				    {% include "console/admin_menu.html" %}
+                                {%else%}
+                                    {% include "console/team_menu.html" %}
+                                {%endif%}
+				<div>
+					Kwippy Toppers.<br/><br/>
+					 <b>Kwips</b><br>
+					 &nbsp user  &nbsp;&nbsp;&nbsp;&nbsp; kwip count <br/><br/>
+									{%for item,key in kwip_toppers%}
+		`                              <a href="/{% formatusername key%}/">{% formatusername key%} </a>&nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+									{%endfor%}		
+
+					 <b>Comments</b><br>
+					 &nbsp user  &nbsp;&nbsp;&nbsp;&nbsp; comment count <br/><br/>
+									{%for item,key in comment_toppers%}
+		`                              <a href="/{% formatusername key%}/">{% formatusername key%}</a> &nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+									{%endfor%}		
+					{%if follower_toppers%}
+					2) <b>Followers</b><br>
+									 &nbsp user  &nbsp;&nbsp;&nbsp;&nbsp; follower count <br/><br/>
+									{%for item,key in follower_toppers%}
+		`                            <a href="/{% formatusername key%}/">  {% formatusername key%} </a>&nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+									{%endfor%}
+					{%endif%}
+					{%if followee_toppers%}
+            			        3) <b>Followees</b><br>
+									 &nbsp user  &nbsp;&nbsp;&nbsp;&nbsp; followee count <br/><br/>
+									{%for item,key in followee_toppers%}
+		`                             <a href="/{% formatusername key%}/"> {% formatusername key%}</a> &nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+									{%endfor%}
+            		{%endif%}	
+                                         <b>Favorites</b><br>
+									 &nbsp user  &nbsp;&nbsp;&nbsp;&nbsp; favorite count <br/><br/>
+									{%for item,key in favorite_toppers%}
+		`                             <a href="/{% formatusername key%}/"> {% formatusername key%} </a>&nbsp;&nbsp;&nbsp;&nbsp; <b>{{item}}</b>  <br/><br/>
+									{%endfor%}
+            			
+				</div>
+
+		 </div><!-- content ends-->
+		<div class="clear"></div>
+		<!--footer begins-->
+		 <div class="footer">
+		 </div><!--footer ends-->
+</div>	 <!--wrap ends-->
+</body>
+</html>

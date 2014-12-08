@@ -1,0 +1,15 @@
+{% if not is_single %}
+  {% if user.is_authenticated %}
+	{%ifequal user.username login %}
+   		{% include "friendship_request.html" %}							
+		<form method="post" action="/kwip/add/" id="kwip_form" name="kwip_form" style="padding:5px;"> 
+			<div id="kwip_area">
+				<textarea class="textarea" name="kwip_box" id="kwip_box" onclick="if (this.value =='Enter your current status here') {this.value=''}" onblur="if (this.value==''){this.value='Enter your current status here'}" value="Enter your current status here">Enter your current status here</textarea>
+					<div class="textarea_bolt">
+						<input  class="button float_left" type="button" name="btnkwip" onClick="submit_form();" id="btnkwip" value="post&raquo;">
+					</div>
+			</div>		
+		  </form>
+	{% endifequal %}
+  {% endif %}
+{% endif %}

@@ -1,0 +1,8 @@
+{%if favorites%}
+{% load show_follower_pic %}
+<h3><b>Bookmarked By:</b></h3><div style="padding-top: 5px; padding-left: 10px;">
+{% for favorite in favorites %}
+      <a href="/{{ favorite.user.username}}/?src=favoritelist_img"><img class="user_pic_16" src="{% show_follower_pic favorite.user.id %}" alt="{{favorite.user.username}}" /></a>
+{%endfor%}
+</div>
+{%endif%}

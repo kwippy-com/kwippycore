@@ -1,0 +1,62 @@
+{% load comments %}
+{% load format_url %}
+{% load is_favourited%}
+{% load format_date_time %}
+{% load show_quip_provider %}
+{% load show_follower_pic %}
+
+{% if quips %}
+  {% for fav in quips %}
+	     <div class="kwip">
+                {% ifequal request.user fav.user%}
+                <div class="float_left" style="padding-top: 5px; padding-left: 10px;">
+                    <a href="/{{ fav.user.username}}/?src=everycommentspage_img">
+                        <img class="user_pic_16" src="{% show_follower_pic fav.user.id %}" alt="{{fav.user.username}}" />
+                    </a>
+                </div>
+                {%endifequal%}
+				<div style="padding-left:10px;float:left;width:492px;padding-right:8px;">
+				    {{ fav.quip.formated|escape|urlizetrunc:40 }}				
+    	    	    <div class="post_byuser" id="{{fav.quip.id}}">
+		        {% if user.is_authenticated %}					   
+			    {% show_is_favourite user.id fav.quip.id %}							
+			{% endif %}	
+						favorited by 
+					{%if fav.user %}
+						<a href="/{{fav.user.username}}/"> 						
+						    {{fav.user.username}} 
+						</a>
+					{%endif%}
+					({{fav.created_at|timesince}} ago)
+									<a href="/{% formattime fav.quip.id%}/?src=everyfavoritepage">
+				    {% ifequal fav.quip.comment_count 0 %}go comment
+                                        <img class="go_icon" src="/images/icons/arrow_right.gif"/>
+                                    {%else%} 
+				        {% ifequal fav.quip.comment_count 1 %}
+					    1 Comment
+				        {% else %}
+                                            {%ifequal fav.quip.comment_count -1%}go comment
+                                            {% else %}
+					       {{ fav.quip.comment_count }} Comments 
+                                            {% endifequal %}
+					{% endifequal %}
+				    {% endifequal%}</a> 
+
+					  | <a  href="/{% formattime fav.quip.id%}/"> 
+                            <img class="link_icon" title="permalink" src="/images/icons/icon_link.gif" />
+                        </a> 
+				    </div>
+                </div>
+
+                {% ifnotequal request.user fav.user%}
+                             <div class="float_left" style="padding-top: 5px; padding-left: 10px;">
+                                <a href="/{{ fav.user.username}}/?src=everycommentspage_img">
+                                    <img class="user_pic_16" src="{% show_follower_pic fav.user.id %}" alt="{{fav.user.username}}" />
+                                </a>
+                            </div>
+                {%endifnotequal%}
+
+            </div>
+	<div class="clear border_top"></div>
+  {% endfor %}
+{% endif %}	

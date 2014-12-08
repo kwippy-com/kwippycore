@@ -1,0 +1,161 @@
+html{background-color:#dddddd;}
+body {
+font: 83% lucida sans, verdana, sans-serif;
+line-height: 1.4;
+color:#333;
+background-repeat:repeat-x ;
+text-align:center;
+}
+
+.float_right{
+float:right;
+}
+.float_left{
+float:left;
+}
+.grey_text{
+color:grey;
+}
+
+.clear{
+clear:both;
+height:0px;
+overflow:hidden;
+}
+a {
+color:#a7d4ff;
+text-decoration:none;
+}
+a:hover {
+text-decoration:underline;
+}
+
+.col2 a {
+color:#0086FF;
+text-decoration:none;
+}
+
+.col2 a:hover{
+text-decoration:underline;
+}
+
+.right_links{
+color:#333;
+font-size:12px;}
+
+.post_byuser{
+padding-right:35px;
+text-align:right;
+background-image:url(/images/bubble_1.png);
+background-repeat:no-repeat;
+background-position:top right;
+padding-bottom:16px;
+color:#ccc;
+}
+
+.post_otherusers{
+padding-left:35px;
+text-align:left;
+background-image:url(/images/bubble_0.png);
+background-repeat:no-repeat;
+padding-bottom:5px;
+color:#ccc;
+}
+
+.content {
+padding-top:2em;
+width:100%;
+}
+.kwipsarea {
+float:left;
+padding:10px 0 0 0;
+background-color:#333;
+text-align:left;
+width:585px;
+
+
+}
+.networkarea {
+float:right;
+padding:10px auto 2em 0pt;
+width:265px;
+text-align:center;
+background-color:#fff;
+
+}
+h1 {
+color:#fff;
+font-size:20px;
+padding-bottom:30px 
+padding-left:7px;
+}
+
+.h2 {
+color:#fff;
+font-size:20px;
+padding-bottom:30px;
+}
+
+.tagline {
+font-size:15px;
+color:white;
+}
+
+.kwip{
+padding: 7px;
+margin:10px auto 0 auto ;
+background-color:#fff;
+}
+
+.textarea {
+width:100%;/*548px;*/
+height:70px;
+text-align:left;
+}
+
+
+.prev_link, .next_link{
+background-color:black;
+padding-right:5px;
+padding-left:5px;
+
+}
+
+.button {
+background-color:#BBD26C;
+border:1px solid grey;
+font-family:georgia,serif;
+height:25px;
+text-align:center;
+padding:0 5% 0 5%;
+}
+.follow_link a{
+padding:2px 5px 2px 5px;
+color:black;
+background-color:#a7d4ff;
+text-decoration:none;
+border:1px solid #a7d4ff;
+}
+.follow_link a:hover{
+padding:2px 5px 2px 5px;
+color:#a7d4ff;
+background-color:#333;
+border:1px solid #a7d4ff;
+}
+
+.user_pic_following {
+border:1px solid #0086FF;
+}
+
+.user_pic_follower {
+border:1px solid #0086FF;
+}
+
+.footer {
+}
+
+.wrap{
+margin:0pt auto;
+text-align:center;
+width:860px;
+}

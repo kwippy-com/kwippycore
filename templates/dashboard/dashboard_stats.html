@@ -1,0 +1,32 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block nav_account %}
+	<li >
+		<span id="account" style="display:block">Account</span>
+	</li>	
+{%endblock%}
+
+{% block content %}
+	<br>
+	<fieldset  id="field_accounts" class="dashboard_fieldset"  style="display:block">
+			<legend>Account</legend>
+			<ul>
+				<li  class="im_names"  style="display:block">
+				 <a href="/{{user}}/dashboard/account/" id="Settings" style="display:block" >Settings</a>
+				</li> 
+				<li class="im_names"  style="display:block">
+				  <span id="Stats_text" style="display:block">Stats</span>
+				</li>
+			</ul>
+			<div class="clear"></div>
+			
+	<br>Total Comments: {{total_comments}}, Total Kwips: {{kwip_count}}, Total Bookmarks: {{favs_count}}<br><br>
+	Kwips/day: {{average_kwips_day}},Comments/day: {{average_comments_day}}<br><br>
+        Comments on your kwips: {{comments_on_kwips}}, Bookmarks on your kwips: {{bookmarks_on_kwips}}
+	  <br/> <br/>Percentage of kwips from various sources<br/>
+	  <img src="http://chart.apis.google.com/chart?chs=500x200&amp;chd=t:{{ per }}&amp;cht=p3&amp;chl={{ list }}" alt="Various sources" />
+          <br/>How often do you kwip (last 30 days)<br/>
+          <img src="http://chart.apis.google.com/chart?chxt=y&amp;chxl={{ limit2 }}&amp;chs=500x200&amp;chd=t:{{ pday }}&amp;cht=lc&amp;chds={{ limit }}" alt="Last 30 days" />
+          
+	
+	</fieldset>
+{%endblock%}
